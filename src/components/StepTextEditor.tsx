@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { fabric } from "fabric";
-import { blessingPhrases, textColors, type Background } from "@/lib/editorData";
+import { type Background } from "@/lib/editorData";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, ArrowUp, ArrowDown, ArrowLeft, ArrowRight, Trash2 } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import PhraseSelector from "@/components/editor/PhraseSelector";
+import ColorPicker from "@/components/editor/ColorPicker";
+import FontControls from "@/components/editor/FontControls";
+import MovementControls from "@/components/editor/MovementControls";
 
 interface Props {
   categoryId: string;
@@ -14,24 +18,26 @@ interface Props {
 
 const CANVAS_W = 900;
 const CANVAS_H = 1200;
-const MOVE_STEP = 20;
 
 const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fabricRef = useRef<fabric.Canvas | null>(null);
   const [activeColor, setActiveColor] = useState("#dc2626");
+  const [activeFont, setActiveFont] = useState("serif");
+  const [activeFontSize, setActiveFontSize] = useState(80);
+  const [isBold, setIsBold] = useState(true);
+  const [isItalic, setIsItalic] = useState(false);
+  const [hasOutline, setHasOutline] = useState(false);
+  const [hasShadow, setHasShadow] = useState(true);
 
   const initCanvas = useCallback(() => {
     if (!canvasRef.current) return;
     if (fabricRef.current) fabricRef.current.dispose();
 
     const fc = new fabric.Canvas(canvasRef.current, {
-      width: CANVAS_W,
-      height: CANVAS_H,
-      backgroundColor: "#ffffff",
+      width: CANVAS_W, height: CANVAS_H, backgroundColor: "#ffffff",
     });
 
-    // Set background
     if (uploadedBg) {
       fabric.Image.fromURL(uploadedBg, (img) => {
         img.scaleToWidth(CANVAS_W);
@@ -39,12 +45,10 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: 
         fc.setBackgroundImage(img, fc.renderAll.bind(fc));
       });
     } else {
-      // Use gradient as background rect
       const rect = new fabric.Rect({
         left: 0, top: 0, width: CANVAS_W, height: CANVAS_H,
         selectable: false, evented: false,
       });
-      // Parse gradient from CSS string
       rect.set("fill", createFabricGradient(background.gradient, CANVAS_W, CANVAS_H));
       fc.add(rect);
       fc.sendToBack(rect);
@@ -62,29 +66,78 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: 
     const fc = fabricRef.current;
     if (!fc) return;
     const t = new fabric.IText(text, {
-      left: CANVAS_W / 2,
-      top: CANVAS_H / 2,
-      originX: "center",
-      originY: "center",
-      fontSize: 80,
-      fontFamily: "serif",
+      left: CANVAS_W / 2, top: CANVAS_H / 2,
+      originX: "center", originY: "center",
+      fontSize: activeFontSize,
+      fontFamily: activeFont,
       fill: activeColor,
-      fontWeight: "bold",
-      shadow: new fabric.Shadow({ color: "rgba(0,0,0,0.4)", blur: 6, offsetX: 3, offsetY: 3 }),
+      fontWeight: isBold ? "bold" : "normal",
+      fontStyle: isItalic ? "italic" : "normal",
+      stroke: hasOutline ? "#000000" : undefined,
+      strokeWidth: hasOutline ? 2 : 0,
+      shadow: hasShadow
+        ? new fabric.Shadow({ color: "rgba(0,0,0,0.5)", blur: 8, offsetX: 4, offsetY: 4 })
+        : undefined,
     });
     fc.add(t);
     fc.setActiveObject(t);
     fc.renderAll();
   };
 
-  const changeColor = (hex: string) => {
-    setActiveColor(hex);
+  const applyToActive = (setter: (obj: fabric.IText) => void) => {
     const fc = fabricRef.current;
     const obj = fc?.getActiveObject();
     if (obj && obj.type === "i-text") {
-      (obj as fabric.IText).set("fill", hex);
+      setter(obj as fabric.IText);
       fc?.renderAll();
     }
+  };
+
+  const changeColor = (hex: string) => {
+    setActiveColor(hex);
+    applyToActive((obj) => obj.set("fill", hex));
+  };
+
+  const changeFont = (family: string) => {
+    setActiveFont(family);
+    applyToActive((obj) => obj.set("fontFamily", family));
+  };
+
+  const changeFontSize = (size: number) => {
+    setActiveFontSize(size);
+    applyToActive((obj) => obj.set("fontSize", size));
+  };
+
+  const toggleBold = () => {
+    const next = !isBold;
+    setIsBold(next);
+    applyToActive((obj) => obj.set("fontWeight", next ? "bold" : "normal"));
+  };
+
+  const toggleItalic = () => {
+    const next = !isItalic;
+    setIsItalic(next);
+    applyToActive((obj) => obj.set("fontStyle", next ? "italic" : "normal"));
+  };
+
+  const toggleOutline = () => {
+    const next = !hasOutline;
+    setHasOutline(next);
+    applyToActive((obj) => {
+      obj.set("stroke", next ? "#000000" : undefined);
+      obj.set("strokeWidth", next ? 2 : 0);
+    });
+  };
+
+  const toggleShadow = () => {
+    const next = !hasShadow;
+    setHasShadow(next);
+    applyToActive((obj) => {
+      obj.set("shadow", next
+        ? new fabric.Shadow({ color: "rgba(0,0,0,0.5)", blur: 8, offsetX: 4, offsetY: 4 })
+        : undefined
+      );
+    });
   };
 
   const moveActive = (dx: number, dy: number) => {
@@ -104,8 +157,6 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: 
     fc?.renderAll();
   };
 
-  const phrases = blessingPhrases[categoryId] || [];
-
   return (
     <div className="flex flex-col items-center gap-4 px-2 py-4 w-full max-w-lg mx-auto">
       <h1 className="text-2xl font-bold text-foreground text-center">編輯文字</h1>
@@ -115,67 +166,23 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: 
         <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
       </div>
 
-      {/* Phrases */}
-      <div className="w-full">
-        <p className="text-lg font-bold text-foreground mb-2">選擇祝福語：</p>
-        <div className="flex flex-wrap gap-2">
-          {phrases.map((p) => (
-            <Button
-              key={p}
-              variant="outline"
-              className="min-h-[52px] text-lg font-bold px-4"
-              onClick={() => addPhrase(p)}
-            >
-              {p}
-            </Button>
-          ))}
-        </div>
-      </div>
-
-      {/* Colors */}
-      <div className="w-full">
-        <p className="text-lg font-bold text-foreground mb-2">文字顏色：</p>
-        <div className="flex gap-3">
-          {textColors.map((c) => (
-            <button
-              key={c.id}
-              onClick={() => changeColor(c.hex)}
-              className={`min-h-[52px] min-w-[64px] rounded-xl border-4 text-lg font-bold ${c.borderClass} ${
-                activeColor === c.hex ? "ring-4 ring-primary/40 scale-110" : ""
-              }`}
-              style={{ backgroundColor: c.hex, color: c.id === "white" ? "#333" : c.id === "black" ? "#fff" : "#fff" }}
-            >
-              {c.name}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Movement controls */}
-      <div className="w-full">
-        <p className="text-lg font-bold text-foreground mb-2">移動文字：</p>
-        <div className="grid grid-cols-3 gap-2 w-[220px] mx-auto">
-          <div />
-          <Button variant="secondary" className="min-h-[60px] text-2xl" onClick={() => moveActive(0, -MOVE_STEP)}>
-            <ArrowUp size={32} />
-          </Button>
-          <div />
-          <Button variant="secondary" className="min-h-[60px] text-2xl" onClick={() => moveActive(-MOVE_STEP, 0)}>
-            <ArrowLeft size={32} />
-          </Button>
-          <Button variant="destructive" className="min-h-[60px] text-xl" onClick={deleteActive}>
-            <Trash2 size={28} />
-          </Button>
-          <Button variant="secondary" className="min-h-[60px] text-2xl" onClick={() => moveActive(MOVE_STEP, 0)}>
-            <ArrowRight size={32} />
-          </Button>
-          <div />
-          <Button variant="secondary" className="min-h-[60px] text-2xl" onClick={() => moveActive(0, MOVE_STEP)}>
-            <ArrowDown size={32} />
-          </Button>
-          <div />
-        </div>
-      </div>
+      <PhraseSelector categoryId={categoryId} onAdd={addPhrase} />
+      <ColorPicker activeColor={activeColor} onChange={changeColor} />
+      <FontControls
+        activeFont={activeFont}
+        activeFontSize={activeFontSize}
+        isBold={isBold}
+        isItalic={isItalic}
+        hasOutline={hasOutline}
+        hasShadow={hasShadow}
+        onFontChange={changeFont}
+        onFontSizeChange={changeFontSize}
+        onBoldToggle={toggleBold}
+        onItalicToggle={toggleItalic}
+        onOutlineToggle={toggleOutline}
+        onShadowToggle={toggleShadow}
+      />
+      <MovementControls onMove={moveActive} onDelete={deleteActive} />
 
       {/* Nav */}
       <div className="flex gap-4 w-full mt-2">
@@ -190,19 +197,16 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: 
   );
 };
 
-// Helper: parse CSS linear-gradient to fabric gradient
 function createFabricGradient(css: string, w: number, h: number): fabric.Gradient {
   const colorsMatch = css.match(/#[a-fA-F0-9]{6}/g) || ["#ffffff", "#cccccc"];
   const isVertical = css.includes("180deg");
   const coords = isVertical
     ? { x1: 0, y1: 0, x2: 0, y2: h }
     : { x1: 0, y1: 0, x2: w, y2: h };
-
   const stops = colorsMatch.map((c, i) => ({
     offset: i / Math.max(colorsMatch.length - 1, 1),
     color: c,
   }));
-
   return new fabric.Gradient({ type: "linear", coords, colorStops: stops });
 }
 

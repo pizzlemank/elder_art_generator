@@ -66,17 +66,39 @@ export const blessingPhrases: Record<string, string[]> = {
   health: ["身體健康", "長命百歲", "健康快樂", "精神百倍", "福壽安康", "事事順心"],
 };
 
-// 文字顏色
+// 文字顏色 — grouped into "常用" and "更多"
 export interface TextColor {
   id: string;
   name: string;
   hex: string;
-  borderClass: string;
 }
 
 export const textColors: TextColor[] = [
-  { id: "red", name: "紅", hex: "#dc2626", borderClass: "border-red-500" },
-  { id: "gold", name: "金", hex: "#d97706", borderClass: "border-yellow-500" },
-  { id: "white", name: "白", hex: "#ffffff", borderClass: "border-gray-400" },
-  { id: "black", name: "黑", hex: "#1a1a1a", borderClass: "border-gray-800" },
+  { id: "red", name: "紅", hex: "#dc2626" },
+  { id: "gold", name: "金", hex: "#d97706" },
+  { id: "white", name: "白", hex: "#ffffff" },
+  { id: "black", name: "黑", hex: "#1a1a1a" },
+];
+
+export const extraColors: TextColor[] = [
+  { id: "pink", name: "粉", hex: "#ec4899" },
+  { id: "orange", name: "橙", hex: "#f97316" },
+  { id: "green", name: "綠", hex: "#16a34a" },
+  { id: "blue", name: "藍", hex: "#2563eb" },
+  { id: "purple", name: "紫", hex: "#9333ea" },
+  { id: "brown", name: "棕", hex: "#92400e" },
+];
+
+// 字型選擇
+export interface FontOption {
+  id: string;
+  name: string;
+  family: string;
+}
+
+export const fontOptions: FontOption[] = [
+  { id: "serif", name: "明體", family: "serif" },
+  { id: "sans", name: "黑體", family: "sans-serif" },
+  { id: "cursive", name: "手寫", family: "cursive" },
+  { id: "kaiti", name: "楷體", family: "'KaiTi', 'DFKai-SB', 'BiauKai', serif" },
 ];

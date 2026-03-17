@@ -3,13 +3,24 @@ import { ChevronLeft, Download } from "lucide-react";
 
 interface Props {
   imageDataUrl: string;
+  textPrefix: string;
   onBack: () => void;
 }
 
-const StepDownload = ({ imageDataUrl, onBack }: Props) => {
+function getSmartFilename(textPrefix: string): string {
+  const now = new Date();
+  const yy = String(now.getFullYear()).slice(-2);
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  const datePart = `${yy}${mm}${dd}`;
+  const prefix = textPrefix.replace(/[^\u4e00-\u9fff\w]/g, "").slice(0, 8) || "祝福圖";
+  return `${prefix}_${datePart}.jpg`;
+}
+
+const StepDownload = ({ imageDataUrl, textPrefix, onBack }: Props) => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.download = "長輩圖.jpg";
+    link.download = getSmartFilename(textPrefix);
     link.href = imageDataUrl;
     link.click();
   };
