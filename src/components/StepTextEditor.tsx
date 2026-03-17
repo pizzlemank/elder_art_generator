@@ -158,40 +158,44 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, onBack, onNext }: 
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 px-2 py-4 w-full max-w-lg mx-auto">
-      <h1 className="text-2xl font-bold text-foreground text-center">編輯文字</h1>
+    <div className="flex flex-col lg:flex-row gap-4 px-2 py-4 w-full max-w-6xl mx-auto">
+      {/* LEFT: Controls (scrollable) */}
+      <div className="lg:w-[420px] lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto lg:pr-2 flex flex-col gap-4 order-2 lg:order-1">
+        <PhraseSelector categoryId={categoryId} onAdd={addPhrase} />
+        <ColorPicker activeColor={activeColor} onChange={changeColor} />
+        <FontControls
+          activeFont={activeFont}
+          activeFontSize={activeFontSize}
+          isBold={isBold}
+          isItalic={isItalic}
+          hasOutline={hasOutline}
+          hasShadow={hasShadow}
+          onFontChange={changeFont}
+          onFontSizeChange={changeFontSize}
+          onBoldToggle={toggleBold}
+          onItalicToggle={toggleItalic}
+          onOutlineToggle={toggleOutline}
+          onShadowToggle={toggleShadow}
+        />
+        <MovementControls onMove={moveActive} onDelete={deleteActive} />
 
-      {/* Canvas */}
-      <div className="w-full overflow-hidden rounded-xl border-4 border-border" style={{ aspectRatio: "3/4" }}>
-        <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
+        {/* Nav */}
+        <div className="flex gap-4 w-full mt-2">
+          <Button variant="secondary" className="flex-1 min-h-[60px] text-xl gap-2" onClick={onBack}>
+            <ChevronLeft size={28} /> 上一步
+          </Button>
+          <Button className="flex-1 min-h-[60px] text-xl gap-2" onClick={() => fabricRef.current && onNext(fabricRef.current)}>
+            下一步 <ChevronRight size={28} />
+          </Button>
+        </div>
       </div>
 
-      <PhraseSelector categoryId={categoryId} onAdd={addPhrase} />
-      <ColorPicker activeColor={activeColor} onChange={changeColor} />
-      <FontControls
-        activeFont={activeFont}
-        activeFontSize={activeFontSize}
-        isBold={isBold}
-        isItalic={isItalic}
-        hasOutline={hasOutline}
-        hasShadow={hasShadow}
-        onFontChange={changeFont}
-        onFontSizeChange={changeFontSize}
-        onBoldToggle={toggleBold}
-        onItalicToggle={toggleItalic}
-        onOutlineToggle={toggleOutline}
-        onShadowToggle={toggleShadow}
-      />
-      <MovementControls onMove={moveActive} onDelete={deleteActive} />
-
-      {/* Nav */}
-      <div className="flex gap-4 w-full mt-2">
-        <Button variant="secondary" className="flex-1 min-h-[60px] text-xl gap-2" onClick={onBack}>
-          <ChevronLeft size={28} /> 上一步
-        </Button>
-        <Button className="flex-1 min-h-[60px] text-xl gap-2" onClick={() => fabricRef.current && onNext(fabricRef.current)}>
-          下一步 <ChevronRight size={28} />
-        </Button>
+      {/* RIGHT: Canvas preview (sticky on desktop) */}
+      <div className="flex-1 flex flex-col items-center order-1 lg:order-2">
+        <h1 className="text-2xl font-bold text-foreground text-center mb-2">編輯文字</h1>
+        <div className="w-full lg:sticky lg:top-4 overflow-hidden rounded-xl border-4 border-border" style={{ aspectRatio: "3/4", maxHeight: "calc(100vh - 160px)" }}>
+          <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
+        </div>
       </div>
     </div>
   );
