@@ -3,24 +3,24 @@ import { ChevronLeft, Download } from "lucide-react";
 
 interface Props {
   imageDataUrl: string;
+  textPrefix: string;
   onBack: () => void;
 }
 
-function getSmartFilename(canvas?: HTMLImageElement | null): string {
+function getSmartFilename(textPrefix: string): string {
   const now = new Date();
   const yy = String(now.getFullYear()).slice(-2);
   const mm = String(now.getMonth() + 1).padStart(2, "0");
   const dd = String(now.getDate()).padStart(2, "0");
   const datePart = `${yy}${mm}${dd}`;
-  return `祝福圖_${datePart}.jpg`;
+  const prefix = textPrefix.replace(/[^\u4e00-\u9fff\w]/g, "").slice(0, 8) || "祝福圖";
+  return `${prefix}_${datePart}.jpg`;
 }
 
-const StepDownload = ({ imageDataUrl, onBack }: Props) => {
+const StepDownload = ({ imageDataUrl, textPrefix, onBack }: Props) => {
   const handleDownload = () => {
-    // Try to extract text from the data URL is not possible,
-    // so we pass a prefix from the parent. For now use a smart date name.
     const link = document.createElement("a");
-    link.download = getSmartFilename();
+    link.download = getSmartFilename(textPrefix);
     link.href = imageDataUrl;
     link.click();
   };

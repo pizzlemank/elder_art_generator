@@ -15,6 +15,7 @@ const Index = () => {
   const [background, setBackground] = useState<Background | null>(null);
   const [uploadedBg, setUploadedBg] = useState<string | null>(null);
   const [finalImage, setFinalImage] = useState<string>("");
+  const [textPrefix, setTextPrefix] = useState<string>("");
 
   const handleCategorySelect = (cat: Category) => {
     setCategory(cat);
