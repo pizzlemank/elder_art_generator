@@ -73,7 +73,7 @@ const Index = () => {
           />
         )}
         {step === 4 && (
-          <StepDownload imageDataUrl={finalImage} onBack={() => setStep(3)} />
+          <StepDownload imageDataUrl={finalImage} textPrefix={textPrefix} onBack={() => setStep(3)} />
         )}
       </main>
     </div>
