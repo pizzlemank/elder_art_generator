@@ -37,6 +37,9 @@ const Index = () => {
   const handleCanvasNext = (canvas: fabric.Canvas) => {
     canvas.discardActiveObject();
     canvas.renderAll();
+    // Extract first text for filename
+    const textObj = canvas.getObjects().find((o) => o.type === "i-text") as fabric.IText | undefined;
+    setTextPrefix(textObj?.text || "");
     const dataUrl = canvas.toDataURL({ format: "jpeg", quality: 0.92 });
     setFinalImage(dataUrl);
     setStep(4);
