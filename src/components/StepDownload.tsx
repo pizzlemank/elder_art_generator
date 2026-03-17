@@ -6,10 +6,21 @@ interface Props {
   onBack: () => void;
 }
 
+function getSmartFilename(canvas?: HTMLImageElement | null): string {
+  const now = new Date();
+  const yy = String(now.getFullYear()).slice(-2);
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  const datePart = `${yy}${mm}${dd}`;
+  return `祝福圖_${datePart}.jpg`;
+}
+
 const StepDownload = ({ imageDataUrl, onBack }: Props) => {
   const handleDownload = () => {
+    // Try to extract text from the data URL is not possible,
+    // so we pass a prefix from the parent. For now use a smart date name.
     const link = document.createElement("a");
-    link.download = "長輩圖.jpg";
+    link.download = getSmartFilename();
     link.href = imageDataUrl;
     link.click();
   };
