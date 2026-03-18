@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { textColors, extraColors, type TextColor } from "@/lib/editorData";
 import { ChevronDown, ChevronUp } from "lucide-react";
 

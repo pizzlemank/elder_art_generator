@@ -1,8 +1,8 @@
-import { type Background, type AspectRatioOption, aspectRatios } from "@/lib/editorData";
+﻿import { type Background, type AspectRatioOption, aspectRatios } from "@/lib/editorData";
 import { useBackgrounds } from "@/hooks/useEditorData";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Upload } from "lucide-react";
-import { useRef } from "react";
+import { useRef, type ChangeEvent } from "react";
 
 interface Props {
   categoryId: string;
@@ -16,13 +16,20 @@ interface Props {
 }
 
 const StepBackgroundSelection = ({
-  categoryId, selected, aspectRatio, onSelect, onAspectRatioChange, onBack, onNext, onUpload,
+  categoryId,
+  selected,
+  aspectRatio,
+  onSelect,
+  onAspectRatioChange,
+  onBack,
+  onNext,
+  onUpload,
 }: Props) => {
   const allBackgrounds = useBackgrounds();
   const bgs = allBackgrounds[categoryId] || [];
   const fileRef = useRef<HTMLInputElement>(null);
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFile = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     const reader = new FileReader();
@@ -31,13 +38,12 @@ const StepBackgroundSelection = ({
   };
 
   return (
-    <div className="flex flex-col items-center gap-6 px-4 py-6 w-full max-w-lg mx-auto">
-      <h1 className="text-3xl font-bold text-foreground text-center">選擇背景</h1>
-      <p className="text-xl text-muted-foreground text-center">請選擇喜歡的背景圖</p>
+    <div className="flex flex-col items-center gap-6 px-4 py-6 w-full max-w-5xl mx-auto">
+      <h1 className="text-3xl font-bold text-foreground text-center">選背景</h1>
+      <p className="text-xl text-muted-foreground text-center">挑一張背景，或上傳自己的照片。</p>
 
-      {/* Aspect Ratio */}
       <div className="w-full">
-        <p className="text-lg font-bold text-foreground mb-2">圖片比例：</p>
+        <p className="text-lg font-bold text-foreground mb-2">版面比例</p>
         <div className="flex gap-2">
           {aspectRatios.map((ar) => (
             <button
@@ -57,22 +63,35 @@ const StepBackgroundSelection = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 w-full">
-        {bgs.map((bg) => (
-          <button
-            key={bg.id}
-            onClick={() => onSelect(bg)}
-            className={`rounded-2xl border-4 transition-all ${
-              selected?.id === bg.id ? "border-primary ring-4 ring-primary/30 scale-105" : "border-border"
-            }`}
-            style={{
-              background: bg.gradient,
-              aspectRatio: `${aspectRatio.width}/${aspectRatio.height}`,
-            }}
-          >
-            <span className="text-lg font-bold text-white drop-shadow-md">{bg.name}</span>
-          </button>
-        ))}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
+        {bgs.map((bg) => {
+          const style: React.CSSProperties = bg.image
+            ? {
+                backgroundImage: `${bg.image ? `url(${bg.image})` : ""}, ${bg.gradient}`,
+                backgroundSize: "cover, cover",
+                backgroundPosition: "center, center",
+              }
+            : {
+                backgroundImage: bg.gradient,
+              };
+
+          return (
+            <button
+              key={bg.id}
+              onClick={() => onSelect(bg)}
+              className={`relative overflow-hidden rounded-2xl border-4 transition-all ${
+                selected?.id === bg.id ? "border-primary ring-4 ring-primary/30 scale-105" : "border-border"
+              }`}
+              style={{
+                ...style,
+                aspectRatio: `${aspectRatio.width}/${aspectRatio.height}`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black/25" />
+              <span className="relative z-10 text-lg font-bold text-white drop-shadow-md">{bg.name}</span>
+            </button>
+          );
+        })}
       </div>
 
       <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
@@ -81,7 +100,7 @@ const StepBackgroundSelection = ({
         className="min-h-[60px] text-xl w-full gap-3"
         onClick={() => fileRef.current?.click()}
       >
-        <Upload size={28} /> 上傳自己的背景
+        <Upload size={28} /> 上傳自己的照片
       </Button>
 
       <div className="flex gap-4 w-full mt-2">

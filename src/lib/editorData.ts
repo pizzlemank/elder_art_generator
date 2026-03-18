@@ -1,4 +1,4 @@
-// Type definitions — data is loaded from public/data/*.json
+﻿// Type definitions and data loaders
 
 export interface Category {
   id: string;
@@ -6,12 +6,14 @@ export interface Category {
   icon: string;
   description: string;
   color: string;
+  featuredImage?: string;
 }
 
 export interface Background {
   id: string;
   name: string;
   gradient: string;
+  image?: string;
 }
 
 export interface TextColor {
@@ -36,7 +38,7 @@ export const textColors: TextColor[] = [
 
 export const extraColors: TextColor[] = [
   { id: "pink", name: "粉", hex: "#ec4899" },
-  { id: "orange", name: "橙", hex: "#f97316" },
+  { id: "orange", name: "橘", hex: "#f97316" },
   { id: "green", name: "綠", hex: "#16a34a" },
   { id: "blue", name: "藍", hex: "#2563eb" },
   { id: "purple", name: "紫", hex: "#9333ea" },
@@ -44,9 +46,9 @@ export const extraColors: TextColor[] = [
 ];
 
 export const fontOptions: FontOption[] = [
-  { id: "serif", name: "明體", family: "serif" },
-  { id: "sans", name: "黑體", family: "sans-serif" },
-  { id: "cursive", name: "手寫", family: "cursive" },
+  { id: "serif", name: "明體", family: "'PMingLiU', 'MingLiU', 'Songti TC', serif" },
+  { id: "sans", name: "黑體", family: "'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif" },
+  { id: "cursive", name: "手寫", family: "'DFKai-SB', 'BiauKai', 'KaiTi', cursive" },
   { id: "kaiti", name: "楷體", family: "'KaiTi', 'DFKai-SB', 'BiauKai', serif" },
 ];
 

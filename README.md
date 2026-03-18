@@ -1,8 +1,12 @@
-# My Awesome Art Generator
+﻿# 長輩圖工作室 (Elder Art Generator)
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+
+## Elevator pitch
+
+在華語社群中，長輩常把祝福圖片轉傳到群組或親友。長輩圖工作室提供簡單的步驟，讓長輩能自己挑主題、選背景、加文字，做出專屬的祝福圖。
 
 ## How can I edit this code?
 
@@ -59,6 +63,22 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Roadmap
+
+| Status | Item |
+| --- | --- |
+| Now | 修正所有亂碼與壞掉的 JSX/JSON |
+| Now | 文字放置置中、邊界限制、對齊輔助線 |
+| Now | Undo/Redo 與清除文字 |
+| Now | 下載 + 分享（Web Share API） |
+| Next | 多行文字、對齊、行距控制 |
+| Next | 貼圖/動畫文字 |
+| Next | 儲存常用祝福語 |
+| Next | 高對比或更大字 UI 微調 |
+| Later | 去除浮水印、進階模板/字體（付費） |
+| Later | 商業版：品牌 Logo、批次輸出 |
+| Later | 印刷/合作服務 |
 
 ## How can I deploy this project?
 

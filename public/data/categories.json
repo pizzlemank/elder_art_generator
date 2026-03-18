@@ -1,23 +1,26 @@
-[
+﻿[
   {
     "id": "cny",
-    "name": "農曆新年",
+    "name": "新年祝福",
     "icon": "🧧",
-    "description": "新年快樂、恭喜發財",
-    "color": "bg-red-100 border-red-400"
+    "description": "過年問候、平安吉祥",
+    "color": "bg-red-100 border-red-400",
+    "featuredImage": "/backgrounds/cny/01.jpg"
   },
   {
     "id": "morning",
     "name": "早安問候",
     "icon": "🌅",
-    "description": "早安吉祥、美好一天",
-    "color": "bg-orange-100 border-orange-400"
+    "description": "每日問安、傳遞好心情",
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/morning/01.jpg"
   },
   {
     "id": "health",
-    "name": "健康祝福",
-    "icon": "💚",
-    "description": "身體健康、平安喜樂",
-    "color": "bg-green-100 border-green-400"
+    "name": "健康平安",
+    "icon": "🍀",
+    "description": "祝身體健康、平安順心",
+    "color": "bg-green-100 border-green-400",
+    "featuredImage": "/backgrounds/health/01.jpg"
   }
 ]

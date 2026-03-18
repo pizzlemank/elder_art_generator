@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { usePhrases } from "@/hooks/useEditorData";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
@@ -24,7 +24,12 @@ const PhraseSelector = ({ categoryId, onAdd }: Props) => {
     <div className="w-full">
       <div className="flex flex-wrap gap-2 mb-3">
         {phrases.map((p) => (
-          <Button key={p} variant="outline" className="min-h-[48px] text-lg font-bold px-4" onClick={() => onAdd(p)}>
+          <Button
+            key={p}
+            variant="outline"
+            className="min-h-[48px] text-lg font-bold px-4"
+            onClick={() => onAdd(p)}
+          >
             {p}
           </Button>
         ))}
@@ -35,7 +40,7 @@ const PhraseSelector = ({ categoryId, onAdd }: Props) => {
           value={customText}
           onChange={(e) => setCustomText(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleAddCustom()}
-          placeholder="輸入自訂文字..."
+          placeholder="輸入自訂文字"
           className="flex-1 min-h-[48px] text-lg px-4 rounded-xl border-4 border-muted bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
         />
         <Button className="min-h-[48px] min-w-[48px]" onClick={handleAddCustom} disabled={!customText.trim()}>

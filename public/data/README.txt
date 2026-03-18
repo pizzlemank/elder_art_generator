@@ -1,85 +1,69 @@
-=====================================================
-  長輩圖製作器 — 資料管理說明 (Moderator Guide)
+﻿=====================================================
+  長輩圖工作室 資料設定指南 (Content Guide)
 =====================================================
 
-本資料夾包含所有使用者可選用的主題、背景及祝福語。
-修改這些 JSON 檔案後，重新部署即可生效。
+這裡的 JSON 檔案用來管理「主題、背景、祝福語」。
+修改後重新整理頁面即可生效。
 
 -----------------------------------------------------
-📁 檔案結構
+檔案位置
 -----------------------------------------------------
-
 public/data/
-├── categories.json     ← 主題分類 (Theme categories)
-├── backgrounds.json    ← 各主題的背景選項 (Backgrounds per theme)
-├── phrases.json        ← 各主題的祝福語 (Blessing phrases per theme)
-└── README.txt          ← 本說明檔
+- categories.json   主題清單
+- backgrounds.json  各主題的背景清單
+- phrases.json      各主題的祝福語
+- README.txt        本說明
 
 -----------------------------------------------------
-📝 如何新增主題 (Adding a new theme)
+新增主題 (categories.json)
 -----------------------------------------------------
+例：
+{
+  "id": "birthday",
+  "name": "生日祝福",
+  "icon": "🎂",
+  "description": "生日問候、祝福滿滿",
+  "color": "bg-purple-100 border-purple-400",
+  "featuredImage": "/backgrounds/birthday/01.jpg"
+}
 
-1. 開啟 categories.json，新增一個物件：
-
-   {
-     "id": "birthday",          ← 唯一識別碼 (英文, 不可重複)
-     "name": "生日快樂",         ← 顯示名稱 (繁體中文)
-     "icon": "🎂",              ← Emoji 圖示
-     "description": "生日祝福",  ← 簡短描述
-     "color": "bg-purple-100 border-purple-400"  ← Tailwind 顏色 class
-   }
-
-   可用顏色: red, orange, yellow, green, blue, purple, pink
-   格式: bg-{color}-100 border-{color}-400
-
-2. 在 backgrounds.json 中新增對應 key：
-
-   "birthday": [
-     {
-       "id": "bd1",
-       "name": "繽紛彩虹",
-       "gradient": "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)"
-     }
-   ]
-
-   gradient 格式: linear-gradient(角度, 顏色1 位置%, 顏色2 位置%)
-   角度: 135deg (對角) 或 180deg (垂直)
-   顏色: 使用 hex 色碼 (例如 #dc2626)
-   可使用 https://cssgradient.io/ 產生漸層
-
-3. 在 phrases.json 中新增對應 key：
-
-   "birthday": ["生日快樂", "年年有今日", "心想事成", "青春永駐"]
+說明：
+- id 用英數小寫，需與 backgrounds.json、phrases.json 的 key 一致
+- color 為 Tailwind 色票（例如 bg-red-100 border-red-400）
+- featuredImage 為主題卡片的預覽圖（可省略）
 
 -----------------------------------------------------
-📝 如何修改現有內容
+新增背景 (backgrounds.json)
 -----------------------------------------------------
+例：
+"birthday": [
+  {
+    "id": "birthday-01",
+    "name": "生日快樂",
+    "gradient": "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)",
+    "image": "/backgrounds/birthday/01.jpg"
+  }
+]
 
-- 修改祝福語: 直接編輯 phrases.json 中對應主題的陣列
-- 修改背景: 編輯 backgrounds.json 中對應主題的物件
-- 修改主題名稱/圖示: 編輯 categories.json 中對應物件
+說明：
+- image 可省略；如果沒有圖片，會顯示漸層色
+- gradient 為 CSS 線性漸層，用來當預設或圖片失敗時的備用
+
+建議圖片放置：
+public/backgrounds/<categoryId>/
+例如：public/backgrounds/birthday/01.jpg
 
 -----------------------------------------------------
-⚠️ 注意事項
+新增祝福語 (phrases.json)
 -----------------------------------------------------
-
-- 所有 JSON 檔案必須是合法 JSON 格式
-  (可用 https://jsonlint.com/ 驗證)
-- id 欄位必須唯一，不可重複
-- categories.json 中的 id 必須與 backgrounds.json 
-  和 phrases.json 中的 key 一致
-- 修改後需重新部署才會生效
-- 建議先在本機測試後再部署
+例：
+"birthday": ["生日快樂", "福如東海", "平安順心"]
 
 -----------------------------------------------------
-🎨 背景漸層工具
+注意事項
 -----------------------------------------------------
-
-推薦使用以下工具產生 CSS 漸層：
-- https://cssgradient.io/
-- https://www.grabient.com/
-
-將產生的 CSS gradient 複製到 backgrounds.json 的 
-gradient 欄位即可。
+- JSON 必須是正確格式（可用 jsonlint.com 檢查）
+- categories.json 的 id 必須對應 backgrounds.json 與 phrases.json 的 key
+- 圖片路徑為公開路徑，以 / 開頭
 
 =====================================================

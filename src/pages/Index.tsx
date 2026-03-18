@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { fabric } from "fabric";
 import StepProgress from "@/components/StepProgress";
 import StepThemeSelection from "@/components/StepThemeSelection";
@@ -8,6 +8,12 @@ import StepDownload from "@/components/StepDownload";
 import { type Category, type Background, type AspectRatioOption, aspectRatios } from "@/lib/editorData";
 
 const TOTAL_STEPS = 4;
+const STEP_LABELS: Record<number, string> = {
+  1: "選主題",
+  2: "選背景",
+  3: "加文字",
+  4: "下載/分享",
+};
 
 const Index = () => {
   const [step, setStep] = useState(1);
@@ -25,11 +31,14 @@ const Index = () => {
     setStep(2);
   };
 
-  const handleBgSelect = (bg: Background) => { setBackground(bg); setUploadedBg(null); };
+  const handleBgSelect = (bg: Background) => {
+    setBackground(bg);
+    setUploadedBg(null);
+  };
 
   const handleBgUpload = (dataUrl: string) => {
     setUploadedBg(dataUrl);
-    setBackground({ id: "custom", name: "自訂背景", gradient: "" });
+    setBackground({ id: "custom", name: "自訂照片", gradient: "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)" });
   };
 
   const handleCanvasNext = (canvas: fabric.Canvas) => {
@@ -45,9 +54,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <header className="bg-card border-b-2 border-border py-3 px-4 text-center">
-        <h2 className="text-2xl font-bold text-foreground">🎨 長輩圖製作器</h2>
+        <h2 className="text-2xl font-bold text-foreground">長輩圖工作室</h2>
+        <p className="text-sm text-muted-foreground">Elder Art Generator</p>
       </header>
-      <StepProgress currentStep={step} totalSteps={TOTAL_STEPS} />
+      <StepProgress currentStep={step} totalSteps={TOTAL_STEPS} label={STEP_LABELS[step]} />
       <main className="flex-1 pb-8">
         {step === 1 && <StepThemeSelection onSelect={handleCategorySelect} />}
         {step === 2 && category && (

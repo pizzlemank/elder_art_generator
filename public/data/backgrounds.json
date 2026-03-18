@@ -1,20 +1,80 @@
-{
+﻿{
   "cny": [
-    { "id": "cny1", "name": "喜慶紅", "gradient": "linear-gradient(135deg, #dc2626 0%, #f59e0b 100%)" },
-    { "id": "cny2", "name": "金碧輝煌", "gradient": "linear-gradient(180deg, #b91c1c 0%, #fbbf24 50%, #dc2626 100%)" },
-    { "id": "cny3", "name": "紅運當頭", "gradient": "linear-gradient(135deg, #991b1b 0%, #ef4444 50%, #fcd34d 100%)" },
-    { "id": "cny4", "name": "春暖花開", "gradient": "linear-gradient(180deg, #fbbf24 0%, #f87171 50%, #dc2626 100%)" }
+    {
+      "id": "cny-01",
+      "name": "紅金喜氣",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
+      "image": "/backgrounds/cny/01.jpg"
+    },
+    {
+      "id": "cny-02",
+      "name": "福氣滿滿",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #facc15 100%)",
+      "image": "/backgrounds/cny/02.jpg"
+    },
+    {
+      "id": "cny-03",
+      "name": "喜氣春暖",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "image": "/backgrounds/cny/03.jpg"
+    },
+    {
+      "id": "cny-04",
+      "name": "金玉滿堂",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)",
+      "image": "/backgrounds/cny/04.jpg"
+    }
   ],
   "morning": [
-    { "id": "m1", "name": "朝霞", "gradient": "linear-gradient(180deg, #fcd34d 0%, #fb923c 50%, #f97316 100%)" },
-    { "id": "m2", "name": "晨曦", "gradient": "linear-gradient(135deg, #a7f3d0 0%, #fde68a 50%, #fdba74 100%)" },
-    { "id": "m3", "name": "清晨藍", "gradient": "linear-gradient(180deg, #93c5fd 0%, #fde68a 100%)" },
-    { "id": "m4", "name": "日出", "gradient": "linear-gradient(180deg, #1e3a5f 0%, #f97316 40%, #fbbf24 100%)" }
+    {
+      "id": "morning-01",
+      "name": "陽光早晨",
+      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
+      "image": "/backgrounds/morning/01.jpg"
+    },
+    {
+      "id": "morning-02",
+      "name": "清新藍天",
+      "gradient": "linear-gradient(135deg, #60a5fa 0%, #bae6fd 100%)",
+      "image": "/backgrounds/morning/02.jpg"
+    },
+    {
+      "id": "morning-03",
+      "name": "溫柔晨光",
+      "gradient": "linear-gradient(135deg, #fda4af 0%, #fecdd3 100%)",
+      "image": "/backgrounds/morning/03.jpg"
+    },
+    {
+      "id": "morning-04",
+      "name": "清爽綠意",
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #bbf7d0 100%)",
+      "image": "/backgrounds/morning/04.jpg"
+    }
   ],
   "health": [
-    { "id": "h1", "name": "生機盎然", "gradient": "linear-gradient(135deg, #22c55e 0%, #a7f3d0 100%)" },
-    { "id": "h2", "name": "寧靜", "gradient": "linear-gradient(180deg, #86efac 0%, #34d399 50%, #059669 100%)" },
-    { "id": "h3", "name": "自然", "gradient": "linear-gradient(135deg, #4ade80 0%, #a3e635 50%, #fde68a 100%)" },
-    { "id": "h4", "name": "清新", "gradient": "linear-gradient(180deg, #bfdbfe 0%, #86efac 50%, #22c55e 100%)" }
+    {
+      "id": "health-01",
+      "name": "平安健康",
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
+      "image": "/backgrounds/health/01.jpg"
+    },
+    {
+      "id": "health-02",
+      "name": "溫暖關懷",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fde68a 100%)",
+      "image": "/backgrounds/health/02.jpg"
+    },
+    {
+      "id": "health-03",
+      "name": "清新祝福",
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #a5f3fc 100%)",
+      "image": "/backgrounds/health/03.jpg"
+    },
+    {
+      "id": "health-04",
+      "name": "柔和紫意",
+      "gradient": "linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%)",
+      "image": "/backgrounds/health/04.jpg"
+    }
   ]
 }
