@@ -1,18 +1,17 @@
-import { categories, type Category } from "@/lib/editorData";
+import { type Category } from "@/lib/editorData";
+import { useCategories } from "@/hooks/useEditorData";
 
 interface Props {
   onSelect: (category: Category) => void;
 }
 
 const StepThemeSelection = ({ onSelect }: Props) => {
+  const categories = useCategories();
+
   return (
     <div className="flex flex-col items-center gap-6 px-4 py-6 w-full max-w-lg mx-auto">
-      <h1 className="text-3xl font-bold text-foreground text-center">
-        選擇主題
-      </h1>
-      <p className="text-xl text-muted-foreground text-center">
-        請選擇您想製作的祝福圖類型
-      </p>
+      <h1 className="text-3xl font-bold text-foreground text-center">選擇主題</h1>
+      <p className="text-xl text-muted-foreground text-center">請選擇您想製作的祝福圖類型</p>
       <div className="flex flex-col gap-5 w-full">
         {categories.map((cat) => (
           <button

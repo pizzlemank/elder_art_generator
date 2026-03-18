@@ -1,4 +1,5 @@
-import { backgrounds, type Background } from "@/lib/editorData";
+import { type Background, type AspectRatioOption, aspectRatios } from "@/lib/editorData";
+import { useBackgrounds } from "@/hooks/useEditorData";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Upload } from "lucide-react";
 import { useRef } from "react";
@@ -6,14 +7,19 @@ import { useRef } from "react";
 interface Props {
   categoryId: string;
   selected: Background | null;
+  aspectRatio: AspectRatioOption;
   onSelect: (bg: Background) => void;
+  onAspectRatioChange: (ar: AspectRatioOption) => void;
   onBack: () => void;
   onNext: () => void;
   onUpload: (dataUrl: string) => void;
 }
 
-const StepBackgroundSelection = ({ categoryId, selected, onSelect, onBack, onNext, onUpload }: Props) => {
-  const bgs = backgrounds[categoryId] || [];
+const StepBackgroundSelection = ({
+  categoryId, selected, aspectRatio, onSelect, onAspectRatioChange, onBack, onNext, onUpload,
+}: Props) => {
+  const allBackgrounds = useBackgrounds();
+  const bgs = allBackgrounds[categoryId] || [];
   const fileRef = useRef<HTMLInputElement>(null);
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,15 +35,40 @@ const StepBackgroundSelection = ({ categoryId, selected, onSelect, onBack, onNex
       <h1 className="text-3xl font-bold text-foreground text-center">選擇背景</h1>
       <p className="text-xl text-muted-foreground text-center">請選擇喜歡的背景圖</p>
 
+      {/* Aspect Ratio */}
+      <div className="w-full">
+        <p className="text-lg font-bold text-foreground mb-2">圖片比例：</p>
+        <div className="flex gap-2">
+          {aspectRatios.map((ar) => (
+            <button
+              key={ar.id}
+              onClick={() => onAspectRatioChange(ar)}
+              className={`flex-1 min-h-[56px] rounded-xl border-4 text-lg font-bold transition-all ${
+                aspectRatio.id === ar.id
+                  ? "border-primary ring-4 ring-primary/30 bg-primary/10"
+                  : "border-muted bg-card"
+              }`}
+            >
+              {ar.name}
+              <br />
+              <span className="text-sm text-muted-foreground">{ar.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className="grid grid-cols-2 gap-4 w-full">
         {bgs.map((bg) => (
           <button
             key={bg.id}
             onClick={() => onSelect(bg)}
-            className={`aspect-[3/4] rounded-2xl border-4 transition-all ${
+            className={`rounded-2xl border-4 transition-all ${
               selected?.id === bg.id ? "border-primary ring-4 ring-primary/30 scale-105" : "border-border"
             }`}
-            style={{ background: bg.gradient }}
+            style={{
+              background: bg.gradient,
+              aspectRatio: `${aspectRatio.width}/${aspectRatio.height}`,
+            }}
           >
             <span className="text-lg font-bold text-white drop-shadow-md">{bg.name}</span>
           </button>
@@ -57,11 +88,7 @@ const StepBackgroundSelection = ({ categoryId, selected, onSelect, onBack, onNex
         <Button variant="secondary" className="flex-1 min-h-[60px] text-xl gap-2" onClick={onBack}>
           <ChevronLeft size={28} /> 上一步
         </Button>
-        <Button
-          className="flex-1 min-h-[60px] text-xl gap-2"
-          onClick={onNext}
-          disabled={!selected}
-        >
+        <Button className="flex-1 min-h-[60px] text-xl gap-2" onClick={onNext} disabled={!selected}>
           下一步 <ChevronRight size={28} />
         </Button>
       </div>
