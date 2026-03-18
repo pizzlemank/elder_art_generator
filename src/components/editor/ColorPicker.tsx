@@ -10,7 +10,7 @@ interface Props {
 const ColorSwatch = ({ color, active, onClick }: { color: TextColor; active: boolean; onClick: () => void }) => (
   <button
     onClick={onClick}
-    className={`min-h-[48px] min-w-[56px] rounded-xl border-4 text-base font-bold transition-all ${
+    className={`min-h-[44px] min-w-[52px] rounded-xl border-4 text-base font-bold transition-all ${
       active ? "ring-4 ring-primary/40 scale-110 border-primary" : "border-muted"
     }`}
     style={{
@@ -27,14 +27,13 @@ const ColorPicker = ({ activeColor, onChange }: Props) => {
 
   return (
     <div className="w-full">
-      <p className="text-lg font-bold text-foreground mb-2">文字顏色：</p>
       <div className="flex flex-wrap gap-2">
         {textColors.map((c) => (
           <ColorSwatch key={c.id} color={c} active={activeColor === c.hex} onClick={() => onChange(c.hex)} />
         ))}
         <button
           onClick={() => setShowMore(!showMore)}
-          className="min-h-[48px] min-w-[56px] rounded-xl border-4 border-muted text-base font-bold bg-secondary text-secondary-foreground flex items-center justify-center gap-1"
+          className="min-h-[44px] min-w-[52px] rounded-xl border-4 border-muted text-base font-bold bg-secondary text-secondary-foreground flex items-center justify-center gap-1"
         >
           更多 {showMore ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </button>

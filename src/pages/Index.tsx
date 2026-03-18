@@ -5,7 +5,7 @@ import StepThemeSelection from "@/components/StepThemeSelection";
 import StepBackgroundSelection from "@/components/StepBackgroundSelection";
 import StepTextEditor from "@/components/StepTextEditor";
 import StepDownload from "@/components/StepDownload";
-import { type Category, type Background } from "@/lib/editorData";
+import { type Category, type Background, type AspectRatioOption, aspectRatios } from "@/lib/editorData";
 
 const TOTAL_STEPS = 4;
 
@@ -14,6 +14,7 @@ const Index = () => {
   const [category, setCategory] = useState<Category | null>(null);
   const [background, setBackground] = useState<Background | null>(null);
   const [uploadedBg, setUploadedBg] = useState<string | null>(null);
+  const [aspectRatio, setAspectRatio] = useState<AspectRatioOption>(aspectRatios[0]);
   const [finalImage, setFinalImage] = useState<string>("");
   const [textPrefix, setTextPrefix] = useState<string>("");
 
@@ -24,10 +25,7 @@ const Index = () => {
     setStep(2);
   };
 
-  const handleBgSelect = (bg: Background) => {
-    setBackground(bg);
-    setUploadedBg(null);
-  };
+  const handleBgSelect = (bg: Background) => { setBackground(bg); setUploadedBg(null); };
 
   const handleBgUpload = (dataUrl: string) => {
     setUploadedBg(dataUrl);
@@ -37,7 +35,6 @@ const Index = () => {
   const handleCanvasNext = (canvas: fabric.Canvas) => {
     canvas.discardActiveObject();
     canvas.renderAll();
-    // Extract first text for filename
     const textObj = canvas.getObjects().find((o) => o.type === "i-text") as fabric.IText | undefined;
     setTextPrefix(textObj?.text || "");
     const dataUrl = canvas.toDataURL({ format: "jpeg", quality: 0.92 });
@@ -57,7 +54,9 @@ const Index = () => {
           <StepBackgroundSelection
             categoryId={category.id}
             selected={background}
+            aspectRatio={aspectRatio}
             onSelect={handleBgSelect}
+            onAspectRatioChange={setAspectRatio}
             onBack={() => setStep(1)}
             onNext={() => setStep(3)}
             onUpload={handleBgUpload}
@@ -68,6 +67,7 @@ const Index = () => {
             categoryId={category.id}
             background={background}
             uploadedBg={uploadedBg}
+            aspectRatio={aspectRatio}
             onBack={() => setStep(2)}
             onNext={handleCanvasNext}
           />

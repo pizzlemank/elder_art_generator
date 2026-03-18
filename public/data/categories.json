@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cny",
+    "name": "農曆新年",
+    "icon": "🧧",
+    "description": "新年快樂、恭喜發財",
+    "color": "bg-red-100 border-red-400"
+  },
+  {
+    "id": "morning",
+    "name": "早安問候",
+    "icon": "🌅",
+    "description": "早安吉祥、美好一天",
+    "color": "bg-orange-100 border-orange-400"
+  },
+  {
+    "id": "health",
+    "name": "健康祝福",
+    "icon": "💚",
+    "description": "身體健康、平安喜樂",
+    "color": "bg-green-100 border-green-400"
+  }
+]
