@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# My Awesome Art Generator
 
 ## Project info
 
