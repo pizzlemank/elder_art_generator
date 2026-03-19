@@ -495,6 +495,7 @@ const StepTextEditor = ({
     uploadedBg,
     CANVAS_W,
     CANVAS_H,
+    bgLocked,
     clampToCanvas,
     pushHistory,
     fitImageToCanvas,
