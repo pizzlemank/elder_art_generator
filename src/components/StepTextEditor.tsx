@@ -14,6 +14,7 @@ interface Props {
   background: Background;
   uploadedBg: string | null;
   aspectRatio: AspectRatioOption;
+  expertMode?: boolean;
   onBack: () => void;
   onNext: (canvas: fabric.Canvas) => void;
   initialCanvasJson?: string | null;
