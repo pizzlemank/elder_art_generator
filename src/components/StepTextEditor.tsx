@@ -382,6 +382,7 @@ const StepTextEditor = ({
         height: CANVAS_H,
         selectable: false,
         evented: false,
+        data: { isBgImage: true },
       });
       rect.set("fill", createFabricGradient(background.gradient, CANVAS_W, CANVAS_H));
       fc.add(rect);
