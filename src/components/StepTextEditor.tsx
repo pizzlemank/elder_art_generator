@@ -416,7 +416,7 @@ const StepTextEditor = ({
       loadImage(
         src,
         (img) => {
-          fitImageToCanvas(img, bgLocked);
+          fitImageToCanvas(img, bgLockedRef.current);
           fc.add(img);
           fc.sendToBack(img);
           fc.renderAll();
