@@ -2,7 +2,7 @@
 import { fabric } from "fabric";
 import { type Background, type AspectRatioOption } from "@/lib/editorData";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, RotateCcw, Undo2, Redo2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, RotateCcw, Undo2, Redo2, Lock, Unlock } from "lucide-react";
 import PhraseSelector from "@/components/editor/PhraseSelector";
 import ColorPicker from "@/components/editor/ColorPicker";
 import FontControls from "@/components/editor/FontControls";
