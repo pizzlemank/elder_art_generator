@@ -1,4 +1,5 @@
 ﻿import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import { fabric } from "fabric";
 import StepProgress from "@/components/StepProgress";
