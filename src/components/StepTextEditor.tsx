@@ -643,6 +643,7 @@ const StepTextEditor = ({
     if (!fc) return;
     const newLocked = !bgLocked;
     setBgLocked(newLocked);
+    bgLockedRef.current = newLocked;
     fc.getObjects().forEach((obj) => {
       if (obj.data?.isBgImage) {
         obj.set({
