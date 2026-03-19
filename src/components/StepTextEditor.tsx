@@ -638,6 +638,57 @@ const StepTextEditor = ({
     if (fc) pushHistory(fc);
   };
 
+  const toggleBgLock = () => {
+    const fc = fabricRef.current;
+    if (!fc) return;
+    const newLocked = !bgLocked;
+    setBgLocked(newLocked);
+    fc.getObjects().forEach((obj) => {
+      if (obj.data?.isBgImage) {
+        obj.set({
+          selectable: !newLocked,
+          evented: !newLocked,
+          hasControls: !newLocked,
+          lockMovementX: newLocked,
+          lockMovementY: newLocked,
+          hoverCursor: newLocked ? "default" : "move",
+        });
+      }
+    });
+    fc.discardActiveObject();
+    fc.renderAll();
+  };
+
+  const addGifSticker = (url: string) => {
+    const fc = fabricRef.current;
+    if (!fc) return;
+    const imgEl = new Image();
+    imgEl.crossOrigin = "anonymous";
+    imgEl.onload = () => {
+      const fImg = new fabric.Image(imgEl, {
+        left: CANVAS_W / 2,
+        top: CANVAS_H / 2,
+        originX: "center",
+        originY: "center",
+        scaleX: Math.min(200 / (imgEl.width || 200), 1),
+        scaleY: Math.min(200 / (imgEl.height || 200), 1),
+        data: { isGifSticker: true },
+      });
+      fImg.set({
+        borderColor: "#ef4444",
+        cornerColor: "#ef4444",
+        cornerStyle: "circle",
+        cornerSize: 14,
+        transparentCorners: false,
+      });
+      fc.add(fImg);
+      fc.setActiveObject(fImg);
+      fc.renderAll();
+      pushHistory(fc);
+    };
+    imgEl.src = url;
+  };
+
   const handleReset = () => {
     const fc = fabricRef.current;
     if (!fc) return;
