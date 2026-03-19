@@ -321,14 +321,21 @@ const StepTextEditor = ({
     setDisplayScale(scale);
   }, [CANVAS_W, CANVAS_H]);
 
-  const fitImageToCanvas = useCallback((img: fabric.Image) => {
-    const scale = Math.min(CANVAS_W / (img.width || 1), CANVAS_H / (img.height || 1));
-    img.scale(scale);
+  const fitImageToCanvas = useCallback((img: fabric.Image, locked = true) => {
+    const scaleVal = Math.max(CANVAS_W / (img.width || 1), CANVAS_H / (img.height || 1));
+    img.scale(scaleVal);
     img.set({
-      left: (CANVAS_W - img.getScaledWidth()) / 2,
-      top: (CANVAS_H - img.getScaledHeight()) / 2,
-      selectable: false,
-      evented: false,
+      left: CANVAS_W / 2,
+      top: CANVAS_H / 2,
+      originX: "center",
+      originY: "center",
+      selectable: !locked,
+      evented: !locked,
+      hasControls: !locked,
+      lockMovementX: locked,
+      lockMovementY: locked,
+      hoverCursor: locked ? "default" : "move",
+      data: { isBgImage: true },
     });
   }, [CANVAS_W, CANVAS_H]);
 
