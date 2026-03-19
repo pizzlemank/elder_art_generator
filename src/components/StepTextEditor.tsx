@@ -811,7 +811,7 @@ const StepTextEditor = ({
             <AccordionItem value="gif" className="border rounded-xl px-3 bg-card border-amber-400">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">🧪 GIF 貼圖 (Beta)</AccordionTrigger>
               <AccordionContent>
-                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為靜態第一幀）</p>
+                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為 PNG 靜態圖）</p>
                 <div className="grid grid-cols-3 gap-2">
                   {SAMPLE_GIFS.map((gif) => (
                     <button
