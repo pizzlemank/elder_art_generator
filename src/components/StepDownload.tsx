@@ -9,14 +9,15 @@ interface Props {
   onBack: () => void;
 }
 
-function getSmartFilename(textPrefix: string): string {
+function getSmartFilename(textPrefix: string, dataUrl: string): string {
   const now = new Date();
   const yy = String(now.getFullYear()).slice(-2);
   const mm = String(now.getMonth() + 1).padStart(2, "0");
   const dd = String(now.getDate()).padStart(2, "0");
   const datePart = `${yy}${mm}${dd}`;
   const prefix = textPrefix.replace(/[^\u4e00-\u9fff\w]/g, "").slice(0, 8) || "祝福圖";
-  return `${prefix}_${datePart}.jpg`;
+  const ext = dataUrl.startsWith("data:image/png") ? "png" : "jpg";
+  return `${prefix}_${datePart}.${ext}`;
 }
 
 function dataUrlToBlob(dataUrl: string): Blob {
@@ -33,13 +34,13 @@ function dataUrlToBlob(dataUrl: string): Blob {
 const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.download = getSmartFilename(textPrefix);
+    link.download = getSmartFilename(textPrefix, imageDataUrl);
     link.href = imageDataUrl;
     link.click();
   };
 
   const handleShare = async () => {
-    const filename = getSmartFilename(textPrefix);
+    const filename = getSmartFilename(textPrefix, imageDataUrl);
     try {
       const blob = dataUrlToBlob(imageDataUrl);
       const file = new File([blob], filename, { type: blob.type });

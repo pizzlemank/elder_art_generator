@@ -69,6 +69,7 @@ const StepTextEditor = ({
   const [canRedo, setCanRedo] = useState(false);
   const [displayScale, setDisplayScale] = useState(1);
   const [bgLocked, setBgLocked] = useState(true);
+  const bgLockedRef = useRef(true);
 
   const CANVAS_W = aspectRatio.width;
   const CANVAS_H = aspectRatio.height;
@@ -415,7 +416,7 @@ const StepTextEditor = ({
       loadImage(
         src,
         (img) => {
-          fitImageToCanvas(img, bgLocked);
+          fitImageToCanvas(img, bgLockedRef.current);
           fc.add(img);
           fc.sendToBack(img);
           fc.renderAll();
@@ -495,7 +496,6 @@ const StepTextEditor = ({
     uploadedBg,
     CANVAS_W,
     CANVAS_H,
-    bgLocked,
     clampToCanvas,
     pushHistory,
     fitImageToCanvas,
@@ -643,6 +643,7 @@ const StepTextEditor = ({
     if (!fc) return;
     const newLocked = !bgLocked;
     setBgLocked(newLocked);
+    bgLockedRef.current = newLocked;
     fc.getObjects().forEach((obj) => {
       if (obj.data?.isBgImage) {
         obj.set({
@@ -810,7 +811,7 @@ const StepTextEditor = ({
             <AccordionItem value="gif" className="border rounded-xl px-3 bg-card border-amber-400">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">🧪 GIF 貼圖 (Beta)</AccordionTrigger>
               <AccordionContent>
-                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為靜態第一幀）</p>
+                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為 PNG 靜態圖）</p>
                 <div className="grid grid-cols-3 gap-2">
                   {SAMPLE_GIFS.map((gif) => (
                     <button

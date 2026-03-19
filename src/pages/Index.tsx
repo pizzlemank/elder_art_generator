@@ -79,7 +79,10 @@ const Index = () => {
     canvas.renderAll();
     const textObj = canvas.getObjects().find((o) => o.type === "i-text") as fabric.IText | undefined;
     setTextPrefix(textObj?.text || "");
-    const dataUrl = canvas.toDataURL({ format: "jpeg", quality: 0.92 });
+    const hasGif = canvas.getObjects().some((o) => o.data?.isGifSticker);
+    const format = hasGif ? "png" : "jpeg";
+    const quality = hasGif ? 1 : 0.92;
+    const dataUrl = canvas.toDataURL({ format, quality });
     setFinalImage(dataUrl);
     setStep(4);
   };
