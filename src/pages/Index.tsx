@@ -112,6 +112,7 @@ const Index = () => {
             background={background}
             uploadedBg={uploadedBg}
             aspectRatio={aspectRatio}
+            expertMode={expertMode}
             onBack={() => setStep(2)}
             onNext={handleCanvasNext}
             initialCanvasJson={canvasJson}
