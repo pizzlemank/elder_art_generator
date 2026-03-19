@@ -68,6 +68,7 @@ const StepTextEditor = ({
   const [canUndo, setCanUndo] = useState(false);
   const [canRedo, setCanRedo] = useState(false);
   const [displayScale, setDisplayScale] = useState(1);
+  const [bgLocked, setBgLocked] = useState(true);
 
   const CANVAS_W = aspectRatio.width;
   const CANVAS_H = aspectRatio.height;
