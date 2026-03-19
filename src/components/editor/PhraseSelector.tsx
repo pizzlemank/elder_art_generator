@@ -34,16 +34,16 @@ const PhraseSelector = ({ categoryId, onAdd }: Props) => {
           </Button>
         ))}
       </div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <input
           type="text"
           value={customText}
           onChange={(e) => setCustomText(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleAddCustom()}
           placeholder="輸入自訂文字"
-          className="flex-1 min-h-[48px] text-lg px-4 rounded-xl border-4 border-muted bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
+          className="flex-1 min-w-[180px] min-h-[48px] text-lg px-4 rounded-xl border-4 border-muted bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
         />
-        <Button className="min-h-[48px] min-w-[48px]" onClick={handleAddCustom} disabled={!customText.trim()}>
+        <Button className="min-h-[48px] min-w-[48px] shrink-0" onClick={handleAddCustom} disabled={!customText.trim()}>
           <Plus size={24} />
         </Button>
       </div>

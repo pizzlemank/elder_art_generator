@@ -10,7 +10,6 @@ const StepThemeSelection = ({ onSelect }: Props) => {
 
   return (
     <div className="flex flex-col items-center gap-6 px-4 py-6 w-full max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold text-foreground text-center">選主題</h1>
       <p className="text-xl text-muted-foreground text-center">先挑一個主題，接著選背景再加文字。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
         {categories.map((cat) => (
@@ -20,7 +19,7 @@ const StepThemeSelection = ({ onSelect }: Props) => {
             className={`flex items-center gap-4 w-full min-h-[110px] rounded-2xl border-4 ${cat.color} px-5 py-4 text-left transition-transform active:scale-95 hover:shadow-lg`}
           >
             <div
-              className="h-20 w-20 rounded-xl border-2 border-white/60 bg-card shadow-sm flex items-center justify-center text-3xl"
+              className="relative h-20 w-20 rounded-xl border-2 border-white/60 bg-card shadow-sm flex items-center justify-center text-3xl overflow-hidden"
               style={
                 cat.featuredImage
                   ? {
@@ -31,7 +30,7 @@ const StepThemeSelection = ({ onSelect }: Props) => {
                   : undefined
               }
             >
-              {!cat.featuredImage && <span>{cat.icon}</span>}
+              <span className="absolute bottom-1 right-1 text-xl drop-shadow">{cat.icon}</span>
             </div>
             <div className="flex-1">
               <p className="text-2xl font-bold text-foreground">{cat.name}</p>

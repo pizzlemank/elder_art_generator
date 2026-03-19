@@ -1,21 +1,23 @@
-﻿=====================================================
+=====================================================
   長輩圖工作室 資料設定指南 (Content Guide)
 =====================================================
 
-這裡的 JSON 檔案用來管理「主題、背景、祝福語」。
-修改後重新整理頁面即可生效。
+本專案採用「資料總表 + 資料同步」流程：
+1) 只編輯 themes.json
+2) 執行 sync-content 產生 categories.json / backgrounds.json / phrases.json
 
 -----------------------------------------------------
 檔案位置
 -----------------------------------------------------
 public/data/
-- categories.json   主題清單
-- backgrounds.json  各主題的背景清單
-- phrases.json      各主題的祝福語
-- README.txt        本說明
+- themes.json        你只需要改這個
+- categories.json    自動產生（勿手動修改）
+- backgrounds.json   自動產生（勿手動修改）
+- phrases.json       自動產生（勿手動修改）
+- README.txt         本說明
 
 -----------------------------------------------------
-新增主題 (categories.json)
+新增主題 + 祝福語 (themes.json)
 -----------------------------------------------------
 例：
 {
@@ -24,46 +26,41 @@ public/data/
   "icon": "🎂",
   "description": "生日問候、祝福滿滿",
   "color": "bg-purple-100 border-purple-400",
-  "featuredImage": "/backgrounds/birthday/01.jpg"
+  "featuredImage": "/backgrounds/birthday/01.jpg",
+  "defaultGradient": "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)",
+  "phrases": ["生日快樂", "福如東海", "平安順心"]
 }
 
 說明：
-- id 用英數小寫，需與 backgrounds.json、phrases.json 的 key 一致
+- id 用英數小寫，需與資料夾名稱一致（public/backgrounds/<id>/）
 - color 為 Tailwind 色票（例如 bg-red-100 border-red-400）
 - featuredImage 為主題卡片的預覽圖（可省略）
+- defaultGradient 為圖片失敗時的備用漸層
 
 -----------------------------------------------------
-新增背景 (backgrounds.json)
+新增背景圖 (資料夾)
 -----------------------------------------------------
-例：
-"birthday": [
-  {
-    "id": "birthday-01",
-    "name": "生日快樂",
-    "gradient": "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)",
-    "image": "/backgrounds/birthday/01.jpg"
-  }
-]
-
-說明：
-- image 可省略；如果沒有圖片，會顯示漸層色
-- gradient 為 CSS 線性漸層，用來當預設或圖片失敗時的備用
-
 建議圖片放置：
-public/backgrounds/<categoryId>/
+public/backgrounds/<themeId>/
 例如：public/backgrounds/birthday/01.jpg
 
+支援格式：jpg / png / webp
+背景名稱預設使用檔名（不含副檔名）。
+
+若要自訂名稱或每張圖的漸層，可在 themes.json 加：
+backgroundLabels / backgroundGradients
+
 -----------------------------------------------------
-新增祝福語 (phrases.json)
+同步資料（重要）
 -----------------------------------------------------
-例：
-"birthday": ["生日快樂", "福如東海", "平安順心"]
+在專案根目錄執行：
+npm run sync-content
 
 -----------------------------------------------------
 注意事項
 -----------------------------------------------------
-- JSON 必須是正確格式（可用 jsonlint.com 檢查）
-- categories.json 的 id 必須對應 backgrounds.json 與 phrases.json 的 key
+- JSON 必須是正確格式
+- themes.json 的 id 必須對應背景資料夾
 - 圖片路徑為公開路徑，以 / 開頭
 
 =====================================================

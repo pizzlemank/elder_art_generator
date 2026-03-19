@@ -16,13 +16,32 @@ interface Props {
   aspectRatio: AspectRatioOption;
   onBack: () => void;
   onNext: (canvas: fabric.Canvas) => void;
+  initialCanvasJson?: string | null;
+  onSaveCanvas?: (json: string) => void;
 }
 
-const WATERMARK_TEXT = "長輩圖工作室";
-const SNAP_THRESHOLD = 12;
+type OutlineStyle = "none" | "sticker" | "glow";
 
-const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBack, onNext }: Props) => {
+const WATERMARK_TEXT = "長輩圖工作室";
+const HIGHLIGHT_COLOR = "rgba(255,255,255,0.85)";
+const DEFAULT_TEXT_COLOR = "#ffffff";
+const DEFAULT_FONT = "'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif";
+const DEFAULT_FONT_SIZE = 80;
+const OUTLINE_COLOR = "#000000";
+const STICKER_OUTLINE_SCALE = 0.08;
+const GLOW_BLUR = 12;
+const StepTextEditor = ({
+  categoryId,
+  background,
+  uploadedBg,
+  aspectRatio,
+  onBack,
+  onNext,
+  initialCanvasJson,
+  onSaveCanvas,
+}: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const fabricRef = useRef<fabric.Canvas | null>(null);
   const historyRef = useRef<{ stack: string[]; index: number; isRestoring: boolean }>({
     stack: [],
@@ -30,17 +49,17 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     isRestoring: false,
   });
 
-  const [activeColor, setActiveColor] = useState("#dc2626");
-  const [activeFont, setActiveFont] = useState(
-    "'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif",
-  );
-  const [activeFontSize, setActiveFontSize] = useState(80);
+  const [activeColor, setActiveColor] = useState(DEFAULT_TEXT_COLOR);
+  const [activeFont, setActiveFont] = useState(DEFAULT_FONT);
+  const [activeFontSize, setActiveFontSize] = useState(DEFAULT_FONT_SIZE);
   const [isBold, setIsBold] = useState(true);
   const [isItalic, setIsItalic] = useState(false);
-  const [hasOutline, setHasOutline] = useState(false);
+  const [outlineStyle, setOutlineStyle] = useState<OutlineStyle>("none");
   const [hasShadow, setHasShadow] = useState(true);
+  const [hasHighlight, setHasHighlight] = useState(false);
   const [canUndo, setCanUndo] = useState(false);
   const [canRedo, setCanRedo] = useState(false);
+  const [displayScale, setDisplayScale] = useState(1);
 
   const CANVAS_W = aspectRatio.width;
   const CANVAS_H = aspectRatio.height;
@@ -51,9 +70,200 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     setCanRedo(index >= 0 && index < stack.length - 1);
   }, []);
 
+  const isBoldWeight = (weight: fabric.IText["fontWeight"]) => {
+    if (typeof weight === "number") return weight >= 600;
+    if (typeof weight === "string") {
+      if (weight.toLowerCase() === "bold") return true;
+      const parsed = Number.parseInt(weight, 10);
+      return Number.isFinite(parsed) && parsed >= 600;
+    }
+    return false;
+  };
+
+  const syncUiFromText = useCallback((obj?: fabric.Object) => {
+    if (!obj || obj.type !== "i-text") return;
+    const textObj = obj as fabric.IText;
+    setActiveColor(typeof textObj.fill === "string" ? textObj.fill : DEFAULT_TEXT_COLOR);
+    setActiveFont(textObj.fontFamily || DEFAULT_FONT);
+    setActiveFontSize(textObj.fontSize || DEFAULT_FONT_SIZE);
+    setIsBold(isBoldWeight(textObj.fontWeight));
+    setIsItalic(textObj.fontStyle === "italic");
+    setHasShadow(Boolean(textObj.shadow));
+    setHasHighlight(Boolean(textObj.textBackgroundColor));
+    const style = (textObj.data as { outlineStyle?: OutlineStyle } | undefined)?.outlineStyle ?? "none";
+    setOutlineStyle(style);
+  }, []);
+
+  const ensureTextId = useCallback((obj: fabric.IText) => {
+    const data = (obj.data || {}) as { textId?: string; outlineStyle?: OutlineStyle };
+    if (!data.textId) {
+      data.textId = `text_${Math.random().toString(36).slice(2, 10)}`;
+      obj.set("data", data);
+    }
+    return data.textId;
+  }, []);
+
+  const findOutlineForText = useCallback((fc: fabric.Canvas, textId: string) => {
+    return fc
+      .getObjects()
+      .find((o) => (o as fabric.Object).data?.outlineFor === textId) as fabric.Text | undefined;
+  }, []);
+
+  const applyOutlineVisuals = useCallback(
+    (outline: fabric.Text, textObj: fabric.IText, style: OutlineStyle) => {
+      const baseScaleX = textObj.scaleX ?? 1;
+      const baseScaleY = textObj.scaleY ?? 1;
+
+      if (style === "sticker") {
+        outline.set({
+          fill: OUTLINE_COLOR,
+          shadow: undefined,
+          opacity: 1,
+          scaleX: baseScaleX * (1 + STICKER_OUTLINE_SCALE),
+          scaleY: baseScaleY * (1 + STICKER_OUTLINE_SCALE),
+        });
+        return;
+      }
+
+      if (style === "glow") {
+        outline.set({
+          fill: OUTLINE_COLOR,
+          opacity: 1,
+          scaleX: baseScaleX,
+          scaleY: baseScaleY,
+          shadow: new fabric.Shadow({
+            color: "rgba(0,0,0,0.7)",
+            blur: GLOW_BLUR,
+            offsetX: 0,
+            offsetY: 0,
+          }),
+        });
+      }
+    },
+    [],
+  );
+
+  const syncOutlineForText = useCallback(
+    (textObj: fabric.IText) => {
+      const fc = fabricRef.current;
+      if (!fc) return;
+      const data = (textObj.data || {}) as { textId?: string; outlineStyle?: OutlineStyle };
+      const style = data.outlineStyle ?? "none";
+      const textId = ensureTextId(textObj);
+      const existing = findOutlineForText(fc, textId);
+
+      if (style === "none") {
+        if (existing) fc.remove(existing);
+        return;
+      }
+
+      const outline =
+        existing ||
+        new fabric.Text(textObj.text || "", {
+          left: textObj.left,
+          top: textObj.top,
+          originX: textObj.originX,
+          originY: textObj.originY,
+          angle: textObj.angle,
+          scaleX: textObj.scaleX,
+          scaleY: textObj.scaleY,
+          skewX: textObj.skewX,
+          skewY: textObj.skewY,
+          flipX: textObj.flipX,
+          flipY: textObj.flipY,
+          fontFamily: textObj.fontFamily,
+          fontSize: textObj.fontSize,
+          fontWeight: textObj.fontWeight,
+          fontStyle: textObj.fontStyle,
+          textAlign: textObj.textAlign,
+          charSpacing: textObj.charSpacing,
+          lineHeight: textObj.lineHeight,
+          selectable: false,
+          evented: false,
+          hasControls: false,
+          hoverCursor: "default",
+          excludeFromExport: true,
+          data: { isOutline: true, outlineFor: textId },
+        });
+
+      outline.set({
+        text: textObj.text || "",
+        left: textObj.left,
+        top: textObj.top,
+        originX: textObj.originX,
+        originY: textObj.originY,
+        angle: textObj.angle,
+        scaleX: textObj.scaleX,
+        scaleY: textObj.scaleY,
+        skewX: textObj.skewX,
+        skewY: textObj.skewY,
+        flipX: textObj.flipX,
+        flipY: textObj.flipY,
+        fontFamily: textObj.fontFamily,
+        fontSize: textObj.fontSize,
+        fontWeight: textObj.fontWeight,
+        fontStyle: textObj.fontStyle,
+        textAlign: textObj.textAlign,
+        charSpacing: textObj.charSpacing,
+        lineHeight: textObj.lineHeight,
+      });
+
+      applyOutlineVisuals(outline, textObj, style);
+
+      if (!existing) {
+        const textIndex = fc.getObjects().indexOf(textObj);
+        const insertIndex = Math.max(0, textIndex);
+        fc.insertAt(outline, insertIndex, false);
+      }
+
+      outline.setCoords();
+    },
+    [applyOutlineVisuals, ensureTextId, findOutlineForText],
+  );
+
+  const removeOutlineForText = useCallback(
+    (textObj: fabric.IText) => {
+      const fc = fabricRef.current;
+      if (!fc) return;
+      const textId = ensureTextId(textObj);
+      const outline = findOutlineForText(fc, textId);
+      if (outline) fc.remove(outline);
+    },
+    [ensureTextId, findOutlineForText],
+  );
+
+  const attachOutlineHandlers = useCallback(
+    (obj: fabric.IText) => {
+      const anyObj = obj as fabric.IText & { __outlineHandlersAttached?: boolean };
+      if (anyObj.__outlineHandlersAttached) return;
+      anyObj.__outlineHandlersAttached = true;
+      obj.on("moving", () => syncOutlineForText(obj));
+      obj.on("scaling", () => syncOutlineForText(obj));
+      obj.on("rotating", () => syncOutlineForText(obj));
+      obj.on("skewing", () => syncOutlineForText(obj));
+      obj.on("modified", () => syncOutlineForText(obj));
+      obj.on("changed", () => syncOutlineForText(obj));
+    },
+    [syncOutlineForText],
+  );
+
+  const styleTextObject = useCallback((obj: fabric.Object) => {
+    if (obj.type !== "i-text") return;
+    obj.set({
+      borderColor: "#ef4444",
+      cornerColor: "#ef4444",
+      cornerStyle: "circle",
+      cornerSize: 14,
+      transparentCorners: false,
+    });
+    const textObj = obj as fabric.IText;
+    attachOutlineHandlers(textObj);
+    syncOutlineForText(textObj);
+  }, [attachOutlineHandlers, syncOutlineForText]);
+
   const pushHistory = useCallback((fc: fabric.Canvas) => {
     if (historyRef.current.isRestoring) return;
-    const json = JSON.stringify(fc.toJSON());
+    const json = JSON.stringify(fc.toJSON(["data"]));
     const { stack, index } = historyRef.current;
     if (stack[index] === json) return;
     historyRef.current.stack = stack.slice(0, index + 1).concat(json);
@@ -91,19 +301,19 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     obj.setCoords();
   }, [CANVAS_W, CANVAS_H]);
 
-  const styleTextObject = useCallback((obj: fabric.Object) => {
-    if (obj.type !== "i-text") return;
-    obj.set({
-      borderColor: "#ef4444",
-      cornerColor: "#ef4444",
-      cornerStyle: "circle",
-      cornerSize: 14,
-      transparentCorners: false,
-    });
-  }, []);
+  const updateDisplayScale = useCallback(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+    const parent = wrapper.parentElement;
+    const buffer = 32;
+    const availableWidth = parent?.clientWidth ? parent.clientWidth - buffer : window.innerWidth - buffer;
+    const availableHeight = parent?.clientHeight ? parent.clientHeight - buffer : window.innerHeight - buffer;
+    const scale = Math.min(1, availableWidth / CANVAS_W, availableHeight / CANVAS_H);
+    setDisplayScale(scale);
+  }, [CANVAS_W, CANVAS_H]);
 
   const fitImageToCanvas = useCallback((img: fabric.Image) => {
-    const scale = Math.max(CANVAS_W / (img.width || 1), CANVAS_H / (img.height || 1));
+    const scale = Math.min(CANVAS_W / (img.width || 1), CANVAS_H / (img.height || 1));
     img.scale(scale);
     img.set({
       left: (CANVAS_W - img.getScaledWidth()) / 2,
@@ -112,6 +322,25 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
       evented: false,
     });
   }, [CANVAS_W, CANVAS_H]);
+
+  const getHighlightPadding = (size: number) => Math.max(8, Math.round(size * 0.2));
+
+  const applyHighlightToText = useCallback(
+    (obj: fabric.IText, fontSize: number, highlightFlag = hasHighlight) => {
+      if (!highlightFlag) {
+        obj.set({
+          textBackgroundColor: undefined,
+          textBackgroundPadding: 0,
+        });
+        return;
+      }
+      obj.set({
+        textBackgroundColor: HIGHLIGHT_COLOR,
+        textBackgroundPadding: getHighlightPadding(fontSize),
+      });
+    },
+    [hasHighlight],
+  );
 
   const initCanvas = useCallback(() => {
     if (!canvasRef.current) return;
@@ -125,9 +354,6 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
       backgroundColor: "#ffffff",
       preserveObjectStacking: true,
     });
-
-    let showCenterV = false;
-    let showCenterH = false;
 
     fc.selectionColor = "rgba(239,68,68,0.12)";
     fc.selectionBorderColor = "#ef4444";
@@ -146,33 +372,55 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
       fc.sendToBack(rect);
     };
 
+    const finalizeBackground = () => {
+      if (initialCanvasJson) {
+        historyRef.current.isRestoring = true;
+        fc.loadFromJSON(initialCanvasJson, () => {
+          fc.getObjects().forEach((o) => styleTextObject(o));
+          fc.renderAll();
+          historyRef.current.isRestoring = false;
+          pushHistory(fc);
+        });
+      } else {
+        pushHistory(fc);
+      }
+    };
+
+    const loadImage = (src: string, onSuccess: (img: fabric.Image) => void, onFail: () => void) => {
+      const imgEl = new Image();
+      imgEl.crossOrigin = "anonymous";
+      imgEl.onload = () => onSuccess(new fabric.Image(imgEl));
+      imgEl.onerror = () => onFail();
+      imgEl.src = src;
+    };
+
+    const applyImageBackground = (src: string) => {
+      loadImage(
+        src,
+        (img) => {
+          fitImageToCanvas(img);
+          fc.setBackgroundImage(img, fc.renderAll.bind(fc));
+          finalizeBackground();
+        },
+        () => {
+          setGradientBackground();
+          finalizeBackground();
+        },
+      );
+    };
+
     if (uploadedBg) {
-      fabric.Image.fromURL(uploadedBg, (img) => {
-        fitImageToCanvas(img);
-        fc.setBackgroundImage(img, fc.renderAll.bind(fc));
-        pushHistory(fc);
-      });
+      applyImageBackground(uploadedBg);
     } else if (background.image) {
-      fabric.Image.fromURL(background.image, (img) => {
-        fitImageToCanvas(img);
-        fc.setBackgroundImage(img, fc.renderAll.bind(fc));
-        pushHistory(fc);
-      });
+      applyImageBackground(background.image);
     } else {
       setGradientBackground();
-      pushHistory(fc);
+      finalizeBackground();
     }
 
     fc.on("object:moving", (e) => {
       const obj = e.target;
       if (!obj) return;
-      const center = obj.getCenterPoint();
-      showCenterV = Math.abs(center.x - CANVAS_W / 2) < SNAP_THRESHOLD;
-      showCenterH = Math.abs(center.y - CANVAS_H / 2) < SNAP_THRESHOLD;
-
-      if (showCenterV) obj.set({ left: CANVAS_W / 2 - obj.getScaledWidth() / 2 });
-      if (showCenterH) obj.set({ top: CANVAS_H / 2 - obj.getScaledHeight() / 2 });
-
       clampToCanvas(obj);
     });
 
@@ -184,9 +432,6 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
 
     fc.on("object:modified", () => {
       pushHistory(fc);
-      showCenterV = false;
-      showCenterH = false;
-      fc.clearContext(fc.contextTop);
     });
 
     fc.on("object:added", (e) => {
@@ -197,42 +442,48 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
       }
     });
 
-    fc.on("object:removed", () => {
+    fc.on("object:removed", (e) => {
+      const obj = e.target;
+      if (obj?.type === "i-text") {
+        removeOutlineForText(obj as fabric.IText);
+      }
+      if (obj?.data?.isOutline) return;
       if (historyRef.current.isRestoring) return;
       pushHistory(fc);
     });
 
-    fc.on("after:render", () => {
-      if (!showCenterV && !showCenterH) return;
-      const ctx = fc.contextTop;
-      if (!ctx) return;
-      ctx.save();
-      ctx.clearRect(0, 0, CANVAS_W, CANVAS_H);
-      ctx.strokeStyle = "rgba(239,68,68,0.7)";
-      ctx.lineWidth = 1;
-      if (showCenterV) {
-        ctx.beginPath();
-        ctx.moveTo(CANVAS_W / 2, 0);
-        ctx.lineTo(CANVAS_W / 2, CANVAS_H);
-        ctx.stroke();
-      }
-      if (showCenterH) {
-        ctx.beginPath();
-        ctx.moveTo(0, CANVAS_H / 2);
-        ctx.lineTo(CANVAS_W, CANVAS_H / 2);
-        ctx.stroke();
-      }
-      ctx.restore();
+    fc.on("selection:created", (e) => {
+      if (historyRef.current.isRestoring) return;
+      const target = e.selected?.[0] || e.target;
+      syncUiFromText(target);
+    });
+
+    fc.on("selection:updated", (e) => {
+      if (historyRef.current.isRestoring) return;
+      const target = e.selected?.[0] || e.target;
+      syncUiFromText(target);
     });
 
     fc.on("mouse:up", () => {
-      showCenterV = false;
-      showCenterH = false;
       fc.clearContext(fc.contextTop);
     });
 
     fabricRef.current = fc;
-  }, [background.gradient, background.image, uploadedBg, CANVAS_W, CANVAS_H, clampToCanvas, pushHistory, fitImageToCanvas, styleTextObject]);
+    updateDisplayScale();
+  }, [
+    background.gradient,
+    background.image,
+    uploadedBg,
+    CANVAS_W,
+    CANVAS_H,
+    clampToCanvas,
+    pushHistory,
+    fitImageToCanvas,
+    styleTextObject,
+    removeOutlineForText,
+    syncUiFromText,
+    initialCanvasJson,
+  ]);
 
   useEffect(() => {
     initCanvas();
@@ -241,6 +492,19 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
       fabricRef.current?.dispose();
     };
   }, [initCanvas, updateHistoryState]);
+
+  useEffect(() => {
+    updateDisplayScale();
+    window.addEventListener("resize", updateDisplayScale);
+    return () => window.removeEventListener("resize", updateDisplayScale);
+  }, [updateDisplayScale]);
+
+  useEffect(() => {
+    const fc = fabricRef.current;
+    if (!fc) return;
+    fc.setZoom(displayScale);
+    fc.requestRenderAll();
+  }, [displayScale]);
 
   const addPhrase = (text: string) => {
     const fc = fabricRef.current;
@@ -255,8 +519,6 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
       fill: activeColor,
       fontWeight: isBold ? "bold" : "normal",
       fontStyle: isItalic ? "italic" : "normal",
-      stroke: hasOutline ? "#000000" : undefined,
-      strokeWidth: hasOutline ? 2 : 0,
       shadow: hasShadow
         ? new fabric.Shadow({ color: "rgba(0,0,0,0.5)", blur: 8, offsetX: 4, offsetY: 4 })
         : undefined,
@@ -267,13 +529,19 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     clampToCanvas(t);
     fc.renderAll();
     pushHistory(fc);
+    applyHighlightToText(t, activeFontSize);
+    t.set("data", { ...(t.data || {}), outlineStyle });
+    syncOutlineForText(t);
   };
 
-  const applyToActive = (setter: (obj: fabric.IText) => void) => {
+  const applyToActive = (setter: (obj: fabric.IText) => void, highlightFlag = hasHighlight) => {
     const fc = fabricRef.current;
     const obj = fc?.getActiveObject();
     if (obj && obj.type === "i-text") {
-      setter(obj as fabric.IText);
+      const textObj = obj as fabric.IText;
+      setter(textObj);
+      applyHighlightToText(textObj, activeFontSize, highlightFlag);
+      syncOutlineForText(textObj);
       fc?.renderAll();
       if (fc) pushHistory(fc);
     }
@@ -301,13 +569,15 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     setIsItalic(n);
     applyToActive((o) => o.set("fontStyle", n ? "italic" : "normal"));
   };
-  const toggleOutline = () => {
-    const n = !hasOutline;
-    setHasOutline(n);
-    applyToActive((o) => {
-      o.set("stroke", n ? "#000000" : undefined);
-      o.set("strokeWidth", n ? 2 : 0);
-    });
+  const toggleStickerOutline = () => {
+    const next = outlineStyle === "sticker" ? "none" : "sticker";
+    setOutlineStyle(next);
+    applyToActive((o) => o.set("data", { ...(o.data || {}), outlineStyle: next }));
+  };
+  const toggleGlowOutline = () => {
+    const next = outlineStyle === "glow" ? "none" : "glow";
+    setOutlineStyle(next);
+    applyToActive((o) => o.set("data", { ...(o.data || {}), outlineStyle: next }));
   };
   const toggleShadow = () => {
     const n = !hasShadow;
@@ -318,6 +588,14 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
         n ? new fabric.Shadow({ color: "rgba(0,0,0,0.5)", blur: 8, offsetX: 4, offsetY: 4 }) : undefined,
       );
     });
+  };
+
+  const toggleHighlight = () => {
+    const next = !hasHighlight;
+    setHasHighlight(next);
+    applyToActive(() => {
+      /* reapply highlight state without other changes */
+    }, next);
   };
 
   const moveActive = (dx: number, dy: number) => {
@@ -357,6 +635,13 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     const fc = fabricRef.current;
     if (!fc) return;
     fc.discardActiveObject();
+    onSaveCanvas?.(JSON.stringify(fc.toJSON(["data"])));
+
+    const prevZoom = fc.getZoom();
+    if (prevZoom !== 1) {
+      fc.setZoom(1);
+      fc.renderAll();
+    }
 
     const watermark = new fabric.Text(WATERMARK_TEXT, {
       left: CANVAS_W - 16,
@@ -375,12 +660,15 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
     onNext(fc);
 
     fc.remove(watermark);
+    if (prevZoom !== 1) {
+      fc.setZoom(prevZoom);
+    }
     fc.renderAll();
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 px-2 py-4 w-full max-w-6xl mx-auto">
-      <div className="lg:w-[420px] lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto lg:pr-2 flex flex-col gap-2 order-2 lg:order-1">
+    <div className="flex flex-col lg:flex-row gap-4 px-2 py-4 w-full max-w-6xl mx-auto lg:items-start">
+      <div className="lg:w-[360px] lg:flex-shrink-0 lg:sticky lg:top-4 lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto lg:pr-2 flex flex-col gap-2 order-2 lg:order-1">
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" className="min-h-[44px] text-base gap-2" onClick={() => restoreHistory(-1)} disabled={!canUndo}>
             <Undo2 size={18} /> 復原
@@ -416,14 +704,17 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
                 activeFontSize={activeFontSize}
                 isBold={isBold}
                 isItalic={isItalic}
-                hasOutline={hasOutline}
+                outlineStyle={outlineStyle}
                 hasShadow={hasShadow}
+                hasHighlight={hasHighlight}
                 onFontChange={changeFont}
                 onFontSizeChange={changeFontSize}
                 onBoldToggle={toggleBold}
                 onItalicToggle={toggleItalic}
-                onOutlineToggle={toggleOutline}
+                onStickerOutlineToggle={toggleStickerOutline}
+                onGlowOutlineToggle={toggleGlowOutline}
                 onShadowToggle={toggleShadow}
+                onHighlightToggle={toggleHighlight}
               />
             </AccordionContent>
           </AccordionItem>
@@ -446,13 +737,26 @@ const StepTextEditor = ({ categoryId, background, uploadedBg, aspectRatio, onBac
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col items-center order-1 lg:order-2">
+      <div className="flex-1 min-w-0 flex flex-col items-center order-1 lg:order-2">
         <h1 className="text-2xl font-bold text-foreground text-center mb-2">拖曳文字到喜歡的位置</h1>
         <div
-          className="w-full lg:sticky lg:top-4 overflow-hidden rounded-xl border-4 border-border bg-white"
-          style={{ aspectRatio: `${CANVAS_W}/${CANVAS_H}`, maxHeight: "calc(100vh - 160px)" }}
+          ref={wrapperRef}
+          className="overflow-hidden rounded-xl border-4 border-border bg-white"
+          style={{
+            width: `${CANVAS_W * displayScale}px`,
+            height: `${CANVAS_H * displayScale}px`,
+            maxWidth: "100%",
+            maxHeight: "calc(100vh - 180px)",
+          }}
         >
-          <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
+          <canvas
+            ref={canvasRef}
+            style={{
+              width: `${CANVAS_W}px`,
+              height: `${CANVAS_H}px`,
+              display: "block",
+            }}
+          />
         </div>
       </div>
     </div>

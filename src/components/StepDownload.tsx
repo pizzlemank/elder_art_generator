@@ -1,9 +1,11 @@
 ﻿import { Button } from "@/components/ui/button";
 import { ChevronLeft, Download, Share2 } from "lucide-react";
+import { type AspectRatioOption } from "@/lib/editorData";
 
 interface Props {
   imageDataUrl: string;
   textPrefix: string;
+  aspectRatio: AspectRatioOption;
   onBack: () => void;
 }
 
@@ -28,7 +30,7 @@ function dataUrlToBlob(dataUrl: string): Blob {
   return new Blob([array], { type: mime });
 }
 
-const StepDownload = ({ imageDataUrl, textPrefix, onBack }: Props) => {
+const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.download = getSmartFilename(textPrefix);
@@ -57,10 +59,12 @@ const StepDownload = ({ imageDataUrl, textPrefix, onBack }: Props) => {
 
   return (
     <div className="flex flex-col items-center gap-6 px-4 py-6 w-full max-w-lg mx-auto">
-      <h1 className="text-3xl font-bold text-foreground text-center">完成</h1>
       <p className="text-xl text-muted-foreground text-center">存檔後就可以分享給親朋好友。</p>
 
-      <div className="w-full overflow-hidden rounded-xl border-4 border-border" style={{ aspectRatio: "3/4" }}>
+      <div
+        className="w-full overflow-hidden rounded-xl border-4 border-border"
+        style={{ aspectRatio: `${aspectRatio.width}/${aspectRatio.height}` }}
+      >
         <img src={imageDataUrl} alt="完成的祝福圖" className="w-full h-full object-contain" />
       </div>
 

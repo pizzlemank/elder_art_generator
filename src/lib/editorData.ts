@@ -37,12 +37,20 @@ export const textColors: TextColor[] = [
 ];
 
 export const extraColors: TextColor[] = [
-  { id: "pink", name: "粉", hex: "#ec4899" },
   { id: "orange", name: "橘", hex: "#f97316" },
+  { id: "yellow", name: "黃", hex: "#eab308" },
+  { id: "lime", name: "萊", hex: "#84cc16" },
   { id: "green", name: "綠", hex: "#16a34a" },
+  { id: "teal", name: "青", hex: "#14b8a6" },
+  { id: "sky", name: "天藍", hex: "#38bdf8" },
   { id: "blue", name: "藍", hex: "#2563eb" },
+  { id: "indigo", name: "靛", hex: "#4f46e5" },
   { id: "purple", name: "紫", hex: "#9333ea" },
+  { id: "pink", name: "粉", hex: "#ec4899" },
+  { id: "rose", name: "玫紅", hex: "#f43f5e" },
   { id: "brown", name: "棕", hex: "#92400e" },
+  { id: "gray", name: "灰", hex: "#6b7280" },
+  { id: "navy", name: "深藍", hex: "#0f172a" },
 ];
 
 export const fontOptions: FontOption[] = [

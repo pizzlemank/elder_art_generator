@@ -2,7 +2,8 @@
 import { useBackgrounds } from "@/hooks/useEditorData";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Upload } from "lucide-react";
-import { useRef, type ChangeEvent } from "react";
+import { useRef, type ChangeEvent, type CSSProperties } from "react";
+import { toast } from "sonner";
 
 interface Props {
   categoryId: string;
@@ -32,14 +33,23 @@ const StepBackgroundSelection = ({
   const handleFile = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      toast.error("檔案格式不正確，請選擇圖片");
+      return;
+    }
+    const maxMb = 8;
+    if (file.size > maxMb * 1024 * 1024) {
+      toast.error(`檔案太大，請小於 ${maxMb}MB`);
+      return;
+    }
     const reader = new FileReader();
     reader.onload = () => onUpload(reader.result as string);
+    reader.onerror = () => toast.error("上傳失敗，請換一張照片");
     reader.readAsDataURL(file);
   };
 
   return (
-    <div className="flex flex-col items-center gap-6 px-4 py-6 w-full max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold text-foreground text-center">選背景</h1>
+    <div className="flex flex-col items-center gap-4 px-4 py-4 w-full max-w-5xl mx-auto">
       <p className="text-xl text-muted-foreground text-center">挑一張背景，或上傳自己的照片。</p>
 
       <div className="w-full">
@@ -63,9 +73,9 @@ const StepBackgroundSelection = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 w-full">
         {bgs.map((bg) => {
-          const style: React.CSSProperties = bg.image
+          const style: CSSProperties = bg.image
             ? {
                 backgroundImage: `${bg.image ? `url(${bg.image})` : ""}, ${bg.gradient}`,
                 backgroundSize: "cover, cover",
@@ -85,10 +95,11 @@ const StepBackgroundSelection = ({
               style={{
                 ...style,
                 aspectRatio: `${aspectRatio.width}/${aspectRatio.height}`,
+                maxHeight: 160,
               }}
             >
               <div className="absolute inset-0 bg-black/25" />
-              <span className="relative z-10 text-lg font-bold text-white drop-shadow-md">{bg.name}</span>
+              <span className="relative z-10 text-base font-bold text-white drop-shadow-md">{bg.name}</span>
             </button>
           );
         })}
@@ -97,18 +108,18 @@ const StepBackgroundSelection = ({
       <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
       <Button
         variant="outline"
-        className="min-h-[60px] text-xl w-full gap-3"
+        className="min-h-[56px] text-lg w-full gap-3"
         onClick={() => fileRef.current?.click()}
       >
-        <Upload size={28} /> 上傳自己的照片
+        <Upload size={24} /> 上傳自己的照片
       </Button>
 
-      <div className="flex gap-4 w-full mt-2">
-        <Button variant="secondary" className="flex-1 min-h-[60px] text-xl gap-2" onClick={onBack}>
-          <ChevronLeft size={28} /> 上一步
+      <div className="flex gap-4 w-full mt-1">
+        <Button variant="secondary" className="flex-1 min-h-[56px] text-lg gap-2" onClick={onBack}>
+          <ChevronLeft size={24} /> 上一步
         </Button>
-        <Button className="flex-1 min-h-[60px] text-xl gap-2" onClick={onNext} disabled={!selected}>
-          下一步 <ChevronRight size={28} />
+        <Button className="flex-1 min-h-[56px] text-lg gap-2" onClick={onNext} disabled={!selected}>
+          下一步 <ChevronRight size={24} />
         </Button>
       </div>
     </div>

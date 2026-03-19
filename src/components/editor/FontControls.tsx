@@ -7,14 +7,17 @@ interface Props {
   activeFontSize: number;
   isBold: boolean;
   isItalic: boolean;
-  hasOutline: boolean;
+  outlineStyle: "none" | "sticker" | "glow";
   hasShadow: boolean;
+  hasHighlight: boolean;
   onFontChange: (family: string) => void;
   onFontSizeChange: (size: number) => void;
   onBoldToggle: () => void;
   onItalicToggle: () => void;
-  onOutlineToggle: () => void;
+  onStickerOutlineToggle: () => void;
+  onGlowOutlineToggle: () => void;
   onShadowToggle: () => void;
+  onHighlightToggle: () => void;
 }
 
 const FontControls = ({
@@ -22,14 +25,17 @@ const FontControls = ({
   activeFontSize,
   isBold,
   isItalic,
-  hasOutline,
+  outlineStyle,
   hasShadow,
+  hasHighlight,
   onFontChange,
   onFontSizeChange,
   onBoldToggle,
   onItalicToggle,
-  onOutlineToggle,
+  onStickerOutlineToggle,
+  onGlowOutlineToggle,
   onShadowToggle,
+  onHighlightToggle,
 }: Props) => (
   <div className="w-full space-y-3">
     <div className="flex flex-wrap gap-2">
@@ -85,11 +91,18 @@ const FontControls = ({
         <Italic size={18} /> 斜體
       </Button>
       <Button
-        variant={hasOutline ? "default" : "outline"}
+        variant={outlineStyle === "sticker" ? "default" : "outline"}
         className="min-h-[44px] text-base gap-1"
-        onClick={onOutlineToggle}
+        onClick={onStickerOutlineToggle}
       >
-        外框
+        貼紙外框
+      </Button>
+      <Button
+        variant={outlineStyle === "glow" ? "default" : "outline"}
+        className="min-h-[44px] text-base gap-1"
+        onClick={onGlowOutlineToggle}
+      >
+        光暈外框
       </Button>
       <Button
         variant={hasShadow ? "default" : "outline"}
@@ -97,6 +110,13 @@ const FontControls = ({
         onClick={onShadowToggle}
       >
         陰影
+      </Button>
+      <Button
+        variant={hasHighlight ? "default" : "outline"}
+        className="min-h-[44px] text-base gap-1"
+        onClick={onHighlightToggle}
+      >
+        底色
       </Button>
     </div>
   </div>
