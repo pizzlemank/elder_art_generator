@@ -40,7 +40,7 @@ const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) 
   };
 
   const handleShare = async () => {
-    const filename = getSmartFilename(textPrefix);
+    const filename = getSmartFilename(textPrefix, imageDataUrl);
     try {
       const blob = dataUrlToBlob(imageDataUrl);
       const file = new File([blob], filename, { type: blob.type });
