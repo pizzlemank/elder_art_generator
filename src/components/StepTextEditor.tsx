@@ -805,6 +805,27 @@ const StepTextEditor = ({
               <MovementControls onMove={moveActive} onDelete={deleteActive} />
             </AccordionContent>
           </AccordionItem>
+
+          {expertMode && (
+            <AccordionItem value="gif" className="border rounded-xl px-3 bg-card border-amber-400">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">🧪 GIF 貼圖 (Beta)</AccordionTrigger>
+              <AccordionContent>
+                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為靜態第一幀）</p>
+                <div className="grid grid-cols-3 gap-2">
+                  {SAMPLE_GIFS.map((gif) => (
+                    <button
+                      key={gif.id}
+                      onClick={() => addGifSticker(gif.url)}
+                      className="flex flex-col items-center gap-1 rounded-xl border-2 border-border p-2 hover:border-primary transition-colors"
+                    >
+                      <img src={gif.url} alt={gif.name} className="w-16 h-16 object-cover rounded" />
+                      <span className="text-xs font-medium">{gif.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          )}
         </Accordion>
 
         <div className="flex gap-4 w-full mt-2">
