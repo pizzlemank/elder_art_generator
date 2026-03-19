@@ -750,6 +750,15 @@ const StepTextEditor = ({
           <Button variant="outline" className="min-h-[44px] text-base gap-2" onClick={handleReset}>
             <RotateCcw size={18} /> 清除文字
           </Button>
+          <Button
+            variant={bgLocked ? "outline" : "secondary"}
+            className="min-h-[44px] text-base gap-2"
+            onClick={toggleBgLock}
+            title={bgLocked ? "背景已鎖定" : "背景已解鎖"}
+          >
+            {bgLocked ? <Lock size={18} /> : <Unlock size={18} />}
+            {bgLocked ? "背景鎖定" : "背景解鎖"}
+          </Button>
         </div>
 
         <Accordion type="single" defaultValue="phrases" collapsible className="w-full space-y-1">
