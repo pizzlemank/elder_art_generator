@@ -31,11 +31,18 @@ const DEFAULT_FONT_SIZE = 80;
 const OUTLINE_COLOR = "#000000";
 const STICKER_OUTLINE_SCALE = 0.08;
 const GLOW_BLUR = 12;
+const SAMPLE_GIFS = [
+  { id: "sparkle", name: "✨ 閃亮", url: "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" },
+  { id: "hearts", name: "💕 愛心", url: "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" },
+  { id: "confetti", name: "🎊 彩帶", url: "https://media.giphy.com/media/g9582DNuQppxC/giphy.gif" },
+];
+
 const StepTextEditor = ({
   categoryId,
   background,
   uploadedBg,
   aspectRatio,
+  expertMode = false,
   onBack,
   onNext,
   initialCanvasJson,
