@@ -1,4 +1,5 @@
 ﻿import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import { fabric } from "fabric";
 import StepProgress from "@/components/StepProgress";
@@ -17,6 +18,8 @@ const STEP_LABELS: Record<number, string> = {
 };
 
 const Index = () => {
+  const [searchParams] = useSearchParams();
+  const expertMode = searchParams.get("mode") === "expert";
   const [step, setStep] = useState(1);
   const [category, setCategory] = useState<Category | null>(null);
   const [background, setBackground] = useState<Background | null>(null);
@@ -109,6 +112,7 @@ const Index = () => {
             background={background}
             uploadedBg={uploadedBg}
             aspectRatio={aspectRatio}
+            expertMode={expertMode}
             onBack={() => setStep(2)}
             onNext={handleCanvasNext}
             initialCanvasJson={canvasJson}

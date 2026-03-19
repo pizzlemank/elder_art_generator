@@ -2,7 +2,7 @@
 import { fabric } from "fabric";
 import { type Background, type AspectRatioOption } from "@/lib/editorData";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, RotateCcw, Undo2, Redo2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, RotateCcw, Undo2, Redo2, Lock, Unlock } from "lucide-react";
 import PhraseSelector from "@/components/editor/PhraseSelector";
 import ColorPicker from "@/components/editor/ColorPicker";
 import FontControls from "@/components/editor/FontControls";
@@ -14,6 +14,7 @@ interface Props {
   background: Background;
   uploadedBg: string | null;
   aspectRatio: AspectRatioOption;
+  expertMode?: boolean;
   onBack: () => void;
   onNext: (canvas: fabric.Canvas) => void;
   initialCanvasJson?: string | null;
@@ -30,11 +31,18 @@ const DEFAULT_FONT_SIZE = 80;
 const OUTLINE_COLOR = "#000000";
 const STICKER_OUTLINE_SCALE = 0.08;
 const GLOW_BLUR = 12;
+const SAMPLE_GIFS = [
+  { id: "sparkle", name: "✨ 閃亮", url: "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" },
+  { id: "hearts", name: "💕 愛心", url: "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" },
+  { id: "confetti", name: "🎊 彩帶", url: "https://media.giphy.com/media/g9582DNuQppxC/giphy.gif" },
+];
+
 const StepTextEditor = ({
   categoryId,
   background,
   uploadedBg,
   aspectRatio,
+  expertMode = false,
   onBack,
   onNext,
   initialCanvasJson,
@@ -60,6 +68,7 @@ const StepTextEditor = ({
   const [canUndo, setCanUndo] = useState(false);
   const [canRedo, setCanRedo] = useState(false);
   const [displayScale, setDisplayScale] = useState(1);
+  const [bgLocked, setBgLocked] = useState(true);
 
   const CANVAS_W = aspectRatio.width;
   const CANVAS_H = aspectRatio.height;
@@ -312,14 +321,21 @@ const StepTextEditor = ({
     setDisplayScale(scale);
   }, [CANVAS_W, CANVAS_H]);
 
-  const fitImageToCanvas = useCallback((img: fabric.Image) => {
-    const scale = Math.min(CANVAS_W / (img.width || 1), CANVAS_H / (img.height || 1));
-    img.scale(scale);
+  const fitImageToCanvas = useCallback((img: fabric.Image, locked = true) => {
+    const scaleVal = Math.max(CANVAS_W / (img.width || 1), CANVAS_H / (img.height || 1));
+    img.scale(scaleVal);
     img.set({
-      left: (CANVAS_W - img.getScaledWidth()) / 2,
-      top: (CANVAS_H - img.getScaledHeight()) / 2,
-      selectable: false,
-      evented: false,
+      left: CANVAS_W / 2,
+      top: CANVAS_H / 2,
+      originX: "center",
+      originY: "center",
+      selectable: !locked,
+      evented: !locked,
+      hasControls: !locked,
+      lockMovementX: locked,
+      lockMovementY: locked,
+      hoverCursor: locked ? "default" : "move",
+      data: { isBgImage: true },
     });
   }, [CANVAS_W, CANVAS_H]);
 
@@ -366,6 +382,7 @@ const StepTextEditor = ({
         height: CANVAS_H,
         selectable: false,
         evented: false,
+        data: { isBgImage: true },
       });
       rect.set("fill", createFabricGradient(background.gradient, CANVAS_W, CANVAS_H));
       fc.add(rect);
@@ -398,8 +415,10 @@ const StepTextEditor = ({
       loadImage(
         src,
         (img) => {
-          fitImageToCanvas(img);
-          fc.setBackgroundImage(img, fc.renderAll.bind(fc));
+          fitImageToCanvas(img, bgLocked);
+          fc.add(img);
+          fc.sendToBack(img);
+          fc.renderAll();
           finalizeBackground();
         },
         () => {
@@ -476,6 +495,7 @@ const StepTextEditor = ({
     uploadedBg,
     CANVAS_W,
     CANVAS_H,
+    bgLocked,
     clampToCanvas,
     pushHistory,
     fitImageToCanvas,
@@ -618,6 +638,57 @@ const StepTextEditor = ({
     if (fc) pushHistory(fc);
   };
 
+  const toggleBgLock = () => {
+    const fc = fabricRef.current;
+    if (!fc) return;
+    const newLocked = !bgLocked;
+    setBgLocked(newLocked);
+    fc.getObjects().forEach((obj) => {
+      if (obj.data?.isBgImage) {
+        obj.set({
+          selectable: !newLocked,
+          evented: !newLocked,
+          hasControls: !newLocked,
+          lockMovementX: newLocked,
+          lockMovementY: newLocked,
+          hoverCursor: newLocked ? "default" : "move",
+        });
+      }
+    });
+    fc.discardActiveObject();
+    fc.renderAll();
+  };
+
+  const addGifSticker = (url: string) => {
+    const fc = fabricRef.current;
+    if (!fc) return;
+    const imgEl = new Image();
+    imgEl.crossOrigin = "anonymous";
+    imgEl.onload = () => {
+      const fImg = new fabric.Image(imgEl, {
+        left: CANVAS_W / 2,
+        top: CANVAS_H / 2,
+        originX: "center",
+        originY: "center",
+        scaleX: Math.min(200 / (imgEl.width || 200), 1),
+        scaleY: Math.min(200 / (imgEl.height || 200), 1),
+        data: { isGifSticker: true },
+      });
+      fImg.set({
+        borderColor: "#ef4444",
+        cornerColor: "#ef4444",
+        cornerStyle: "circle",
+        cornerSize: 14,
+        transparentCorners: false,
+      });
+      fc.add(fImg);
+      fc.setActiveObject(fImg);
+      fc.renderAll();
+      pushHistory(fc);
+    };
+    imgEl.src = url;
+  };
+
   const handleReset = () => {
     const fc = fabricRef.current;
     if (!fc) return;
@@ -679,6 +750,15 @@ const StepTextEditor = ({
           <Button variant="outline" className="min-h-[44px] text-base gap-2" onClick={handleReset}>
             <RotateCcw size={18} /> 清除文字
           </Button>
+          <Button
+            variant={bgLocked ? "outline" : "secondary"}
+            className="min-h-[44px] text-base gap-2"
+            onClick={toggleBgLock}
+            title={bgLocked ? "背景已鎖定" : "背景已解鎖"}
+          >
+            {bgLocked ? <Lock size={18} /> : <Unlock size={18} />}
+            {bgLocked ? "背景鎖定" : "背景解鎖"}
+          </Button>
         </div>
 
         <Accordion type="single" defaultValue="phrases" collapsible className="w-full space-y-1">
@@ -725,6 +805,27 @@ const StepTextEditor = ({
               <MovementControls onMove={moveActive} onDelete={deleteActive} />
             </AccordionContent>
           </AccordionItem>
+
+          {expertMode && (
+            <AccordionItem value="gif" className="border rounded-xl px-3 bg-card border-amber-400">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">🧪 GIF 貼圖 (Beta)</AccordionTrigger>
+              <AccordionContent>
+                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為靜態第一幀）</p>
+                <div className="grid grid-cols-3 gap-2">
+                  {SAMPLE_GIFS.map((gif) => (
+                    <button
+                      key={gif.id}
+                      onClick={() => addGifSticker(gif.url)}
+                      className="flex flex-col items-center gap-1 rounded-xl border-2 border-border p-2 hover:border-primary transition-colors"
+                    >
+                      <img src={gif.url} alt={gif.name} className="w-16 h-16 object-cover rounded" />
+                      <span className="text-xs font-medium">{gif.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          )}
         </Accordion>
 
         <div className="flex gap-4 w-full mt-2">
