@@ -34,7 +34,7 @@ function dataUrlToBlob(dataUrl: string): Blob {
 const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.download = getSmartFilename(textPrefix);
+    link.download = getSmartFilename(textPrefix, imageDataUrl);
     link.href = imageDataUrl;
     link.click();
   };
