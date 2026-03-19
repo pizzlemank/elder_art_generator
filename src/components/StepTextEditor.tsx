@@ -415,8 +415,10 @@ const StepTextEditor = ({
       loadImage(
         src,
         (img) => {
-          fitImageToCanvas(img);
-          fc.setBackgroundImage(img, fc.renderAll.bind(fc));
+          fitImageToCanvas(img, bgLocked);
+          fc.add(img);
+          fc.sendToBack(img);
+          fc.renderAll();
           finalizeBackground();
         },
         () => {
