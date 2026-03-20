@@ -66,27 +66,5 @@
       },
       "phrases": ["祝你身體健康", "平安喜樂", "一切順心", "健康長壽", "天天都有好精神"]
     }
-      {
-      "id": "birthday",
-      "name": "生日快樂",
-      "icon": "🕯️",
-      "description": "HAPPY BIRTHDAY",
-      "color": "bg-red-100 border-red-400",
-      "featuredImage": "/backgrounds/cny/01.jpg",
-      "defaultGradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
-      "backgroundLabels": {
-        "01.jpg": "紅金喜氣",
-        "02.jpg": "福氣滿滿",
-        "03.jpg": "喜氣春暖",
-        "04.jpg": "金玉滿堂"
-      },
-      "backgroundGradients": {
-        "01.jpg": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
-        "02.jpg": "linear-gradient(135deg, #f97316 0%, #facc15 100%)",
-        "03.jpg": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
-        "04.jpg": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)"
-      },
-      "phrases": ["生日快樂", "永遠健康", "Happy Birthday", "有蛋糕嗎?", "親愛的祝你生日快樂"]
-    },
   ]
 }

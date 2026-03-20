@@ -100,8 +100,12 @@ const StepBackgroundSelection = ({
                 maxHeight: 160,
               }}
             >
-              <div className="absolute inset-0 bg-black/25" />
-              <span className="relative z-10 text-base font-bold text-white drop-shadow-md">{bg.name}</span>
+              {!displayImage && (
+                <>
+                  <div className="absolute inset-0 bg-black/25" />
+                  <span className="relative z-10 text-base font-bold text-white drop-shadow-md">{bg.name}</span>
+                </>
+              )}
             </button>
           );
         })}

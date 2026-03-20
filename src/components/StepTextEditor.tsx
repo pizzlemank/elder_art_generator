@@ -741,102 +741,119 @@ const StepTextEditor = ({
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 px-2 py-4 w-full max-w-6xl mx-auto lg:items-start">
-      <div className="lg:w-[360px] lg:flex-shrink-0 lg:sticky lg:top-4 lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto lg:pr-2 flex flex-col gap-2 order-2 lg:order-1">
-        <div className="flex flex-wrap gap-2">
-          <Button variant="outline" className="min-h-[44px] text-base gap-2" onClick={() => restoreHistory(-1)} disabled={!canUndo}>
-            <Undo2 size={18} /> 復原
+    <div className="flex flex-col lg:flex-row gap-4 px-2 py-4 w-full max-w-7xl mx-auto lg:items-start lg:h-[calc(100vh-160px)]">
+      <div className="lg:w-[400px] lg:flex-shrink-0 flex flex-col gap-4 order-2 lg:order-1 lg:h-full lg:overflow-hidden">
+        {/* Top Actions: Undo/Redo/Lock */}
+        <div className="flex flex-wrap gap-2 lg:flex-shrink-0">
+          <Button
+            variant="outline"
+            size="sm"
+            className="h-10 text-sm gap-1.5"
+            onClick={() => restoreHistory(-1)}
+            disabled={!canUndo}
+          >
+            <Undo2 size={16} /> 復原
           </Button>
-          <Button variant="outline" className="min-h-[44px] text-base gap-2" onClick={() => restoreHistory(1)} disabled={!canRedo}>
-            <Redo2 size={18} /> 重做
+          <Button
+            variant="outline"
+            size="sm"
+            className="h-10 text-sm gap-1.5"
+            onClick={() => restoreHistory(1)}
+            disabled={!canRedo}
+          >
+            <Redo2 size={16} /> 重做
           </Button>
-          <Button variant="outline" className="min-h-[44px] text-base gap-2" onClick={handleReset}>
-            <RotateCcw size={18} /> 清除文字
+          <Button variant="outline" size="sm" className="h-10 text-sm gap-1.5" onClick={handleReset}>
+            <RotateCcw size={16} /> 清除
           </Button>
           <Button
             variant={bgLocked ? "outline" : "secondary"}
-            className="min-h-[44px] text-base gap-2"
+            size="sm"
+            className="h-10 text-sm gap-1.5"
             onClick={toggleBgLock}
-            title={bgLocked ? "背景已鎖定" : "背景已解鎖"}
           >
-            {bgLocked ? <Lock size={18} /> : <Unlock size={18} />}
+            {bgLocked ? <Lock size={16} /> : <Unlock size={16} />}
             {bgLocked ? "背景鎖定" : "背景解鎖"}
           </Button>
         </div>
 
-        <Accordion type="single" defaultValue="phrases" collapsible className="w-full space-y-1">
-          <AccordionItem value="phrases" className="border rounded-xl px-3 bg-card">
-            <AccordionTrigger className="text-lg font-bold hover:no-underline">選一句祝福語</AccordionTrigger>
-            <AccordionContent>
-              <PhraseSelector categoryId={categoryId} onAdd={addPhrase} />
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="color" className="border rounded-xl px-3 bg-card">
-            <AccordionTrigger className="text-lg font-bold hover:no-underline">文字顏色</AccordionTrigger>
-            <AccordionContent>
-              <ColorPicker activeColor={activeColor} onChange={changeColor} />
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="font" className="border rounded-xl px-3 bg-card">
-            <AccordionTrigger className="text-lg font-bold hover:no-underline">字體與樣式</AccordionTrigger>
-            <AccordionContent>
-              <FontControls
-                activeFont={activeFont}
-                activeFontSize={activeFontSize}
-                isBold={isBold}
-                isItalic={isItalic}
-                outlineStyle={outlineStyle}
-                hasShadow={hasShadow}
-                hasHighlight={hasHighlight}
-                onFontChange={changeFont}
-                onFontSizeChange={changeFontSize}
-                onBoldToggle={toggleBold}
-                onItalicToggle={toggleItalic}
-                onStickerOutlineToggle={toggleStickerOutline}
-                onGlowOutlineToggle={toggleGlowOutline}
-                onShadowToggle={toggleShadow}
-                onHighlightToggle={toggleHighlight}
-              />
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="move" className="border rounded-xl px-3 bg-card">
-            <AccordionTrigger className="text-lg font-bold hover:no-underline">移動與刪除</AccordionTrigger>
-            <AccordionContent>
-              <MovementControls onMove={moveActive} onDelete={deleteActive} />
-            </AccordionContent>
-          </AccordionItem>
-
-          {expertMode && (
-            <AccordionItem value="gif" className="border rounded-xl px-3 bg-card border-amber-400">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline">🧪 GIF 貼圖 (Beta)</AccordionTrigger>
+        {/* Scrollable Tools */}
+        <div className="flex-1 overflow-y-auto pr-1 space-y-4">
+          <Accordion type="single" defaultValue="phrases" collapsible className="w-full space-y-1">
+            <AccordionItem value="phrases" className="border rounded-xl px-3 bg-card">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">選一句祝福語</AccordionTrigger>
               <AccordionContent>
-                <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為 PNG 靜態圖）</p>
-                <div className="grid grid-cols-3 gap-2">
-                  {SAMPLE_GIFS.map((gif) => (
-                    <button
-                      key={gif.id}
-                      onClick={() => addGifSticker(gif.url)}
-                      className="flex flex-col items-center gap-1 rounded-xl border-2 border-border p-2 hover:border-primary transition-colors"
-                    >
-                      <img src={gif.url} alt={gif.name} className="w-16 h-16 object-cover rounded" />
-                      <span className="text-xs font-medium">{gif.name}</span>
-                    </button>
-                  ))}
-                </div>
+                <PhraseSelector categoryId={categoryId} onAdd={addPhrase} />
               </AccordionContent>
             </AccordionItem>
-          )}
-        </Accordion>
 
-        <div className="flex gap-4 w-full mt-2">
-          <Button variant="secondary" className="flex-1 min-h-[60px] text-xl gap-2" onClick={onBack}>
-            <ChevronLeft size={28} /> 上一步
+            <AccordionItem value="color" className="border rounded-xl px-3 bg-card">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">文字顏色</AccordionTrigger>
+              <AccordionContent>
+                <ColorPicker activeColor={activeColor} onChange={changeColor} />
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="font" className="border rounded-xl px-3 bg-card">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">字體與樣式</AccordionTrigger>
+              <AccordionContent>
+                <FontControls
+                  activeFont={activeFont}
+                  activeFontSize={activeFontSize}
+                  isBold={isBold}
+                  isItalic={isItalic}
+                  outlineStyle={outlineStyle}
+                  hasShadow={hasShadow}
+                  hasHighlight={hasHighlight}
+                  onFontChange={changeFont}
+                  onFontSizeChange={changeFontSize}
+                  onBoldToggle={toggleBold}
+                  onItalicToggle={toggleItalic}
+                  onStickerOutlineToggle={toggleStickerOutline}
+                  onGlowOutlineToggle={toggleGlowOutline}
+                  onShadowToggle={toggleShadow}
+                  onHighlightToggle={toggleHighlight}
+                />
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="move" className="border rounded-xl px-3 bg-card">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">移動與刪除</AccordionTrigger>
+              <AccordionContent>
+                <MovementControls onMove={moveActive} onDelete={deleteActive} />
+              </AccordionContent>
+            </AccordionItem>
+
+            {expertMode && (
+              <AccordionItem value="gif" className="border rounded-xl px-3 bg-card border-amber-400">
+                <AccordionTrigger className="text-lg font-bold hover:no-underline">🧪 GIF 貼圖 (Beta)</AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm text-muted-foreground mb-2">點選加入 GIF 貼圖（匯出為 PNG 靜態圖）</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    {SAMPLE_GIFS.map((gif) => (
+                      <button
+                        key={gif.id}
+                        onClick={() => addGifSticker(gif.url)}
+                        className="flex flex-col items-center gap-1 rounded-xl border-2 border-border p-2 hover:border-primary transition-colors"
+                      >
+                        <img src={gif.url} alt={gif.name} className="w-16 h-16 object-cover rounded" />
+                        <span className="text-xs font-medium">{gif.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            )}
+          </Accordion>
+        </div>
+
+        {/* Sticky Sidebar Footer: Back/Next */}
+        <div className="flex gap-4 w-full pt-4 bg-background lg:flex-shrink-0 mt-auto border-t">
+          <Button variant="secondary" className="flex-1 min-h-[56px] text-lg gap-2" onClick={onBack}>
+            <ChevronLeft size={24} /> 上一步
           </Button>
-          <Button className="flex-1 min-h-[60px] text-xl gap-2" onClick={handleNext}>
-            下一步 <ChevronRight size={28} />
+          <Button className="flex-1 min-h-[56px] text-lg gap-2" onClick={handleNext}>
+            下一步 <ChevronRight size={24} />
           </Button>
         </div>
       </div>
