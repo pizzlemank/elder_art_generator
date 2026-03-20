@@ -19,7 +19,8 @@ const STEP_LABELS: Record<number, string> = {
 
 const Index = () => {
   const [searchParams] = useSearchParams();
-  const expertMode = searchParams.get("mode") === "expert";
+  // Expert mode is currently disabled for MVP
+  const expertMode = false; // searchParams.get("mode") === "expert";
   const [step, setStep] = useState(1);
   const [category, setCategory] = useState<Category | null>(null);
   const [background, setBackground] = useState<Background | null>(null);
@@ -131,6 +132,9 @@ const Index = () => {
           />
         )}
       </main>
+      <footer className="py-2 text-center">
+        <span className="text-[10px] text-muted-foreground/30 font-mono">v1.1.0-ar</span>
+      </footer>
     </div>
   );
 };
