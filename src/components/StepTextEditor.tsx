@@ -431,6 +431,8 @@ const StepTextEditor = ({
 
     if (uploadedBg) {
       applyImageBackground(uploadedBg);
+    } else if (background.arImages?.[aspectRatio.id]) {
+      applyImageBackground(background.arImages[aspectRatio.id]);
     } else if (background.image) {
       applyImageBackground(background.image);
     } else {

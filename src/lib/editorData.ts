@@ -14,6 +14,7 @@ export interface Background {
   name: string;
   gradient: string;
   image?: string;
+  arImages?: Record<string, string>;
 }
 
 export interface TextColor {

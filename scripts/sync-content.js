@@ -43,10 +43,23 @@ themes.forEach((theme) => {
   if (!theme?.id) return;
   const id = theme.id;
   const themeDir = path.join(backgroundsDir, id);
-  const files = fs.existsSync(themeDir) ? fs.readdirSync(themeDir) : [];
-  const imageFiles = files
-    .filter((file) => IMAGE_EXTS.has(path.extname(file).toLowerCase()))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
+  const AR_SUBFOLDERS = ["portrait", "square", "landscape"];
+
+  const arFiles = {};
+  AR_SUBFOLDERS.forEach((sub) => {
+    const subDir = path.join(themeDir, sub);
+    if (fs.existsSync(subDir)) {
+      arFiles[sub] = fs
+        .readdirSync(subDir)
+        .filter((file) => IMAGE_EXTS.has(path.extname(file).toLowerCase()));
+    }
+  });
+
+  const rootFiles = fs.existsSync(themeDir)
+    ? fs
+        .readdirSync(themeDir)
+        .filter((file) => IMAGE_EXTS.has(path.extname(file).toLowerCase()))
+    : [];
 
   if (!fs.existsSync(themeDir)) {
     console.warn(`Theme folder missing: ${themeDir}`);
@@ -55,25 +68,56 @@ themes.forEach((theme) => {
   const defaultGradient = theme.defaultGradient || FALLBACK_GRADIENT;
   const labelMap = theme.backgroundLabels || {};
   const gradientMap = theme.backgroundGradients || {};
+
+  // AUTOMATIC AGGREGATION:
+  // We collect all unique filenames from the theme root AND from subfolders (portrait, square, landscape).
+  // If "morning.jpg" exists in multiple places, we group them into a single background option.
+  const allImageNames = new Set([
+    ...rootFiles,
+    ...Object.values(arFiles).flat(),
+  ]);
+
   const labelKeys = Object.keys(labelMap);
   const gradientKeys = Object.keys(gradientMap);
-  const fileSet = new Set([...imageFiles, ...labelKeys, ...gradientKeys]);
-  const filesToUse = [
-    ...imageFiles,
-    ...Array.from(fileSet).filter((file) => !imageFiles.includes(file)),
-  ].sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
+  const fileSet = new Set([...allImageNames, ...labelKeys, ...gradientKeys]);
+  const filesToUse = Array.from(fileSet).sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
+  );
 
   const themeBackgrounds = filesToUse.map((file, index) => {
     const ext = path.extname(file);
     const base = path.basename(file, ext);
     const name = labelMap[file] || humanizeFilename(base, index);
     const gradient = gradientMap[file] || defaultGradient;
-    return {
+
+    const bgEntry = {
       id: `${id}-${base}`,
       name,
       gradient,
-      image: `/backgrounds/${id}/${file}`,
     };
+
+    // Main image: from root if exists, OR if it's a known label/gradient (legacy behavior)
+    if (rootFiles.includes(file) || labelMap[file] || gradientMap[file]) {
+      bgEntry.image = `/backgrounds/${id}/${file}`;
+    }
+
+    // AR-specific images
+    const arImages = {};
+    AR_SUBFOLDERS.forEach((sub) => {
+      if (arFiles[sub]?.includes(file)) {
+        arImages[sub] = `/backgrounds/${id}/${sub}/${file}`;
+      }
+    });
+
+    if (Object.keys(arImages).length > 0) {
+      bgEntry.arImages = arImages;
+      // If no root image, pick the first AR one as primary
+      if (!bgEntry.image) {
+        bgEntry.image = Object.values(arImages)[0];
+      }
+    }
+
+    return bgEntry;
   });
 
   backgrounds[id] = themeBackgrounds;
