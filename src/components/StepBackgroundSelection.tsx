@@ -75,9 +75,11 @@ const StepBackgroundSelection = ({
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 w-full">
         {bgs.map((bg) => {
-          const style: CSSProperties = bg.image
+          const arImage = bg.arImages?.[aspectRatio.id];
+          const displayImage = arImage || bg.image;
+          const style: CSSProperties = displayImage
             ? {
-                backgroundImage: `${bg.image ? `url(${bg.image})` : ""}, ${bg.gradient}`,
+                backgroundImage: `url(${displayImage}), ${bg.gradient}`,
                 backgroundSize: "cover, cover",
                 backgroundPosition: "center, center",
               }
