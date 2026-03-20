@@ -69,7 +69,9 @@ themes.forEach((theme) => {
   const labelMap = theme.backgroundLabels || {};
   const gradientMap = theme.backgroundGradients || {};
 
-  // Collect all unique filenames across root and AR subfolders
+  // AUTOMATIC AGGREGATION:
+  // We collect all unique filenames from the theme root AND from subfolders (portrait, square, landscape).
+  // If "morning.jpg" exists in multiple places, we group them into a single background option.
   const allImageNames = new Set([
     ...rootFiles,
     ...Object.values(arFiles).flat(),
