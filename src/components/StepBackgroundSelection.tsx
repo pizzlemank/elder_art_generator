@@ -48,12 +48,51 @@ const StepBackgroundSelection = ({
     reader.readAsDataURL(file);
   };
 
+  const gradientBgs = bgs.filter((bg) => !bg.image && !bg.arImages);
+  const imageBgs = bgs.filter((bg) => bg.image || bg.arImages);
+
+  const renderBgButton = (bg: Background) => {
+    const arImage = bg.arImages?.[aspectRatio.id];
+    const displayImage = arImage || bg.image;
+    const style: CSSProperties = displayImage
+      ? {
+          backgroundImage: `url(${displayImage}), ${bg.gradient}`,
+          backgroundSize: "cover, cover",
+          backgroundPosition: "center, center",
+        }
+      : {
+          backgroundImage: bg.gradient,
+        };
+
+    return (
+      <button
+        key={bg.id}
+        onClick={() => onSelect(bg)}
+        className={`relative overflow-hidden rounded-2xl border-4 transition-all ${
+          selected?.id === bg.id ? "border-primary ring-4 ring-primary/30 scale-105" : "border-border"
+        }`}
+        style={{
+          ...style,
+          aspectRatio: `${aspectRatio.width}/${aspectRatio.height}`,
+          maxHeight: 160,
+        }}
+      >
+        {!displayImage && (
+          <>
+            <div className="absolute inset-0 bg-black/10" />
+            <span className="relative z-10 text-base font-bold text-white drop-shadow-md">{bg.name}</span>
+          </>
+        )}
+      </button>
+    );
+  };
+
   return (
-    <div className="flex flex-col items-center gap-4 px-4 py-4 w-full max-w-5xl mx-auto">
+    <div className="flex flex-col items-center gap-6 px-4 py-4 w-full max-w-5xl mx-auto">
       <p className="text-xl text-muted-foreground text-center">挑一張背景，或上傳自己的照片。</p>
 
       <div className="w-full">
-        <p className="text-lg font-bold text-foreground mb-2">版面比例</p>
+        <p className="text-lg font-bold text-foreground mb-3">1. 選擇版面比例</p>
         <div className="flex gap-2">
           {aspectRatios.map((ar) => (
             <button
@@ -73,54 +112,36 @@ const StepBackgroundSelection = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 w-full">
-        {bgs.map((bg) => {
-          const arImage = bg.arImages?.[aspectRatio.id];
-          const displayImage = arImage || bg.image;
-          const style: CSSProperties = displayImage
-            ? {
-                backgroundImage: `url(${displayImage}), ${bg.gradient}`,
-                backgroundSize: "cover, cover",
-                backgroundPosition: "center, center",
-              }
-            : {
-                backgroundImage: bg.gradient,
-              };
+      <div className="w-full space-y-6">
+        {gradientBgs.length > 0 && (
+          <div className="w-full">
+            <p className="text-lg font-bold text-foreground mb-3">2. 選擇背景顏色</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              {gradientBgs.map(renderBgButton)}
+            </div>
+          </div>
+        )}
 
-          return (
-            <button
-              key={bg.id}
-              onClick={() => onSelect(bg)}
-              className={`relative overflow-hidden rounded-2xl border-4 transition-all ${
-                selected?.id === bg.id ? "border-primary ring-4 ring-primary/30 scale-105" : "border-border"
-              }`}
-              style={{
-                ...style,
-                aspectRatio: `${aspectRatio.width}/${aspectRatio.height}`,
-                maxHeight: 160,
-              }}
-            >
-              {!displayImage && (
-                <>
-                  <div className="absolute inset-0 bg-black/25" />
-                  <span className="relative z-10 text-base font-bold text-white drop-shadow-md">{bg.name}</span>
-                </>
-              )}
-            </button>
-          );
-        })}
+        <div className="w-full">
+          <p className="text-lg font-bold text-foreground mb-3">
+            {gradientBgs.length > 0 ? "3. 選擇背景照片" : "2. 選擇背景照片"}
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {imageBgs.map(renderBgButton)}
+          </div>
+        </div>
       </div>
 
       <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
       <Button
         variant="outline"
-        className="min-h-[56px] text-lg w-full gap-3"
+        className="min-h-[56px] text-lg w-full gap-3 mt-2"
         onClick={() => fileRef.current?.click()}
       >
         <Upload size={24} /> 上傳自己的照片
       </Button>
 
-      <div className="flex gap-4 w-full mt-1">
+      <div className="flex gap-4 w-full mt-2">
         <Button variant="secondary" className="flex-1 min-h-[56px] text-lg gap-2" onClick={onBack}>
           <ChevronLeft size={24} /> 上一步
         </Button>

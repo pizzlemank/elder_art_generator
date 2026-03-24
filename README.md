@@ -10,6 +10,11 @@ Pick a theme → pick a background → add text → download/share.
 ### Project overview
 This is a static Vite + React app. Content is managed by a single file (`public/data/themes.json`) and a sync script that generates the app's runtime JSON.
 
+### Branch Management
+The current stable production branch is `jules-1781359672094979605-62b99c51`.
+- **Deployments**: Ensure your hosting provider (e.g., Cloudflare Pages) is set to build from this branch.
+- **Collaborating**: Always pull the latest changes from this branch before starting new work.
+
 ### Content Moderator Guide
 
 This app is designed to be content-driven through simple files and folders. Follow this guide to add or edit themes, background images, and greeting phrases.
@@ -63,19 +68,10 @@ All themes and their greeting phrases are defined in this JSON file.
 1.  **Prepare Assets**: Create your images for the 3 aspect ratios and name them identically (e.g., `cake.jpg`).
 2.  **Upload**: Place them in the appropriate `portrait/`, `square/`, and `landscape/` subfolders within your theme's folder.
 3.  **Update JSON**: Edit `public/data/themes.json` to add new themes or update the `phrases` list.
-4.  **Sync**: Run `npm run sync-content`. This script:
-    -   Automatically **optimizes and converts all images to WebP** (using `sharp`).
-    -   Resizes images to a maximum dimension of 1200px (to ensure fast loading).
-    -   Reads your folders and updates the app's internal database.
+4.  **Sync & Optimize**: Run `npm run sync-content`. This script will:
+    - **Optimize**: Automatically convert images to **WebP** and resize them for faster loading.
+    - **Sync**: Read your folders and update the app's internal database.
 5.  **Deploy**: Push your changes to the repository. If using Cloudflare Pages, it will build and deploy automatically.
-
-### Version Control Best Practice (for New Developers)
-If you're feeling lost in different branches ("branch sauce"), follow these steps to keep your work clean:
-
-1.  **Work on one feature branch** (like the one I'm on now).
-2.  **Pull changes from `main`** frequently to stay up to date: `git pull origin main`.
-3.  **Merge your branch into `main`** only when you are completely happy with it. Since you're using Cloudflare Pages, merging into `main` is usually what triggers the "official" live site update.
-4.  **Commit often** with clear messages so you can always go back if something breaks.
 
 #### Optional per-image labels/gradients
 In `themes.json`, you can override per file:
@@ -100,8 +96,6 @@ Recommended for a static MVP.
 5. If your domain is with another registrar, add it to Cloudflare and update nameservers at the registrar.
 
 ### This week’s roadmap
-- **Now**: Automatic image optimization and WebP conversion.
-- **Now**: Added themes for Birthday, Night, Qingming Festival, and Mother's Day.
 - **Now**: Replace outline with Sticker Outline + Outer Glow options.
 - **Now**: Folder-driven content workflow + sync script.
 - **This week**: Deploy to Cloudflare Pages and connect a custom domain.
@@ -132,7 +126,9 @@ Recommended for a static MVP.
 #### 3. 更新流程
 1.  準備好圖片（檔名相同），上傳至對應的比例資料夾。
 2.  編輯 `public/data/themes.json` 新增主題或修改文字。
-3.  執行 `npm run sync-content`。
+3.  執行 `npm run sync-content`。此腳本會：
+    - **自動優化**：將圖片轉為 **WebP** 格式並調整大小，加快載入速度。
+    - **同步資料**：更新 App 內部的背景圖與文字資料庫。
 4.  Push 到 Repo 即可自動部署。
 
 ### 部署（Cloudflare Pages + 自訂網域）
