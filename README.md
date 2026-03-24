@@ -63,8 +63,19 @@ All themes and their greeting phrases are defined in this JSON file.
 1.  **Prepare Assets**: Create your images for the 3 aspect ratios and name them identically (e.g., `cake.jpg`).
 2.  **Upload**: Place them in the appropriate `portrait/`, `square/`, and `landscape/` subfolders within your theme's folder.
 3.  **Update JSON**: Edit `public/data/themes.json` to add new themes or update the `phrases` list.
-4.  **Sync**: Run `npm run sync-content`. This script reads your folders and updates the app's internal database.
+4.  **Sync**: Run `npm run sync-content`. This script:
+    -   Automatically **optimizes and converts all images to WebP** (using `sharp`).
+    -   Resizes images to a maximum dimension of 1200px (to ensure fast loading).
+    -   Reads your folders and updates the app's internal database.
 5.  **Deploy**: Push your changes to the repository. If using Cloudflare Pages, it will build and deploy automatically.
+
+### Version Control Best Practice (for New Developers)
+If you're feeling lost in different branches ("branch sauce"), follow these steps to keep your work clean:
+
+1.  **Work on one feature branch** (like the one I'm on now).
+2.  **Pull changes from `main`** frequently to stay up to date: `git pull origin main`.
+3.  **Merge your branch into `main`** only when you are completely happy with it. Since you're using Cloudflare Pages, merging into `main` is usually what triggers the "official" live site update.
+4.  **Commit often** with clear messages so you can always go back if something breaks.
 
 #### Optional per-image labels/gradients
 In `themes.json`, you can override per file:
@@ -89,6 +100,8 @@ Recommended for a static MVP.
 5. If your domain is with another registrar, add it to Cloudflare and update nameservers at the registrar.
 
 ### This week’s roadmap
+- **Now**: Automatic image optimization and WebP conversion.
+- **Now**: Added themes for Birthday, Night, Qingming Festival, and Mother's Day.
 - **Now**: Replace outline with Sticker Outline + Outer Glow options.
 - **Now**: Folder-driven content workflow + sync script.
 - **This week**: Deploy to Cloudflare Pages and connect a custom domain.

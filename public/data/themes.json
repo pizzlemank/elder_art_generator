@@ -6,21 +6,14 @@
       "icon": "🧧",
       "description": "過年問候、平安吉祥",
       "color": "bg-red-100 border-red-400",
-      "featuredImage": "/backgrounds/cny/01.jpg",
-      "defaultGradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
-      "backgroundLabels": {
-        "01.jpg": "紅金喜氣",
-        "02.jpg": "福氣滿滿",
-        "03.jpg": "喜氣春暖",
-        "04.jpg": "金玉滿堂"
-      },
-      "backgroundGradients": {
-        "01.jpg": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
-        "02.jpg": "linear-gradient(135deg, #f97316 0%, #facc15 100%)",
-        "03.jpg": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
-        "04.jpg": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)"
-      },
-      "phrases": ["新年快樂", "恭喜發財", "闔家平安", "萬事如意", "身體健康", "福氣滿滿"]
+      "phrases": [
+        "新年快樂",
+        "恭喜發財",
+        "闔家平安",
+        "萬事如意",
+        "身體健康",
+        "福氣滿滿"
+      ]
     },
     {
       "id": "morning",
@@ -28,21 +21,13 @@
       "icon": "🌅",
       "description": "每日問安、傳遞好心情",
       "color": "bg-orange-100 border-orange-400",
-      "featuredImage": "/backgrounds/morning/01.jpg",
-      "defaultGradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
-      "backgroundLabels": {
-        "01.jpg": "陽光早晨",
-        "02.jpg": "清新藍天",
-        "03.jpg": "溫柔晨光",
-        "04.jpg": "清爽綠意"
-      },
-      "backgroundGradients": {
-        "01.jpg": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
-        "02.jpg": "linear-gradient(135deg, #60a5fa 0%, #bae6fd 100%)",
-        "03.jpg": "linear-gradient(135deg, #fda4af 0%, #fecdd3 100%)",
-        "04.jpg": "linear-gradient(135deg, #22c55e 0%, #bbf7d0 100%)"
-      },
-      "phrases": ["早安你好", "祝你有美好的一天", "平安順心", "好運一整天", "天天好心情"]
+      "phrases": [
+        "早安你好",
+        "祝你有美好的一天",
+        "平安順心",
+        "好運一整天",
+        "天天好心情"
+      ]
     },
     {
       "id": "health",
@@ -50,21 +35,92 @@
       "icon": "🍀",
       "description": "祝身體健康、平安順心",
       "color": "bg-green-100 border-green-400",
-      "featuredImage": "/backgrounds/health/01.jpg",
-      "defaultGradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
-      "backgroundLabels": {
-        "01.jpg": "平安健康",
-        "02.jpg": "溫暖關懷",
-        "03.jpg": "清新祝福",
-        "04.jpg": "柔和紫意"
-      },
-      "backgroundGradients": {
-        "01.jpg": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
-        "02.jpg": "linear-gradient(135deg, #f59e0b 0%, #fde68a 100%)",
-        "03.jpg": "linear-gradient(135deg, #38bdf8 0%, #a5f3fc 100%)",
-        "04.jpg": "linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%)"
-      },
-      "phrases": ["祝你身體健康", "平安喜樂", "一切順心", "健康長壽", "天天都有好精神"]
+      "phrases": [
+        "祝你身體健康",
+        "平安喜樂",
+        "一切順心",
+        "健康長壽",
+        "天天都有好精神"
+      ]
+    },
+    {
+      "id": "classic",
+      "name": "經典款",
+      "icon": "🖼️",
+      "description": "最道地的長輩圖風格",
+      "color": "bg-blue-100 border-blue-400",
+      "phrases": [
+        "認同請分享",
+        "感恩讚歎",
+        "善的循環",
+        "平安吉祥"
+      ]
+    },
+    {
+      "id": "buddhist",
+      "name": "佛系生活",
+      "icon": "☸️",
+      "description": "禪意十足的祝福",
+      "color": "bg-yellow-100 border-yellow-400",
+      "phrases": [
+        "心中有佛",
+        "隨緣不攀緣",
+        "法喜充滿",
+        "南無阿彌陀佛"
+      ]
+    },
+    {
+      "id": "birthday",
+      "name": "生日快樂",
+      "icon": "🎂",
+      "description": "祝壽、生日驚喜",
+      "color": "bg-pink-100 border-pink-400",
+      "phrases": [
+        "生日快樂",
+        "永遠年輕",
+        "心想事成",
+        "平安喜樂",
+        "福如東海，壽比南山"
+      ]
+    },
+    {
+      "id": "night",
+      "name": "晚安好夢",
+      "icon": "🌙",
+      "description": "睡前關懷、祝好夢",
+      "color": "bg-indigo-100 border-indigo-400",
+      "phrases": [
+        "晚安好夢",
+        "祝你一夜好眠",
+        "美夢成真",
+        "睡前放下憂愁"
+      ]
+    },
+    {
+      "id": "qingming",
+      "name": "清明節",
+      "icon": "🕯️",
+      "description": "慎終追遠、清明時節",
+      "color": "bg-slate-100 border-slate-400",
+      "phrases": [
+        "清明時節",
+        "慎終追遠",
+        "平安康泰",
+        "清心明德"
+      ]
+    },
+    {
+      "id": "mothersday",
+      "name": "母親節",
+      "icon": "💐",
+      "description": "感恩母親、辛勞一年",
+      "color": "bg-rose-100 border-rose-400",
+      "phrases": [
+        "母親節快樂",
+        "媽媽您辛苦了",
+        "願您永遠美麗健康",
+        "感念親恩"
+      ]
     }
   ]
 }
