@@ -69,6 +69,14 @@
       "icon": "🖼️",
       "description": "最道地的長輩圖風格",
       "color": "bg-blue-100 border-blue-400",
+      "backgroundLabels": {
+        "pure_blue": "經典深藍",
+        "pure_gray": "沉穩灰"
+      },
+      "backgroundGradients": {
+        "pure_blue": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",
+        "pure_gray": "linear-gradient(135deg, #374151 0%, #6b7280 100%)"
+      },
       "phrases": ["認同請分享", "感恩讚歎", "善的循環", "平安吉祥"]
     },
     {
@@ -77,6 +85,14 @@
       "icon": "☸️",
       "description": "禪意十足的祝福",
       "color": "bg-yellow-100 border-yellow-400",
+      "backgroundLabels": {
+        "zen_gold": "禪意金",
+        "zen_brown": "古樸褐"
+      },
+      "backgroundGradients": {
+        "zen_gold": "linear-gradient(135deg, #b45309 0%, #f59e0b 100%)",
+        "zen_brown": "linear-gradient(135deg, #451a03 0%, #78350f 100%)"
+      },
       "phrases": ["心中有佛", "隨緣不攀緣", "法喜充滿", "南無阿彌陀佛"]
     },
     {
