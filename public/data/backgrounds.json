@@ -76,5 +76,31 @@
       "gradient": "linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%)",
       "image": "/backgrounds/health/04.jpg"
     }
+  ],
+  "birthday": [
+    {
+      "id": "birthday-01",
+      "name": "紅金喜氣",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
+      "image": "/backgrounds/birthday/01.jpg"
+    },
+    {
+      "id": "birthday-02",
+      "name": "福氣滿滿",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #facc15 100%)",
+      "image": "/backgrounds/birthday/02.jpg"
+    },
+    {
+      "id": "birthday-03",
+      "name": "喜氣春暖",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "image": "/backgrounds/birthday/03.jpg"
+    },
+    {
+      "id": "birthday-04",
+      "name": "金玉滿堂",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)",
+      "image": "/backgrounds/birthday/04.jpg"
+    }
   ]
 }

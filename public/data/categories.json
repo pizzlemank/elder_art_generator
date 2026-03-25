@@ -22,5 +22,13 @@
     "description": "祝身體健康、平安順心",
     "color": "bg-green-100 border-green-400",
     "featuredImage": "/backgrounds/health/01.jpg"
+  },
+  {
+    "id": "birthday",
+    "name": "生日快樂",
+    "icon": "🕯️",
+    "description": "HAPPY BIRTHDAY",
+    "color": "bg-red-100 border-red-400",
+    "featuredImage": "/backgrounds/cny/01.jpg"
   }
 ]
