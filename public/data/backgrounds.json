@@ -3,78 +3,329 @@
     {
       "id": "cny-01",
       "name": "紅金喜氣",
-      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
-      "image": "/backgrounds/cny/01.jpg"
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)"
     },
     {
       "id": "cny-02",
       "name": "福氣滿滿",
-      "gradient": "linear-gradient(135deg, #f97316 0%, #facc15 100%)",
-      "image": "/backgrounds/cny/02.jpg"
+      "gradient": "linear-gradient(135deg, #f97316 0%, #facc15 100%)"
     },
     {
       "id": "cny-03",
       "name": "喜氣春暖",
-      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
-      "image": "/backgrounds/cny/03.jpg"
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)"
     },
     {
       "id": "cny-04",
       "name": "金玉滿堂",
-      "gradient": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)",
-      "image": "/backgrounds/cny/04.jpg"
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)"
     }
   ],
   "morning": [
     {
       "id": "morning-01",
       "name": "陽光早晨",
-      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
-      "image": "/backgrounds/morning/01.jpg"
+      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)"
     },
     {
       "id": "morning-02",
       "name": "清新藍天",
-      "gradient": "linear-gradient(135deg, #60a5fa 0%, #bae6fd 100%)",
-      "image": "/backgrounds/morning/02.jpg"
+      "gradient": "linear-gradient(135deg, #60a5fa 0%, #bae6fd 100%)"
     },
     {
       "id": "morning-03",
       "name": "溫柔晨光",
-      "gradient": "linear-gradient(135deg, #fda4af 0%, #fecdd3 100%)",
-      "image": "/backgrounds/morning/03.jpg"
+      "gradient": "linear-gradient(135deg, #fda4af 0%, #fecdd3 100%)"
     },
     {
       "id": "morning-04",
       "name": "清爽綠意",
-      "gradient": "linear-gradient(135deg, #22c55e 0%, #bbf7d0 100%)",
-      "image": "/backgrounds/morning/04.jpg"
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #bbf7d0 100%)"
     }
   ],
   "health": [
     {
       "id": "health-01",
       "name": "平安健康",
-      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
-      "image": "/backgrounds/health/01.jpg"
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)"
     },
     {
       "id": "health-02",
       "name": "溫暖關懷",
-      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fde68a 100%)",
-      "image": "/backgrounds/health/02.jpg"
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fde68a 100%)"
     },
     {
       "id": "health-03",
       "name": "清新祝福",
-      "gradient": "linear-gradient(135deg, #38bdf8 0%, #a5f3fc 100%)",
-      "image": "/backgrounds/health/03.jpg"
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #a5f3fc 100%)"
     },
     {
       "id": "health-04",
       "name": "柔和紫意",
-      "gradient": "linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%)",
-      "image": "/backgrounds/health/04.jpg"
+      "gradient": "linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%)"
+    }
+  ],
+  "classic": [
+    {
+      "id": "classic-0_0",
+      "name": "0 0",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/0_0.webp"
+    },
+    {
+      "id": "classic-0_2",
+      "name": "0 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/0_2.webp"
+    },
+    {
+      "id": "classic-0_3",
+      "name": "0 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/0_3.webp"
+    },
+    {
+      "id": "classic-11",
+      "name": "背景 11",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/11.webp"
+    },
+    {
+      "id": "classic-111",
+      "name": "背景 111",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/111.webp"
+    },
+    {
+      "id": "classic-pure_blue",
+      "name": "經典深藍",
+      "gradient": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)"
+    },
+    {
+      "id": "classic-pure_gray",
+      "name": "沉穩灰",
+      "gradient": "linear-gradient(135deg, #374151 0%, #6b7280 100%)"
+    },
+    {
+      "id": "classic-s",
+      "name": "s",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/s.webp"
+    },
+    {
+      "id": "classic-sample",
+      "name": "sample",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/sample.webp"
+    }
+  ],
+  "buddhist": [
+    {
+      "id": "buddhist-0_2",
+      "name": "0 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/buddhist/0_2.webp"
+    },
+    {
+      "id": "buddhist-0_3",
+      "name": "0 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/buddhist/0_3.webp"
+    },
+    {
+      "id": "buddhist-zen_brown",
+      "name": "古樸褐",
+      "gradient": "linear-gradient(135deg, #451a03 0%, #78350f 100%)"
+    },
+    {
+      "id": "buddhist-zen_gold",
+      "name": "禪意金",
+      "gradient": "linear-gradient(135deg, #b45309 0%, #f59e0b 100%)"
+    }
+  ],
+  "birthday": [
+    {
+      "id": "birthday-01",
+      "name": "夢幻粉紫",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #a855f7 100%)",
+      "image": "/backgrounds/birthday/01.webp"
+    },
+    {
+      "id": "birthday-02",
+      "name": "繽紛氣球",
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #818cf8 100%)",
+      "image": "/backgrounds/birthday/02.webp"
+    },
+    {
+      "id": "birthday-03",
+      "name": "甜點派對",
+      "gradient": "linear-gradient(135deg, #fcd34d 0%, #f472b6 100%)"
+    }
+  ],
+  "night": [
+    {
+      "id": "night-01",
+      "name": "深邃星空",
+      "gradient": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+      "image": "/backgrounds/night/01.webp"
+    },
+    {
+      "id": "night-02",
+      "name": "寂靜深夜",
+      "gradient": "linear-gradient(135deg, #0f172a 0%, #334155 100%)",
+      "image": "/backgrounds/night/02.webp"
+    },
+    {
+      "id": "night-03",
+      "name": "溫暖月光",
+      "gradient": "linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%)"
+    }
+  ],
+  "qingming": [
+    {
+      "id": "qingming-01",
+      "name": "清爽山水",
+      "gradient": "linear-gradient(135deg, #475569 0%, #94a3b8 100%)",
+      "image": "/backgrounds/qingming/01.webp"
+    },
+    {
+      "id": "qingming-02",
+      "name": "雨過天青",
+      "gradient": "linear-gradient(135deg, #334155 0%, #64748b 100%)",
+      "image": "/backgrounds/qingming/02.webp"
+    },
+    {
+      "id": "qingming-03",
+      "name": "淡雅綠意",
+      "gradient": "linear-gradient(135deg, #166534 0%, #4ade80 100%)"
+    }
+  ],
+  "mothersday": [
+    {
+      "id": "mothersday-01",
+      "name": "康乃馨情",
+      "gradient": "linear-gradient(135deg, #fb7185 0%, #fda4af 100%)",
+      "image": "/backgrounds/mothersday/01.webp"
+    },
+    {
+      "id": "mothersday-02",
+      "name": "柔和晨曦",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #fb923c 100%)",
+      "image": "/backgrounds/mothersday/02.webp"
+    },
+    {
+      "id": "mothersday-03",
+      "name": "溫暖母愛",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)"
+    }
+  ],
+  "lantern": [
+    {
+      "id": "lantern-01",
+      "name": "張燈結彩",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)"
+    },
+    {
+      "id": "lantern-02",
+      "name": "圓滿平安",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #ea580c 100%)"
+    }
+  ],
+  "valentine": [
+    {
+      "id": "valentine-01",
+      "name": "甜蜜告白",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)"
+    },
+    {
+      "id": "valentine-02",
+      "name": "永恆之戀",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #fb7185 100%)"
+    }
+  ],
+  "dragonboat": [
+    {
+      "id": "dragonboat-01",
+      "name": "粽香千里",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)"
+    },
+    {
+      "id": "dragonboat-02",
+      "name": "龍舟競渡",
+      "gradient": "linear-gradient(135deg, #10b981 0%, #6ee7b7 100%)"
+    }
+  ],
+  "fathersday": [
+    {
+      "id": "fathersday-01",
+      "name": "父愛如山",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)"
+    },
+    {
+      "id": "fathersday-02",
+      "name": "頂天立地",
+      "gradient": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)"
+    }
+  ],
+  "midautumn": [
+    {
+      "id": "midautumn-01",
+      "name": "月圓花好",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)"
+    },
+    {
+      "id": "midautumn-02",
+      "name": "中秋團圓",
+      "gradient": "linear-gradient(135deg, #ca8a04 0%, #fde68a 100%)"
+    }
+  ],
+  "nationalday": [
+    {
+      "id": "nationalday-01",
+      "name": "雙十盛典",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)"
+    },
+    {
+      "id": "nationalday-02",
+      "name": "國泰民安",
+      "gradient": "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)"
+    }
+  ],
+  "christmas": [
+    {
+      "id": "christmas-01",
+      "name": "聖誕紅",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)"
+    },
+    {
+      "id": "christmas-02",
+      "name": "常青森林",
+      "gradient": "linear-gradient(135deg, #064e3b 0%, #15803d 100%)"
+    }
+  ],
+  "newyear": [
+    {
+      "id": "newyear-01",
+      "name": "旭日東升",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)"
+    },
+    {
+      "id": "newyear-02",
+      "name": "跨年盛典",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)"
+    }
+  ],
+  "funny": [
+    {
+      "id": "funny-01",
+      "name": "鮮豔撞色",
+      "gradient": "linear-gradient(135deg, #84cc16 0%, #facc15 100%)",
+      "image": "/backgrounds/funny/01.webp"
+    },
+    {
+      "id": "funny-02",
+      "name": "活力亮黃",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #fb923c 100%)"
     }
   ]
 }

@@ -69,26 +69,31 @@ themes.forEach((theme) => {
   const labelMap = theme.backgroundLabels || {};
   const gradientMap = theme.backgroundGradients || {};
 
-  // AUTOMATIC AGGREGATION:
-  // We collect all unique filenames from the theme root AND from subfolders (portrait, square, landscape).
-  // If "morning.jpg" exists in multiple places, we group them into a single background option.
-  const allImageNames = new Set([
-    ...rootFiles,
-    ...Object.values(arFiles).flat(),
-  ]);
+  // Find actual files for specific entries to handle extension changes (e.g. .jpg -> .webp)
+  function findFileForBase(baseName, currentFiles) {
+    return currentFiles.find(f => path.basename(f, path.extname(f)) === baseName);
+  }
 
-  const labelKeys = Object.keys(labelMap);
-  const gradientKeys = Object.keys(gradientMap);
-  const fileSet = new Set([...allImageNames, ...labelKeys, ...gradientKeys]);
-  const filesToUse = Array.from(fileSet).sort((a, b) =>
+  // AUTOMATIC AGGREGATION:
+  // We collect all unique base filenames from the theme root AND from subfolders (portrait, square, landscape)
+  // AND from labels/gradients.
+  const allImageBases = new Set();
+  rootFiles.forEach(f => allImageBases.add(path.basename(f, path.extname(f))));
+  Object.values(arFiles).flat().forEach(f => allImageBases.add(path.basename(f, path.extname(f))));
+  Object.keys(labelMap).forEach(k => allImageBases.add(path.basename(k, path.extname(k))));
+  Object.keys(gradientMap).forEach(k => allImageBases.add(path.basename(k, path.extname(k))));
+
+  const basesToUse = Array.from(allImageBases).sort((a, b) =>
     a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
   );
 
-  const themeBackgrounds = filesToUse.map((file, index) => {
-    const ext = path.extname(file);
-    const base = path.basename(file, ext);
-    const name = labelMap[file] || humanizeFilename(base, index);
-    const gradient = gradientMap[file] || defaultGradient;
+  const themeBackgrounds = basesToUse.map((base, index) => {
+    // Look for exact matches in the maps first, then try extension-less matching
+    const labelKey = Object.keys(labelMap).find(k => k === base || path.basename(k, path.extname(k)) === base);
+    const gradientKey = Object.keys(gradientMap).find(k => k === base || path.basename(k, path.extname(k)) === base);
+
+    const name = labelMap[labelKey] || humanizeFilename(base, index);
+    const gradient = gradientMap[gradientKey] || defaultGradient;
 
     const bgEntry = {
       id: `${id}-${base}`,
@@ -96,16 +101,20 @@ themes.forEach((theme) => {
       gradient,
     };
 
-    // Main image: from root if exists, OR if it's a known label/gradient (legacy behavior)
-    if (rootFiles.includes(file) || labelMap[file] || gradientMap[file]) {
-      bgEntry.image = `/backgrounds/${id}/${file}`;
+    // Main image: look for actual file in root that matches base
+    const actualRootFile = findFileForBase(base, rootFiles);
+    if (actualRootFile) {
+      bgEntry.image = `/backgrounds/${id}/${actualRootFile}`;
+    } else if (labelKey && labelMap[labelKey] && !labelKey.includes(".") ) {
+       // This is just a label/gradient entry without an actual file, do nothing
     }
 
     // AR-specific images
     const arImages = {};
     AR_SUBFOLDERS.forEach((sub) => {
-      if (arFiles[sub]?.includes(file)) {
-        arImages[sub] = `/backgrounds/${id}/${sub}/${file}`;
+      const actualSubFile = findFileForBase(base, arFiles[sub] || []);
+      if (actualSubFile) {
+        arImages[sub] = `/backgrounds/${id}/${sub}/${actualSubFile}`;
       }
     });
 
@@ -129,7 +138,7 @@ themes.forEach((theme) => {
     icon: theme.icon || "🖼️",
     description: theme.description || "",
     color: theme.color || "bg-slate-100 border-slate-300",
-    featuredImage: theme.featuredImage || themeBackgrounds[0]?.image,
+    featuredImage: theme.featuredImage || themeBackgrounds.find(bg => bg.image)?.image || themeBackgrounds[0]?.image,
   });
 });
 
