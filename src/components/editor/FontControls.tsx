@@ -7,14 +7,13 @@ interface Props {
   activeFontSize: number;
   isBold: boolean;
   isItalic: boolean;
-  outlineStyle: "none" | "sticker" | "glow";
+  outlineStyle: "none" | "glow";
   hasShadow: boolean;
   hasHighlight: boolean;
   onFontChange: (family: string) => void;
   onFontSizeChange: (size: number) => void;
   onBoldToggle: () => void;
   onItalicToggle: () => void;
-  onStickerOutlineToggle: () => void;
   onGlowOutlineToggle: () => void;
   onShadowToggle: () => void;
   onHighlightToggle: () => void;
@@ -32,7 +31,6 @@ const FontControls = ({
   onFontSizeChange,
   onBoldToggle,
   onItalicToggle,
-  onStickerOutlineToggle,
   onGlowOutlineToggle,
   onShadowToggle,
   onHighlightToggle,
@@ -89,13 +87,6 @@ const FontControls = ({
         onClick={onItalicToggle}
       >
         <Italic size={18} /> 斜體
-      </Button>
-      <Button
-        variant={outlineStyle === "sticker" ? "default" : "outline"}
-        className="min-h-[44px] text-base gap-1"
-        onClick={onStickerOutlineToggle}
-      >
-        貼紙外框
       </Button>
       <Button
         variant={outlineStyle === "glow" ? "default" : "outline"}

@@ -131,6 +131,9 @@ const Index = () => {
           />
         )}
       </main>
+      <footer className="py-4 text-center">
+        <p className="text-[10px] text-muted-foreground/30 font-mono">v1.2.0</p>
+      </footer>
     </div>
   );
 };

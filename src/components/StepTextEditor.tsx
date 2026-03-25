@@ -21,15 +21,15 @@ interface Props {
   onSaveCanvas?: (json: string) => void;
 }
 
-type OutlineStyle = "none" | "sticker" | "glow";
+type OutlineStyle = "none" | "glow";
 
 const WATERMARK_TEXT = "長輩圖工作室";
-const HIGHLIGHT_COLOR = "rgba(255,255,255,0.85)";
+const HIGHLIGHT_COLOR_WHITE = "rgba(255,255,255,0.85)";
+const HIGHLIGHT_COLOR_BLACK = "rgba(0,0,0,0.85)";
 const DEFAULT_TEXT_COLOR = "#ffffff";
 const DEFAULT_FONT = "'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif";
 const DEFAULT_FONT_SIZE = 80;
 const OUTLINE_COLOR = "#000000";
-const STICKER_OUTLINE_SCALE = 0.08;
 const GLOW_BLUR = 12;
 const SAMPLE_GIFS = [
   { id: "sparkle", name: "✨ 閃亮", url: "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" },
@@ -123,17 +123,6 @@ const StepTextEditor = ({
     (outline: fabric.Text, textObj: fabric.IText, style: OutlineStyle) => {
       const baseScaleX = textObj.scaleX ?? 1;
       const baseScaleY = textObj.scaleY ?? 1;
-
-      if (style === "sticker") {
-        outline.set({
-          fill: OUTLINE_COLOR,
-          shadow: undefined,
-          opacity: 1,
-          scaleX: baseScaleX * (1 + STICKER_OUTLINE_SCALE),
-          scaleY: baseScaleY * (1 + STICKER_OUTLINE_SCALE),
-        });
-        return;
-      }
 
       if (style === "glow") {
         outline.set({
@@ -342,6 +331,27 @@ const StepTextEditor = ({
 
   const getHighlightPadding = (size: number) => Math.max(8, Math.round(size * 0.2));
 
+  const getInverseHighlightColor = (textColor: string) => {
+    // Simple luminance check for hex colors
+    const hex = textColor.replace("#", "");
+    if (hex.length !== 6 && hex.length !== 3) return HIGHLIGHT_COLOR_WHITE;
+
+    let r, g, b;
+    if (hex.length === 6) {
+      r = parseInt(hex.slice(0, 2), 16);
+      g = parseInt(hex.slice(2, 4), 16);
+      b = parseInt(hex.slice(4, 6), 16);
+    } else {
+      r = parseInt(hex[0] + hex[0], 16);
+      g = parseInt(hex[1] + hex[1], 16);
+      b = parseInt(hex[2] + hex[2], 16);
+    }
+
+    // Standard relative luminance formula
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    return luminance > 0.6 ? HIGHLIGHT_COLOR_BLACK : HIGHLIGHT_COLOR_WHITE;
+  };
+
   const applyHighlightToText = useCallback(
     (obj: fabric.IText, fontSize: number, highlightFlag = hasHighlight) => {
       if (!highlightFlag) {
@@ -351,8 +361,10 @@ const StepTextEditor = ({
         });
         return;
       }
+
+      const textColor = typeof obj.fill === "string" ? obj.fill : DEFAULT_TEXT_COLOR;
       obj.set({
-        textBackgroundColor: HIGHLIGHT_COLOR,
+        textBackgroundColor: getInverseHighlightColor(textColor),
         textBackgroundPadding: getHighlightPadding(fontSize),
       });
     },
@@ -591,11 +603,6 @@ const StepTextEditor = ({
     setIsItalic(n);
     applyToActive((o) => o.set("fontStyle", n ? "italic" : "normal"));
   };
-  const toggleStickerOutline = () => {
-    const next = outlineStyle === "sticker" ? "none" : "sticker";
-    setOutlineStyle(next);
-    applyToActive((o) => o.set("data", { ...(o.data || {}), outlineStyle: next }));
-  };
   const toggleGlowOutline = () => {
     const next = outlineStyle === "glow" ? "none" : "glow";
     setOutlineStyle(next);
@@ -794,7 +801,6 @@ const StepTextEditor = ({
                 onFontSizeChange={changeFontSize}
                 onBoldToggle={toggleBold}
                 onItalicToggle={toggleItalic}
-                onStickerOutlineToggle={toggleStickerOutline}
                 onGlowOutlineToggle={toggleGlowOutline}
                 onShadowToggle={toggleShadow}
                 onHighlightToggle={toggleHighlight}

@@ -1,6 +1,7 @@
 ﻿import { Button } from "@/components/ui/button";
 import { ChevronLeft, Download, Share2 } from "lucide-react";
 import { type AspectRatioOption } from "@/lib/editorData";
+import { toast } from "sonner";
 
 interface Props {
   imageDataUrl: string;
@@ -41,21 +42,41 @@ const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) 
 
   const handleShare = async () => {
     const filename = getSmartFilename(textPrefix, imageDataUrl);
-    try {
-      const blob = dataUrlToBlob(imageDataUrl);
-      const file = new File([blob], filename, { type: blob.type });
-      if (navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
+    const blob = dataUrlToBlob(imageDataUrl);
+    const file = new File([blob], filename, { type: blob.type });
+
+    // 1. Try Native Share (Mobile)
+    if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
         await navigator.share({
           files: [file],
           title: "長輩圖工作室",
           text: "我做了一張祝福圖",
         });
-      } else {
-        handleDownload();
+        return;
+      } catch (err) {
+        if (err instanceof Error && err.name === "AbortError") {
+          return;
+        }
+        console.error("Share failed:", err);
       }
-    } catch {
-      handleDownload();
     }
+
+    // 2. Try Copy to Clipboard (Desktop Fallback)
+    try {
+      if (navigator.clipboard && window.ClipboardItem) {
+        const data = [new ClipboardItem({ [blob.type]: blob })];
+        await navigator.clipboard.write(data);
+        toast.success("圖片已複製到剪貼簿，可直接在通訊軟體貼上分享！");
+        return;
+      }
+    } catch (err) {
+      console.error("Clipboard copy failed:", err);
+    }
+
+    // 3. Final Fallback: Download
+    toast.info("瀏覽器不支援直接分享，改為下載圖片");
+    handleDownload();
   };
 
   return (

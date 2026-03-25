@@ -34,7 +34,7 @@ public/backgrounds/
 **Automatic Aggregation:**
 If you have an image with the **same filename** (e.g., `01.jpg`) in the `portrait`, `square`, and `landscape` folders, the app will automatically group them as **one single background option**. When a user changes the aspect ratio in the app, it will seamlessly switch between these specific versions of the image.
 
-#### 2. Themes and Phrases (`public/data/themes.json`)
+#### 2. Themes, Ordering and Thumbnails (`public/data/themes.json`)
 All themes and their greeting phrases are defined in this JSON file.
 
 ```json
@@ -46,6 +46,7 @@ All themes and their greeting phrases are defined in this JSON file.
       "icon": "🎂",
       "description": "溫馨的生日祝福",
       "color": "bg-purple-100 border-purple-400",
+      "featuredImage": "/backgrounds/birthday/cake.jpg",
       "phrases": [
         "生日快樂！",
         "願你天天開心",
@@ -58,6 +59,10 @@ All themes and their greeting phrases are defined in this JSON file.
 - **`id`**: Must match the folder name in `public/backgrounds/`.
 - **`phrases`**: This is where you add or edit the preset greetings that appear in the editor.
 - **`color`**: Tailwind CSS classes for the theme button's background and border.
+- **Theme Ordering**: The order of themes in the app's selection screen is determined by their **position in the `themes` array** within this file.
+- **Theme Thumbnails**:
+  - If a **`featuredImage`** is specified (as a path like `/backgrounds/theme-id/image.jpg`), it will be used as the thumbnail.
+  - If `featuredImage` is missing, the sync script will automatically pick the **first background image** found in the theme's folder to use as the thumbnail.
 
 #### 3. Content Update Workflow
 1.  **Prepare Assets**: Create your images for the 3 aspect ratios and name them identically (e.g., `cake.jpg`).
@@ -112,9 +117,13 @@ Recommended for a static MVP.
 **自動聚合 (Automatic Aggregation)：**
 如果您在上述三個資料夾中放入同檔名（如 `morning.jpg`）的圖片，系統會將它們視為**同一張背景圖**。當使用者在 App 中切換比例時，系統會自動載入對應的版本。
 
-#### 2. 主題與祝福語 (`public/data/themes.json`)
+#### 2. 主題、排序與縮圖 (`public/data/themes.json`)
 - **`phrases`**: 在此編輯主題預設的祝福文字。
 - **`id`**: 必須與圖片資料夾名稱一致。
+- **主題排序 (Theme Ordering)**: App 中主題的排列順序完全依照在此 JSON 檔案中 `themes` 陣列的**先後順序**而定。
+- **主題縮圖 (Theme Thumbnails)**:
+  - 若有指定 **`featuredImage`** (路徑如 `/backgrounds/theme-id/image.jpg`)，則會優先使用該圖片。
+  - 若未指定 `featuredImage`，同步腳本會自動抓取該主題資料夾下的**第一張圖片**作為縮圖。
 
 #### 3. 更新流程
 1.  準備好圖片（檔名相同），上傳至對應的比例資料夾。
