@@ -1,4 +1,4 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ChevronLeft, Download, Share2 } from "lucide-react";
 import { type AspectRatioOption } from "@/lib/editorData";
 
@@ -20,16 +20,6 @@ function getSmartFilename(textPrefix: string, dataUrl: string): string {
   return `${prefix}_${datePart}.${ext}`;
 }
 
-function dataUrlToBlob(dataUrl: string): Blob {
-  const [header, data] = dataUrl.split(",");
-  const mime = header.match(/:(.*?);/)?.[1] || "image/jpeg";
-  const binary = atob(data);
-  const array = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i += 1) {
-    array[i] = binary.charCodeAt(i);
-  }
-  return new Blob([array], { type: mime });
-}
 
 const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) => {
   const handleDownload = () => {
@@ -40,20 +30,39 @@ const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) 
   };
 
   const handleShare = async () => {
-    const filename = getSmartFilename(textPrefix, imageDataUrl);
     try {
-      const blob = dataUrlToBlob(imageDataUrl);
-      const file = new File([blob], filename, { type: blob.type });
-      if (navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
-        await navigator.share({
-          files: [file],
+      if (navigator.share) {
+        const response = await fetch(imageDataUrl);
+        const blob = await response.blob();
+
+        // Use a persistent and safe filename for sharing
+        const ext = imageDataUrl.startsWith("data:image/png") ? "png" : "jpg";
+        const file = new File([blob], `greeting.${ext}`, { type: blob.type });
+
+        const shareData: ShareData = {
           title: "長輩圖工作室",
-          text: "我做了一張祝福圖",
-        });
+          text: "我做了一張祝福圖🖼️,你也來做一個吧🖌️ https://lbt.studiozinc.com/",
+        };
+
+        // If the browser supports sharing files, include the image
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          shareData.files = [file];
+        }
+
+        await navigator.share(shareData);
       } else {
+        // Only if browser doesn't support Web Share API at all
         handleDownload();
       }
-    } catch {
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        // User cancelled the share - don't trigger download
+        console.log("Share cancelled by user");
+        return;
+      }
+
+      console.error("Share failed:", error);
+      // Fallback to download for other errors
       handleDownload();
     }
   };
