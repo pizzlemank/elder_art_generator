@@ -43,19 +43,6 @@ const StepThemeSelection = ({ onSelect }: Props) => {
         ))}
       </div>
 
-      {/* Secret Expert Mode link */}
-      <div className="w-full mt-4">
-        {isExpert ? (
-          <p className="text-xs text-center text-amber-600 font-medium">🧪 EXPERT MODE 已啟用</p>
-        ) : (
-          <a
-            href="/?mode=expert"
-            className="block text-[10px] text-muted-foreground/40 hover:text-muted-foreground/70 transition-colors text-left"
-          >
-            EXPERT MODE
-          </a>
-        )}
-      </div>
     </div>
   );
 };
