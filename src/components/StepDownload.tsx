@@ -31,38 +31,52 @@ const StepDownload = ({ imageDataUrl, textPrefix, aspectRatio, onBack }: Props) 
 
   const handleShare = async () => {
     try {
-      if (navigator.share) {
-        const response = await fetch(imageDataUrl);
-        const blob = await response.blob();
-
-        // Use a persistent and safe filename for sharing
-        const ext = imageDataUrl.startsWith("data:image/png") ? "png" : "jpg";
-        const file = new File([blob], `greeting.${ext}`, { type: blob.type });
-
-        const shareData: ShareData = {
-          title: "長輩圖工作室",
-          text: "我做了一張祝福圖🖼️,你也來做一個吧🖌️ https://lbt.studiozinc.com/",
-        };
-
-        // If the browser supports sharing files, include the image
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          shareData.files = [file];
-        }
-
-        await navigator.share(shareData);
-      } else {
-        // Only if browser doesn't support Web Share API at all
+      // Basic check for Web Share API support
+      if (!navigator.share) {
+        console.log("Web Share API not supported, falling back to download");
         handleDownload();
+        return;
       }
+
+      // 1. Convert the data URL to a Blob first
+      const response = await fetch(imageDataUrl);
+      const blob = await response.blob();
+
+      // 2. Generate a smart filename for the shared file (same logic as download)
+      const filename = getSmartFilename(textPrefix, imageDataUrl);
+      
+      // 3. Create a File object from the blob
+      // Using the detected blob type and the smart filename
+      const file = new File([blob], filename, { type: blob.type });
+
+      // 4. Construct the share data object
+      // Some apps prefer the URL in its own field, others in the text
+      const shareData: ShareData = {
+        title: "長輩圖工作室",
+        text: "我做了一張祝福圖🖼️,你也來做一個吧🖌️",
+        url: "https://lbt.studiozinc.com/",
+      };
+
+      // 5. Check if the browser specifically supports sharing this exact file + text combo
+      // navigator.canShare is the most reliable way to check for file support
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        shareData.files = [file];
+      } else {
+        console.warn("This device/browser doesn't support sharing files via Web Share API.");
+        // We will still try to share the text/URL if files aren't supported
+      }
+
+      await navigator.share(shareData);
+      console.log("Share successful");
     } catch (error) {
+      // AbortError means user manually cancelled the share dialog - ignore it
       if (error instanceof Error && error.name === 'AbortError') {
-        // User cancelled the share - don't trigger download
         console.log("Share cancelled by user");
         return;
       }
 
+      // For other errors, log them and fall back to a direct download
       console.error("Share failed:", error);
-      // Fallback to download for other errors
       handleDownload();
     }
   };
