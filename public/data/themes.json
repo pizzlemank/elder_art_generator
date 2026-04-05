@@ -19,7 +19,7 @@
         "03": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
         "04": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)"
       },
-      "phrases": ["新年快樂", "恭喜發財", "闔家平安", "萬事如意", "身體健康", "福氣滿滿"]
+      "phrases": ["新年快樂", "恭喜發財", "闔家平安", "萬事如意", "身體健康", "福氣滿滿", "龍馬精神", "歲歲平安"]
     },
     {
       "id": "morning",
@@ -134,6 +134,24 @@
       "phrases": ["晚安好夢", "祝你一夜好眠", "美夢成真", "睡前放下憂愁"]
     },
     {
+      "id": "womensday",
+      "name": "女神節",
+      "icon": "👸",
+      "description": "國際婦女節、向女性致敬",
+      "color": "bg-purple-100 border-purple-300",
+      "defaultGradient": "linear-gradient(135deg, #d946ef 0%, #f472b6 100%)",
+      "phrases": ["女神節快樂", "活出自己的精彩", "願妳永遠美麗動人", "寵愛自己，自信綻放"]
+    },
+    {
+      "id": "childrensday",
+      "name": "兒童節",
+      "icon": "🎈",
+      "description": "童心未泯、快樂成長",
+      "color": "bg-sky-100 border-sky-300",
+      "defaultGradient": "linear-gradient(135deg, #38bdf8 0%, #86efac 100%)",
+      "phrases": ["兒童節快樂", "保持純真童心", "快樂成長", "夢想啟航"]
+    },
+    {
       "id": "qingming",
       "name": "清明節",
       "icon": "🕯️",
@@ -151,6 +169,15 @@
         "03": "linear-gradient(135deg, #166534 0%, #4ade80 100%)"
       },
       "phrases": ["清明時節", "慎終追遠", "平安康泰", "清心明德"]
+    },
+    {
+      "id": "laborday",
+      "name": "勞動節",
+      "icon": "🛠️",
+      "description": "致敬勞動者、辛苦了",
+      "color": "bg-amber-100 border-amber-400",
+      "defaultGradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      "phrases": ["勞動節快樂", "您辛苦了", "勤奮致富", "祝工作順利"]
     },
     {
       "id": "mothersday",
@@ -240,6 +267,15 @@
       "phrases": ["父親節快樂", "老爸您辛苦了", "願您健康長壽", "英雄老爸"]
     },
     {
+      "id": "teachersday",
+      "name": "教師節",
+      "icon": "👨‍🏫",
+      "description": "感念師恩、尊師重道",
+      "color": "bg-emerald-100 border-emerald-400",
+      "defaultGradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "phrases": ["教師節快樂", "感謝恩師栽培", "教導之恩，終生難忘", "名師出高徒"]
+    },
+    {
       "id": "midautumn",
       "name": "中秋佳節",
       "icon": "🌕",
@@ -255,6 +291,15 @@
         "02": "linear-gradient(135deg, #ca8a04 0%, #fde68a 100%)"
       },
       "phrases": ["中秋快樂", "月圓人團圓", "但願人長久，千里共嬋娟", "中秋安康"]
+    },
+    {
+      "id": "doubleninth",
+      "name": "重陽節",
+      "icon": "🌼",
+      "description": "敬老尊賢、久久長長",
+      "color": "bg-orange-100 border-orange-400",
+      "defaultGradient": "linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)",
+      "phrases": ["重陽節快樂", "祝長輩健康長壽", "九九重陽，久久吉祥", "福壽安康"]
     },
     {
       "id": "nationalday",
