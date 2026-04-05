@@ -19,6 +19,30 @@
       "id": "cny-04",
       "name": "金玉滿堂",
       "gradient": "linear-gradient(135deg, #eab308 0%, #fbbf24 100%)"
+    },
+    {
+      "id": "cny-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
+      "image": "/backgrounds/cny/stock_1.webp"
+    },
+    {
+      "id": "cny-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
+      "image": "/backgrounds/cny/stock_2.webp"
+    },
+    {
+      "id": "cny-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
+      "image": "/backgrounds/cny/stock_3.webp"
+    },
+    {
+      "id": "cny-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)",
+      "image": "/backgrounds/cny/stock_4.webp"
     }
   ],
   "morning": [
@@ -41,6 +65,30 @@
       "id": "morning-04",
       "name": "清爽綠意",
       "gradient": "linear-gradient(135deg, #22c55e 0%, #bbf7d0 100%)"
+    },
+    {
+      "id": "morning-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
+      "image": "/backgrounds/morning/stock_1.webp"
+    },
+    {
+      "id": "morning-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
+      "image": "/backgrounds/morning/stock_2.webp"
+    },
+    {
+      "id": "morning-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
+      "image": "/backgrounds/morning/stock_3.webp"
+    },
+    {
+      "id": "morning-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #fb923c 0%, #fde68a 100%)",
+      "image": "/backgrounds/morning/stock_4.webp"
     }
   ],
   "health": [
@@ -63,6 +111,30 @@
       "id": "health-04",
       "name": "柔和紫意",
       "gradient": "linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%)"
+    },
+    {
+      "id": "health-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
+      "image": "/backgrounds/health/stock_1.webp"
+    },
+    {
+      "id": "health-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
+      "image": "/backgrounds/health/stock_2.webp"
+    },
+    {
+      "id": "health-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
+      "image": "/backgrounds/health/stock_3.webp"
+    },
+    {
+      "id": "health-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #22c55e 0%, #86efac 100%)",
+      "image": "/backgrounds/health/stock_4.webp"
     }
   ],
   "classic": [
@@ -117,6 +189,30 @@
       "name": "sample",
       "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
       "image": "/backgrounds/classic/sample.webp"
+    },
+    {
+      "id": "classic-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/stock_1.webp"
+    },
+    {
+      "id": "classic-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/stock_2.webp"
+    },
+    {
+      "id": "classic-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/stock_3.webp"
+    },
+    {
+      "id": "classic-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/classic/stock_4.webp"
     }
   ],
   "buddhist": [
@@ -131,6 +227,30 @@
       "name": "0 3",
       "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
       "image": "/backgrounds/buddhist/0_3.webp"
+    },
+    {
+      "id": "buddhist-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/buddhist/stock_1.webp"
+    },
+    {
+      "id": "buddhist-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/buddhist/stock_2.webp"
+    },
+    {
+      "id": "buddhist-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/buddhist/stock_3.webp"
+    },
+    {
+      "id": "buddhist-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/buddhist/stock_4.webp"
     },
     {
       "id": "buddhist-zen_brown",
@@ -160,6 +280,30 @@
       "id": "birthday-03",
       "name": "甜點派對",
       "gradient": "linear-gradient(135deg, #fcd34d 0%, #f472b6 100%)"
+    },
+    {
+      "id": "birthday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #a855f7 100%)",
+      "image": "/backgrounds/birthday/stock_1.webp"
+    },
+    {
+      "id": "birthday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #a855f7 100%)",
+      "image": "/backgrounds/birthday/stock_2.webp"
+    },
+    {
+      "id": "birthday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #a855f7 100%)",
+      "image": "/backgrounds/birthday/stock_3.webp"
+    },
+    {
+      "id": "birthday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #f472b6 0%, #a855f7 100%)",
+      "image": "/backgrounds/birthday/stock_4.webp"
     }
   ],
   "night": [
@@ -179,6 +323,82 @@
       "id": "night-03",
       "name": "溫暖月光",
       "gradient": "linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%)"
+    },
+    {
+      "id": "night-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+      "image": "/backgrounds/night/stock_1.webp"
+    },
+    {
+      "id": "night-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+      "image": "/backgrounds/night/stock_2.webp"
+    },
+    {
+      "id": "night-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+      "image": "/backgrounds/night/stock_3.webp"
+    },
+    {
+      "id": "night-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+      "image": "/backgrounds/night/stock_4.webp"
+    }
+  ],
+  "womensday": [
+    {
+      "id": "womensday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #d946ef 0%, #f472b6 100%)",
+      "image": "/backgrounds/womensday/stock_1.webp"
+    },
+    {
+      "id": "womensday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #d946ef 0%, #f472b6 100%)",
+      "image": "/backgrounds/womensday/stock_2.webp"
+    },
+    {
+      "id": "womensday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #d946ef 0%, #f472b6 100%)",
+      "image": "/backgrounds/womensday/stock_3.webp"
+    },
+    {
+      "id": "womensday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #d946ef 0%, #f472b6 100%)",
+      "image": "/backgrounds/womensday/stock_4.webp"
+    }
+  ],
+  "childrensday": [
+    {
+      "id": "childrensday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #86efac 100%)",
+      "image": "/backgrounds/childrensday/stock_1.webp"
+    },
+    {
+      "id": "childrensday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #86efac 100%)",
+      "image": "/backgrounds/childrensday/stock_2.webp"
+    },
+    {
+      "id": "childrensday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #86efac 100%)",
+      "image": "/backgrounds/childrensday/stock_3.webp"
+    },
+    {
+      "id": "childrensday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #38bdf8 0%, #86efac 100%)",
+      "image": "/backgrounds/childrensday/stock_4.webp"
     }
   ],
   "qingming": [
@@ -198,6 +418,56 @@
       "id": "qingming-03",
       "name": "淡雅綠意",
       "gradient": "linear-gradient(135deg, #166534 0%, #4ade80 100%)"
+    },
+    {
+      "id": "qingming-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #475569 0%, #94a3b8 100%)",
+      "image": "/backgrounds/qingming/stock_1.webp"
+    },
+    {
+      "id": "qingming-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #475569 0%, #94a3b8 100%)",
+      "image": "/backgrounds/qingming/stock_2.webp"
+    },
+    {
+      "id": "qingming-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #475569 0%, #94a3b8 100%)",
+      "image": "/backgrounds/qingming/stock_3.webp"
+    },
+    {
+      "id": "qingming-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #475569 0%, #94a3b8 100%)",
+      "image": "/backgrounds/qingming/stock_4.webp"
+    }
+  ],
+  "laborday": [
+    {
+      "id": "laborday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      "image": "/backgrounds/laborday/stock_1.webp"
+    },
+    {
+      "id": "laborday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      "image": "/backgrounds/laborday/stock_2.webp"
+    },
+    {
+      "id": "laborday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      "image": "/backgrounds/laborday/stock_3.webp"
+    },
+    {
+      "id": "laborday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      "image": "/backgrounds/laborday/stock_4.webp"
     }
   ],
   "mothersday": [
@@ -217,6 +487,30 @@
       "id": "mothersday-03",
       "name": "溫暖母愛",
       "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)"
+    },
+    {
+      "id": "mothersday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #fb7185 0%, #fda4af 100%)",
+      "image": "/backgrounds/mothersday/stock_1.webp"
+    },
+    {
+      "id": "mothersday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #fb7185 0%, #fda4af 100%)",
+      "image": "/backgrounds/mothersday/stock_2.webp"
+    },
+    {
+      "id": "mothersday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #fb7185 0%, #fda4af 100%)",
+      "image": "/backgrounds/mothersday/stock_3.webp"
+    },
+    {
+      "id": "mothersday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #fb7185 0%, #fda4af 100%)",
+      "image": "/backgrounds/mothersday/stock_4.webp"
     }
   ],
   "lantern": [
@@ -229,6 +523,30 @@
       "id": "lantern-02",
       "name": "圓滿平安",
       "gradient": "linear-gradient(135deg, #dc2626 0%, #ea580c 100%)"
+    },
+    {
+      "id": "lantern-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/stock_1.webp"
+    },
+    {
+      "id": "lantern-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/stock_2.webp"
+    },
+    {
+      "id": "lantern-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/stock_3.webp"
+    },
+    {
+      "id": "lantern-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/stock_4.webp"
     }
   ],
   "valentine": [
@@ -241,6 +559,30 @@
       "id": "valentine-02",
       "name": "永恆之戀",
       "gradient": "linear-gradient(135deg, #f472b6 0%, #fb7185 100%)"
+    },
+    {
+      "id": "valentine-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/stock_1.webp"
+    },
+    {
+      "id": "valentine-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/stock_2.webp"
+    },
+    {
+      "id": "valentine-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/stock_3.webp"
+    },
+    {
+      "id": "valentine-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/stock_4.webp"
     }
   ],
   "dragonboat": [
@@ -253,6 +595,30 @@
       "id": "dragonboat-02",
       "name": "龍舟競渡",
       "gradient": "linear-gradient(135deg, #10b981 0%, #6ee7b7 100%)"
+    },
+    {
+      "id": "dragonboat-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/stock_1.webp"
+    },
+    {
+      "id": "dragonboat-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/stock_2.webp"
+    },
+    {
+      "id": "dragonboat-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/stock_3.webp"
+    },
+    {
+      "id": "dragonboat-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/stock_4.webp"
     }
   ],
   "fathersday": [
@@ -265,6 +631,56 @@
       "id": "fathersday-02",
       "name": "頂天立地",
       "gradient": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)"
+    },
+    {
+      "id": "fathersday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/stock_1.webp"
+    },
+    {
+      "id": "fathersday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/stock_2.webp"
+    },
+    {
+      "id": "fathersday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/stock_3.webp"
+    },
+    {
+      "id": "fathersday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/stock_4.webp"
+    }
+  ],
+  "teachersday": [
+    {
+      "id": "teachersday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "image": "/backgrounds/teachersday/stock_1.webp"
+    },
+    {
+      "id": "teachersday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "image": "/backgrounds/teachersday/stock_2.webp"
+    },
+    {
+      "id": "teachersday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "image": "/backgrounds/teachersday/stock_3.webp"
+    },
+    {
+      "id": "teachersday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "image": "/backgrounds/teachersday/stock_4.webp"
     }
   ],
   "midautumn": [
@@ -277,6 +693,56 @@
       "id": "midautumn-02",
       "name": "中秋團圓",
       "gradient": "linear-gradient(135deg, #ca8a04 0%, #fde68a 100%)"
+    },
+    {
+      "id": "midautumn-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/stock_1.webp"
+    },
+    {
+      "id": "midautumn-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/stock_2.webp"
+    },
+    {
+      "id": "midautumn-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/stock_3.webp"
+    },
+    {
+      "id": "midautumn-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/stock_4.webp"
+    }
+  ],
+  "doubleninth": [
+    {
+      "id": "doubleninth-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)",
+      "image": "/backgrounds/doubleninth/stock_1.webp"
+    },
+    {
+      "id": "doubleninth-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)",
+      "image": "/backgrounds/doubleninth/stock_2.webp"
+    },
+    {
+      "id": "doubleninth-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)",
+      "image": "/backgrounds/doubleninth/stock_3.webp"
+    },
+    {
+      "id": "doubleninth-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)",
+      "image": "/backgrounds/doubleninth/stock_4.webp"
     }
   ],
   "nationalday": [
@@ -289,6 +755,30 @@
       "id": "nationalday-02",
       "name": "國泰民安",
       "gradient": "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)"
+    },
+    {
+      "id": "nationalday-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/stock_1.webp"
+    },
+    {
+      "id": "nationalday-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/stock_2.webp"
+    },
+    {
+      "id": "nationalday-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/stock_3.webp"
+    },
+    {
+      "id": "nationalday-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/stock_4.webp"
     }
   ],
   "christmas": [
@@ -301,6 +791,30 @@
       "id": "christmas-02",
       "name": "常青森林",
       "gradient": "linear-gradient(135deg, #064e3b 0%, #15803d 100%)"
+    },
+    {
+      "id": "christmas-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/stock_1.webp"
+    },
+    {
+      "id": "christmas-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/stock_2.webp"
+    },
+    {
+      "id": "christmas-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/stock_3.webp"
+    },
+    {
+      "id": "christmas-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/stock_4.webp"
     }
   ],
   "newyear": [
@@ -313,6 +827,30 @@
       "id": "newyear-02",
       "name": "跨年盛典",
       "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)"
+    },
+    {
+      "id": "newyear-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/stock_1.webp"
+    },
+    {
+      "id": "newyear-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/stock_2.webp"
+    },
+    {
+      "id": "newyear-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/stock_3.webp"
+    },
+    {
+      "id": "newyear-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/stock_4.webp"
     }
   ],
   "funny": [
@@ -326,6 +864,30 @@
       "id": "funny-02",
       "name": "活力亮黃",
       "gradient": "linear-gradient(135deg, #facc15 0%, #fb923c 100%)"
+    },
+    {
+      "id": "funny-stock_1",
+      "name": "stock 1",
+      "gradient": "linear-gradient(135deg, #84cc16 0%, #facc15 100%)",
+      "image": "/backgrounds/funny/stock_1.webp"
+    },
+    {
+      "id": "funny-stock_2",
+      "name": "stock 2",
+      "gradient": "linear-gradient(135deg, #84cc16 0%, #facc15 100%)",
+      "image": "/backgrounds/funny/stock_2.webp"
+    },
+    {
+      "id": "funny-stock_3",
+      "name": "stock 3",
+      "gradient": "linear-gradient(135deg, #84cc16 0%, #facc15 100%)",
+      "image": "/backgrounds/funny/stock_3.webp"
+    },
+    {
+      "id": "funny-stock_4",
+      "name": "stock 4",
+      "gradient": "linear-gradient(135deg, #84cc16 0%, #facc15 100%)",
+      "image": "/backgrounds/funny/stock_4.webp"
     }
   ]
 }

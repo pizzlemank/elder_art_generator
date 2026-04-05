@@ -4,21 +4,24 @@
     "name": "新年祝福",
     "icon": "🧧",
     "description": "過年問候、平安吉祥",
-    "color": "bg-red-100 border-red-400"
+    "color": "bg-red-100 border-red-400",
+    "featuredImage": "/backgrounds/cny/stock_1.webp"
   },
   {
     "id": "morning",
     "name": "早安問候",
     "icon": "🌅",
     "description": "每日問安、傳遞好心情",
-    "color": "bg-orange-100 border-orange-400"
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/morning/stock_1.webp"
   },
   {
     "id": "health",
     "name": "健康平安",
     "icon": "🍀",
     "description": "祝身體健康、平安順心",
-    "color": "bg-green-100 border-green-400"
+    "color": "bg-green-100 border-green-400",
+    "featuredImage": "/backgrounds/health/stock_1.webp"
   },
   {
     "id": "classic",
@@ -53,12 +56,36 @@
     "featuredImage": "/backgrounds/night/01.webp"
   },
   {
+    "id": "womensday",
+    "name": "女神節",
+    "icon": "👸",
+    "description": "國際婦女節、向女性致敬",
+    "color": "bg-purple-100 border-purple-300",
+    "featuredImage": "/backgrounds/womensday/stock_1.webp"
+  },
+  {
+    "id": "childrensday",
+    "name": "兒童節",
+    "icon": "🎈",
+    "description": "童心未泯、快樂成長",
+    "color": "bg-sky-100 border-sky-300",
+    "featuredImage": "/backgrounds/childrensday/stock_1.webp"
+  },
+  {
     "id": "qingming",
     "name": "清明節",
     "icon": "🕯️",
     "description": "慎終追遠、清明時節",
     "color": "bg-slate-100 border-slate-400",
     "featuredImage": "/backgrounds/qingming/01.webp"
+  },
+  {
+    "id": "laborday",
+    "name": "勞動節",
+    "icon": "🛠️",
+    "description": "致敬勞動者、辛苦了",
+    "color": "bg-amber-100 border-amber-400",
+    "featuredImage": "/backgrounds/laborday/stock_1.webp"
   },
   {
     "id": "mothersday",
@@ -73,56 +100,80 @@
     "name": "元宵節",
     "icon": "🏮",
     "description": "提燈看月、元宵喜慶",
-    "color": "bg-orange-100 border-orange-300"
+    "color": "bg-orange-100 border-orange-300",
+    "featuredImage": "/backgrounds/lantern/stock_1.webp"
   },
   {
     "id": "valentine",
     "name": "情人節",
     "icon": "💖",
     "description": "甜蜜告白、浪漫時刻",
-    "color": "bg-pink-100 border-pink-300"
+    "color": "bg-pink-100 border-pink-300",
+    "featuredImage": "/backgrounds/valentine/stock_1.webp"
   },
   {
     "id": "dragonboat",
     "name": "端午節",
     "icon": "🛶",
     "description": "粽香千里、龍舟競渡",
-    "color": "bg-green-100 border-green-300"
+    "color": "bg-green-100 border-green-300",
+    "featuredImage": "/backgrounds/dragonboat/stock_1.webp"
   },
   {
     "id": "fathersday",
     "name": "父親節",
     "icon": "👔",
     "description": "感恩父親、如山如海",
-    "color": "bg-blue-100 border-blue-300"
+    "color": "bg-blue-100 border-blue-300",
+    "featuredImage": "/backgrounds/fathersday/stock_1.webp"
+  },
+  {
+    "id": "teachersday",
+    "name": "教師節",
+    "icon": "👨‍🏫",
+    "description": "感念師恩、尊師重道",
+    "color": "bg-emerald-100 border-emerald-400",
+    "featuredImage": "/backgrounds/teachersday/stock_1.webp"
   },
   {
     "id": "midautumn",
     "name": "中秋佳節",
     "icon": "🌕",
     "description": "月圓團圓、中秋思親",
-    "color": "bg-yellow-100 border-yellow-300"
+    "color": "bg-yellow-100 border-yellow-300",
+    "featuredImage": "/backgrounds/midautumn/stock_1.webp"
+  },
+  {
+    "id": "doubleninth",
+    "name": "重陽節",
+    "icon": "🌼",
+    "description": "敬老尊賢、久久長長",
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/doubleninth/stock_1.webp"
   },
   {
     "id": "nationalday",
     "name": "國慶節",
     "icon": "🎆",
     "description": "雙十國慶、舉國同慶",
-    "color": "bg-red-100 border-red-300"
+    "color": "bg-red-100 border-red-300",
+    "featuredImage": "/backgrounds/nationalday/stock_1.webp"
   },
   {
     "id": "christmas",
     "name": "聖誕節",
     "icon": "🎄",
     "description": "聖誕祝福、雪夜平安",
-    "color": "bg-green-100 border-green-500"
+    "color": "bg-green-100 border-green-500",
+    "featuredImage": "/backgrounds/christmas/stock_1.webp"
   },
   {
     "id": "newyear",
     "name": "跨年元旦",
     "icon": "🎇",
     "description": "辭舊迎新、新年氣象",
-    "color": "bg-blue-100 border-blue-500"
+    "color": "bg-blue-100 border-blue-500",
+    "featuredImage": "/backgrounds/newyear/stock_1.webp"
   },
   {
     "id": "funny",
