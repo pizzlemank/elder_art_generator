@@ -186,7 +186,7 @@
         "01": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
         "02": "linear-gradient(135deg, #dc2626 0%, #ea580c 100%)"
       },
-      "phrases": ["元宵節快樂", "月圓人團團", "福星高照", "燈火輝煌"]
+      "phrases": ["元宵節快樂", "月圓人團圓", "福星高照", "燈火輝煌"]
     },
     {
       "id": "valentine",
@@ -323,6 +323,70 @@
         "02": "linear-gradient(135deg, #facc15 0%, #fb923c 100%)"
       },
       "phrases": ["認同請分享", "你今天微笑了嗎", "生活多點幽默", "快樂很簡單"]
+    },
+    {
+      "id": "children",
+      "name": "兒童節",
+      "icon": "🧸",
+      "description": "歡慶兒童節、童心未泯",
+      "color": "bg-cyan-100 border-cyan-400",
+      "phrases": ["兒童節快樂", "保有童心", "快樂成長", "活潑健康"]
+    },
+    {
+      "id": "labor",
+      "name": "勞動節",
+      "icon": "🛠️",
+      "description": "五一勞動節、辛勞肯定",
+      "color": "bg-amber-100 border-amber-400",
+      "phrases": ["勞動節快樂", "辛苦了", "放鬆一下", "勞動最光榮"]
+    },
+    {
+      "id": "ghost",
+      "name": "中元節",
+      "icon": "🏮",
+      "description": "中元普渡、祈求平安",
+      "color": "bg-orange-100 border-orange-500",
+      "phrases": ["中元平安", "祈求順遂", "虔誠祭祀", "保佑安康"]
+    },
+    {
+      "id": "teachers",
+      "name": "教師節",
+      "icon": "👨‍🏫",
+      "description": "感念師恩、教師節快樂",
+      "color": "bg-emerald-100 border-emerald-400",
+      "phrases": ["教師節快樂", "感念師恩", "桃李滿天下", "老師您辛苦了"]
+    },
+    {
+      "id": "double-ninth",
+      "name": "重陽節",
+      "icon": "🌼",
+      "description": "九九重陽、敬老尊賢",
+      "color": "bg-yellow-100 border-yellow-500",
+      "phrases": ["重陽節快樂", "福壽康寧", "久久長長", "登高望遠"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就就搗蛋",
+      "color": "bg-orange-200 border-orange-600",
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "驚喜連連", "歡樂萬聖"]
+    },
+    {
+      "id": "solstice",
+      "name": "冬至節",
+      "icon": "🥣",
+      "description": "冬至吃湯圓、暖心團圓",
+      "color": "bg-blue-50 border-blue-300",
+      "phrases": ["冬至快樂", "圓圓滿滿", "溫暖冬至", "吃湯圓長一歲"]
+    },
+    {
+      "id": "peace",
+      "name": "和平紀念日",
+      "icon": "🕊️",
+      "description": "二二八和平紀念日",
+      "color": "bg-slate-50 border-slate-300",
+      "phrases": ["和平平安", "珍惜和平", "守護家園", "祈願祥和"]
     }
   ]
 }
