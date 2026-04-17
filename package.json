@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/optimize-images.js && node scripts/sync-content.js && vite build",
+    "build": "node scripts/optimize-images.js && node scripts/sync-content.js && node scripts/generate-latest-page.js && vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "optimize-images": "node scripts/optimize-images.js",
-    "sync-content": "node scripts/optimize-images.js && node scripts/sync-content.js",
+    "sync-content": "node scripts/optimize-images.js && node scripts/sync-content.js && node scripts/generate-latest-page.js",
     "test": "vitest run",
     "test:watch": "vitest"
   },
