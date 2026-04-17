@@ -221,98 +221,290 @@
   ],
   "lantern": [
     {
+      "id": "lantern-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/1.webp"
+    },
+    {
       "id": "lantern-01",
       "name": "張燈結彩",
       "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)"
     },
     {
+      "id": "lantern-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/2.webp"
+    },
+    {
       "id": "lantern-02",
       "name": "圓滿平安",
       "gradient": "linear-gradient(135deg, #dc2626 0%, #ea580c 100%)"
+    },
+    {
+      "id": "lantern-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/3.webp"
+    },
+    {
+      "id": "lantern-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "image": "/backgrounds/lantern/4.webp"
     }
   ],
   "valentine": [
+    {
+      "id": "valentine-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/1.webp"
+    },
     {
       "id": "valentine-01",
       "name": "甜蜜告白",
       "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)"
     },
     {
+      "id": "valentine-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/2.webp"
+    },
+    {
       "id": "valentine-02",
       "name": "永恆之戀",
       "gradient": "linear-gradient(135deg, #f472b6 0%, #fb7185 100%)"
+    },
+    {
+      "id": "valentine-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/3.webp"
+    },
+    {
+      "id": "valentine-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
+      "image": "/backgrounds/valentine/4.webp"
     }
   ],
   "dragonboat": [
+    {
+      "id": "dragonboat-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/1.webp"
+    },
     {
       "id": "dragonboat-01",
       "name": "粽香千里",
       "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)"
     },
     {
+      "id": "dragonboat-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/2.webp"
+    },
+    {
       "id": "dragonboat-02",
       "name": "龍舟競渡",
       "gradient": "linear-gradient(135deg, #10b981 0%, #6ee7b7 100%)"
+    },
+    {
+      "id": "dragonboat-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/3.webp"
+    },
+    {
+      "id": "dragonboat-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "image": "/backgrounds/dragonboat/4.webp"
     }
   ],
   "fathersday": [
+    {
+      "id": "fathersday-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/1.webp"
+    },
     {
       "id": "fathersday-01",
       "name": "父愛如山",
       "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)"
     },
     {
+      "id": "fathersday-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/2.webp"
+    },
+    {
       "id": "fathersday-02",
       "name": "頂天立地",
       "gradient": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)"
+    },
+    {
+      "id": "fathersday-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/3.webp"
+    },
+    {
+      "id": "fathersday-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+      "image": "/backgrounds/fathersday/4.webp"
     }
   ],
   "midautumn": [
+    {
+      "id": "midautumn-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/1.webp"
+    },
     {
       "id": "midautumn-01",
       "name": "月圓花好",
       "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)"
     },
     {
+      "id": "midautumn-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/2.webp"
+    },
+    {
       "id": "midautumn-02",
       "name": "中秋團圓",
       "gradient": "linear-gradient(135deg, #ca8a04 0%, #fde68a 100%)"
+    },
+    {
+      "id": "midautumn-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/3.webp"
+    },
+    {
+      "id": "midautumn-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #fef08a 100%)",
+      "image": "/backgrounds/midautumn/4.webp"
     }
   ],
   "nationalday": [
+    {
+      "id": "nationalday-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/1.webp"
+    },
     {
       "id": "nationalday-01",
       "name": "雙十盛典",
       "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)"
     },
     {
+      "id": "nationalday-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/2.webp"
+    },
+    {
       "id": "nationalday-02",
       "name": "國泰民安",
       "gradient": "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)"
+    },
+    {
+      "id": "nationalday-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/3.webp"
+    },
+    {
+      "id": "nationalday-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fb7185 100%)",
+      "image": "/backgrounds/nationalday/4.webp"
     }
   ],
   "christmas": [
+    {
+      "id": "christmas-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/1.webp"
+    },
     {
       "id": "christmas-01",
       "name": "聖誕紅",
       "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)"
     },
     {
+      "id": "christmas-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/2.webp"
+    },
+    {
       "id": "christmas-02",
       "name": "常青森林",
       "gradient": "linear-gradient(135deg, #064e3b 0%, #15803d 100%)"
+    },
+    {
+      "id": "christmas-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/3.webp"
+    },
+    {
+      "id": "christmas-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #166534 0%, #ef4444 100%)",
+      "image": "/backgrounds/christmas/4.webp"
     }
   ],
   "newyear": [
+    {
+      "id": "newyear-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/1.webp"
+    },
     {
       "id": "newyear-01",
       "name": "旭日東升",
       "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)"
     },
     {
+      "id": "newyear-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/2.webp"
+    },
+    {
       "id": "newyear-02",
       "name": "跨年盛典",
       "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)"
+    },
+    {
+      "id": "newyear-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/3.webp"
+    },
+    {
+      "id": "newyear-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #fde68a 100%)",
+      "image": "/backgrounds/newyear/4.webp"
     }
   ],
   "funny": [
@@ -326,6 +518,318 @@
       "id": "funny-02",
       "name": "活力亮黃",
       "gradient": "linear-gradient(135deg, #facc15 0%, #fb923c 100%)"
+    }
+  ],
+  "labor": [
+    {
+      "id": "labor-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/labor/1.webp"
+    },
+    {
+      "id": "labor-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/labor/2.webp"
+    },
+    {
+      "id": "labor-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/labor/3.webp"
+    },
+    {
+      "id": "labor-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/labor/4.webp"
+    }
+  ],
+  "ghost": [
+    {
+      "id": "ghost-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/ghost/1.webp"
+    },
+    {
+      "id": "ghost-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/ghost/2.webp"
+    },
+    {
+      "id": "ghost-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/ghost/3.webp"
+    },
+    {
+      "id": "ghost-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/ghost/4.webp"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "teachers-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/teachers/1.webp"
+    },
+    {
+      "id": "teachers-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/teachers/2.webp"
+    },
+    {
+      "id": "teachers-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/teachers/3.webp"
+    },
+    {
+      "id": "teachers-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/teachers/4.webp"
+    }
+  ],
+  "doubleninth": [
+    {
+      "id": "doubleninth-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/doubleninth/1.webp"
+    },
+    {
+      "id": "doubleninth-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/doubleninth/2.webp"
+    },
+    {
+      "id": "doubleninth-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/doubleninth/3.webp"
+    },
+    {
+      "id": "doubleninth-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/doubleninth/4.webp"
+    }
+  ],
+  "winter": [
+    {
+      "id": "winter-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/winter/1.webp"
+    },
+    {
+      "id": "winter-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/winter/2.webp"
+    },
+    {
+      "id": "winter-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/winter/3.webp"
+    },
+    {
+      "id": "winter-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/winter/4.webp"
+    }
+  ],
+  "peace228": [
+    {
+      "id": "peace228-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/peace228/1.webp"
+    },
+    {
+      "id": "peace228-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/peace228/2.webp"
+    },
+    {
+      "id": "peace228-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/peace228/3.webp"
+    },
+    {
+      "id": "peace228-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/peace228/4.webp"
+    }
+  ],
+  "womensday": [
+    {
+      "id": "womensday-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/womensday/1.webp"
+    },
+    {
+      "id": "womensday-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/womensday/2.webp"
+    },
+    {
+      "id": "womensday-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/womensday/3.webp"
+    },
+    {
+      "id": "womensday-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/womensday/4.webp"
+    }
+  ],
+  "childrensday": [
+    {
+      "id": "childrensday-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/childrensday/1.webp"
+    },
+    {
+      "id": "childrensday-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/childrensday/2.webp"
+    },
+    {
+      "id": "childrensday-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/childrensday/3.webp"
+    },
+    {
+      "id": "childrensday-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/childrensday/4.webp"
+    }
+  ],
+  "graduation": [
+    {
+      "id": "graduation-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/graduation/1.webp"
+    },
+    {
+      "id": "graduation-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/graduation/2.webp"
+    },
+    {
+      "id": "graduation-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/graduation/3.webp"
+    },
+    {
+      "id": "graduation-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/graduation/4.webp"
+    }
+  ],
+  "exams": [
+    {
+      "id": "exams-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/exams/1.webp"
+    },
+    {
+      "id": "exams-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/exams/2.webp"
+    },
+    {
+      "id": "exams-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/exams/3.webp"
+    },
+    {
+      "id": "exams-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/exams/4.webp"
+    }
+  ],
+  "wedding": [
+    {
+      "id": "wedding-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/wedding/1.webp"
+    },
+    {
+      "id": "wedding-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/wedding/2.webp"
+    },
+    {
+      "id": "wedding-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/wedding/3.webp"
+    },
+    {
+      "id": "wedding-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/wedding/4.webp"
+    }
+  ],
+  "encourage": [
+    {
+      "id": "encourage-1",
+      "name": "背景 1",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/encourage/1.webp"
+    },
+    {
+      "id": "encourage-2",
+      "name": "背景 2",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/encourage/2.webp"
+    },
+    {
+      "id": "encourage-3",
+      "name": "背景 3",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/encourage/3.webp"
+    },
+    {
+      "id": "encourage-4",
+      "name": "背景 4",
+      "gradient": "linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)",
+      "image": "/backgrounds/encourage/4.webp"
     }
   ]
 }
