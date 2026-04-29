@@ -73,56 +73,64 @@
     "name": "元宵節",
     "icon": "🏮",
     "description": "提燈看月、元宵喜慶",
-    "color": "bg-orange-100 border-orange-300"
+    "color": "bg-orange-100 border-orange-300",
+    "featuredImage": "/backgrounds/lantern/01.webp"
   },
   {
     "id": "valentine",
     "name": "情人節",
     "icon": "💖",
     "description": "甜蜜告白、浪漫時刻",
-    "color": "bg-pink-100 border-pink-300"
+    "color": "bg-pink-100 border-pink-300",
+    "featuredImage": "/backgrounds/valentine/01.webp"
   },
   {
     "id": "dragonboat",
     "name": "端午節",
     "icon": "🛶",
     "description": "粽香千里、龍舟競渡",
-    "color": "bg-green-100 border-green-300"
+    "color": "bg-green-100 border-green-300",
+    "featuredImage": "/backgrounds/dragonboat/01.webp"
   },
   {
     "id": "fathersday",
     "name": "父親節",
     "icon": "👔",
     "description": "感恩父親、如山如海",
-    "color": "bg-blue-100 border-blue-300"
+    "color": "bg-blue-100 border-blue-300",
+    "featuredImage": "/backgrounds/fathersday/01.webp"
   },
   {
     "id": "midautumn",
     "name": "中秋佳節",
     "icon": "🌕",
-    "description": "月圓團圓、中秋思親",
-    "color": "bg-yellow-100 border-yellow-300"
+    "description": "月圓團團、中秋思親",
+    "color": "bg-yellow-100 border-yellow-300",
+    "featuredImage": "/backgrounds/midautumn/01.webp"
   },
   {
     "id": "nationalday",
     "name": "國慶節",
     "icon": "🎆",
     "description": "雙十國慶、舉國同慶",
-    "color": "bg-red-100 border-red-300"
+    "color": "bg-red-100 border-red-300",
+    "featuredImage": "/backgrounds/nationalday/01.webp"
   },
   {
     "id": "christmas",
     "name": "聖誕節",
     "icon": "🎄",
     "description": "聖誕祝福、雪夜平安",
-    "color": "bg-green-100 border-green-500"
+    "color": "bg-green-100 border-green-500",
+    "featuredImage": "/backgrounds/christmas/01.webp"
   },
   {
     "id": "newyear",
     "name": "跨年元旦",
     "icon": "🎇",
     "description": "辭舊迎新、新年氣象",
-    "color": "bg-blue-100 border-blue-500"
+    "color": "bg-blue-100 border-blue-500",
+    "featuredImage": "/backgrounds/newyear/01.webp"
   },
   {
     "id": "funny",
@@ -131,5 +139,125 @@
     "description": "幽默一下、博君一粲",
     "color": "bg-purple-100 border-purple-400",
     "featuredImage": "/backgrounds/funny/01.webp"
+  },
+  {
+    "id": "peace228",
+    "name": "228和平紀念日",
+    "icon": "🕊️",
+    "description": "和平守護、愛與包容",
+    "color": "bg-blue-50 border-blue-200",
+    "featuredImage": "/backgrounds/peace228/01.webp"
+  },
+  {
+    "id": "children",
+    "name": "兒童節",
+    "icon": "🎈",
+    "description": "童心未泯、快樂成長",
+    "color": "bg-yellow-50 border-yellow-200",
+    "featuredImage": "/backgrounds/children/01.webp"
+  },
+  {
+    "id": "labor",
+    "name": "勞動節",
+    "icon": "🛠️",
+    "description": "致敬勞動者、辛苦了",
+    "color": "bg-slate-50 border-slate-300",
+    "featuredImage": "/backgrounds/labor/01.webp"
+  },
+  {
+    "id": "ghost",
+    "name": "中元普渡",
+    "icon": "🏮",
+    "description": "虔誠祭祀、平安祈福",
+    "color": "bg-orange-50 border-orange-200",
+    "featuredImage": "/backgrounds/ghost/01.webp"
+  },
+  {
+    "id": "doubleninth",
+    "name": "重陽節",
+    "icon": "🌼",
+    "description": "敬老尊賢、健康長壽",
+    "color": "bg-yellow-50 border-yellow-400",
+    "featuredImage": "/backgrounds/doubleninth/01.webp"
+  },
+  {
+    "id": "teachers",
+    "name": "教師節",
+    "icon": "📚",
+    "description": "感念師恩、作育英才",
+    "color": "bg-stone-50 border-stone-300",
+    "featuredImage": "/backgrounds/teachers/01.webp"
+  },
+  {
+    "id": "winter",
+    "name": "冬至節氣",
+    "icon": "🥣",
+    "description": "冬至吃湯圓、溫暖圓滿",
+    "color": "bg-blue-50 border-blue-300",
+    "featuredImage": "/backgrounds/winter/01.webp"
+  },
+  {
+    "id": "womens",
+    "name": "婦女節",
+    "icon": "💃",
+    "description": "慶祝女性、魅力永恆",
+    "color": "bg-rose-50 border-rose-300",
+    "featuredImage": "/backgrounds/womens/01.webp"
+  },
+  {
+    "id": "graduation",
+    "name": "畢業季",
+    "icon": "🎓",
+    "description": "前程似錦、畢業快樂",
+    "color": "bg-indigo-50 border-indigo-200",
+    "featuredImage": "/backgrounds/graduation/01.webp"
+  },
+  {
+    "id": "exam",
+    "name": "金榜題名",
+    "icon": "✍️",
+    "description": "考試順利、金榜題名",
+    "color": "bg-amber-50 border-amber-300",
+    "featuredImage": "/backgrounds/exam/01.webp"
+  },
+  {
+    "id": "wedding",
+    "name": "新婚誌喜",
+    "icon": "💍",
+    "description": "百年好合、永浴愛河",
+    "color": "bg-red-50 border-red-200",
+    "featuredImage": "/backgrounds/wedding/01.webp"
+  },
+  {
+    "id": "encouragement",
+    "name": "加油打氣",
+    "icon": "💪",
+    "description": "正能量、為你加油",
+    "color": "bg-cyan-50 border-cyan-300",
+    "featuredImage": "/backgrounds/encouragement/01.webp"
+  },
+  {
+    "id": "peace",
+    "name": "平安喜樂",
+    "icon": "🍎",
+    "description": "事事平安、順心如意",
+    "color": "bg-emerald-50 border-emerald-300",
+    "featuredImage": "/backgrounds/peace/01.webp"
+  },
+  {
+    "id": "summer",
+    "name": "夏日問候",
+    "icon": "🍦",
+    "description": "夏日清涼、暑氣全消",
+    "color": "bg-sky-50 border-sky-300",
+    "featuredImage": "/backgrounds/summer/01.webp"
+  },
+  {
+    "id": "thanksgiving",
+    "name": "感恩有你",
+    "icon": "🙏",
+    "description": "心懷感恩、知足常樂",
+    "color": "bg-orange-50 border-orange-300",
+    "featuredImage": "/backgrounds/thanksgiving/01.webp"
   }
 ]
