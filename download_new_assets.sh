@@ -2,6 +2,15 @@
 
 # Configuration for all themes that might be missing images
 THEMES=(
+    "cny:chinese,new,year,red"
+    "morning:morning,sunrise,coffee"
+    "health:health,wellness,nature"
+    "birthday:birthday,cake,celebration"
+    "qingming:willow,nature,spring"
+    "buddhist:zen,buddha,temple"
+    "night:night,moon,stars"
+    "mothersday:carnation,mother,love"
+    "funny:funny,smile,happy"
     "lantern:lantern,festival"
     "valentine:love,hearts"
     "dragonboat:dragon,boat,zongzi"
@@ -25,6 +34,13 @@ THEMES=(
     "peace:apple,nature"
     "summer:summer,sea"
     "thanksgiving:gratitude,thanks"
+    "halloween:halloween,pumpkin"
+    "qixi:starry,night,love"
+    "mazu:temple,sea,goddess"
+    "easter:easter,egg,rabbit"
+    "whiteday:white,gift,love"
+    "buddha:buddha,lotus,peace"
+    "earthgod:temple,old,man,blessing"
 )
 
 BG_DIR="public/backgrounds"
@@ -40,21 +56,26 @@ for item in "${THEMES[@]}"; do
     mkdir -p "$TARGET_DIR"
 
     for i in $(seq 1 $NUM_IMAGES); do
-        FILEPATH="$TARGET_DIR/0$i.jpg"
-        # Check if any image exists (jpg or webp)
-        if [ ! -f "$FILEPATH" ] && [ ! -f "$TARGET_DIR/0$i.webp" ]; then
-            echo "  Downloading image $i..."
-            # Try with query but if it fails to produce a file, it might be the query format
-            # Using commas for loremflickr as per their API
-            curl -L "https://loremflickr.com/1200/900/${QUERY}" -o "$FILEPATH" -s
+        FILEPATH_JPG="$TARGET_DIR/0$i.jpg"
+        FILEPATH_WEBP="$TARGET_DIR/0$i.webp"
 
-            # Simple check if download was successful and is a real file
-            if [ ! -s "$FILEPATH" ]; then
-                echo "    Download failed for $FILEPATH, retrying without query..."
-                curl -L "https://loremflickr.com/1200/900/nature" -o "$FILEPATH" -s
-            fi
-            sleep 0.5
+        echo "  Downloading image $i for $ID..."
+        # Force download even if exists to fix duplicates, using lock to ensure uniqueness
+        # We use i as lock
+        curl -L "https://loremflickr.com/1200/900/${QUERY}/all?lock=$i" -o "$FILEPATH_JPG" -s
+
+        # Simple check if download was successful and is a real file
+        if [ ! -s "$FILEPATH_JPG" ]; then
+            echo "    Download failed for $FILEPATH_JPG, retrying with nature..."
+            curl -L "https://loremflickr.com/1200/900/nature/all?lock=$i" -o "$FILEPATH_JPG" -s
         fi
+
+        # Remove webp if it exists so sync-content can regenerate it from the new jpg
+        if [ -f "$FILEPATH_WEBP" ]; then
+            rm "$FILEPATH_WEBP"
+        fi
+
+        sleep 0.5
     done
 done
 
