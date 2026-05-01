@@ -527,6 +527,69 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就搗蛋、歡樂萬聖",
+      "color": "bg-orange-100 border-orange-600",
+      "defaultGradient": "linear-gradient(135deg, #f97316 0%, #1e293b 100%)",
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "Happy Halloween", "平安狂歡"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "💑",
+      "description": "牛郎織女、浪漫七夕",
+      "color": "bg-pink-50 border-pink-400",
+      "defaultGradient": "linear-gradient(135deg, #fce7f3 0%, #ec4899 100%)",
+      "phrases": ["七夕快樂", "願天下有情人終成眷屬", "心心相印", "浪漫相隨"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖誕辰",
+      "icon": "⛩️",
+      "description": "天上聖母、護國佑民",
+      "color": "bg-red-50 border-red-500",
+      "defaultGradient": "linear-gradient(135deg, #fef2f2 0%, #dc2626 100%)",
+      "phrases": ["媽祖聖誕千秋", "平安吉祥", "風調雨順", "國泰民安"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🥚",
+      "description": "基督復活、希望與重生",
+      "color": "bg-sky-50 border-sky-400",
+      "defaultGradient": "linear-gradient(135deg, #e0f2fe 0%, #0ea5e9 100%)",
+      "phrases": ["復活節快樂", "希望永存", "Happy Easter", "平安喜樂"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "真情回饋、甜蜜延續",
+      "color": "bg-slate-50 border-slate-400",
+      "defaultGradient": "linear-gradient(135deg, #f8fafc 0%, #64748b 100%)",
+      "phrases": ["白色情人節快樂", "情深意重", "感謝有你", "甜蜜相伴"]
+    },
+    {
+      "id": "buddha",
+      "name": "佛誕日",
+      "icon": "🙏",
+      "description": "浴佛法喜、心中有佛",
+      "color": "bg-yellow-50 border-yellow-500",
+      "defaultGradient": "linear-gradient(135deg, #fefce8 0%, #eab308 100%)",
+      "phrases": ["佛誕吉祥", "法喜充滿", "平安康泰", "福慧增長"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公誕辰",
+      "icon": "👴",
+      "description": "福德正神、保佑鄉里",
+      "color": "bg-amber-50 border-amber-500",
+      "defaultGradient": "linear-gradient(135deg, #fffbeb 0%, #d97706 100%)",
+      "phrases": ["土地公保佑", "招財進寶", "平安順利", "大吉大利"]
     }
   ]
 }
