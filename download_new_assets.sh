@@ -2,6 +2,22 @@
 
 # Configuration for all themes that might be missing images
 THEMES=(
+    "cny:red,gold,oriental"
+    "morning:sunrise,nature,morning"
+    "health:nature,peace,green"
+    "birthday:cake,balloon,party"
+    "night:starry,moon,night"
+    "funny:humor,smile,happy"
+    "mothersday:carnation,flower,mother"
+    "qingming:mountain,river,mist"
+    "mazu:mazu,temple,statue"
+    "buddha:buddha,lotus,temple"
+    "qixi:stars,night,romantic"
+    "halloween:pumpkin,autumn,halloween"
+    "easter:easter,spring,eggs"
+    "whiteday:white,heart,sweet"
+    "earthgod:temple,chinese,tradition"
+    "diwali:diwali,light,candle"
     "lantern:lantern,festival"
     "valentine:love,hearts"
     "dragonboat:dragon,boat,zongzi"
@@ -46,7 +62,8 @@ for item in "${THEMES[@]}"; do
             echo "  Downloading image $i..."
             # Try with query but if it fails to produce a file, it might be the query format
             # Using commas for loremflickr as per their API
-            curl -L "https://loremflickr.com/1200/900/${QUERY}" -o "$FILEPATH" -s
+            # Added lock parameter to avoid duplicates
+            curl -L "https://loremflickr.com/1200/900/${QUERY}/all?lock=${ID}${i}" -o "$FILEPATH" -s
 
             # Simple check if download was successful and is a real file
             if [ ! -s "$FILEPATH" ]; then

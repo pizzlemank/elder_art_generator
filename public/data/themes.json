@@ -527,6 +527,110 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖誕辰",
+      "icon": "🏮",
+      "description": "媽祖平安、天后聖誕",
+      "color": "bg-red-50 border-red-200",
+      "phrases": [
+        "媽祖保佑",
+        "平安吉祥",
+        "聖誕千秋",
+        "福佑萬民"
+      ]
+    },
+    {
+      "id": "buddha",
+      "name": "佛誕節",
+      "icon": "☸️",
+      "description": "浴佛祈福、佛誕吉祥",
+      "color": "bg-yellow-50 border-yellow-200",
+      "phrases": [
+        "佛誕吉祥",
+        "法喜充滿",
+        "福慧增長",
+        "浴佛淨心"
+      ]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🌌",
+      "description": "七夕浪漫、緣定今生",
+      "color": "bg-purple-50 border-purple-200",
+      "phrases": [
+        "七夕快樂",
+        "心心相印",
+        "緣定今生",
+        "幸福永隨"
+      ]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "萬聖狂歡、驚喜不絕",
+      "color": "bg-orange-100 border-orange-400",
+      "phrases": [
+        "萬聖節快樂",
+        "不給糖就搗蛋",
+        "驚喜搞怪",
+        "平安度過"
+      ]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🥚",
+      "description": "復活希望、平安喜樂",
+      "color": "bg-green-50 border-green-200",
+      "phrases": [
+        "復活節快樂",
+        "平安喜樂",
+        "萬象更新",
+        "希望常在"
+      ]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "甜蜜回禮、浪漫白節",
+      "color": "bg-slate-50 border-slate-200",
+      "phrases": [
+        "白色情人節快樂",
+        "甜蜜如初",
+        "告白成功",
+        "愛你一生"
+      ]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "👴",
+      "description": "福德正神聖誕、招財進寶",
+      "color": "bg-amber-50 border-amber-200",
+      "phrases": [
+        "土地公保佑",
+        "招財進寶",
+        "福德正神聖誕千秋",
+        "闔家平安"
+      ]
+    },
+    {
+      "id": "diwali",
+      "name": "排燈節",
+      "icon": "🪔",
+      "description": "光明驅走黑暗、幸福平安",
+      "color": "bg-orange-50 border-orange-300",
+      "phrases": [
+        "Happy Diwali",
+        "排燈節快樂",
+        "光明平安",
+        "點亮心燈"
+      ]
     }
   ]
 }
