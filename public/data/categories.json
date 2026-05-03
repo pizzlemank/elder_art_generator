@@ -4,21 +4,24 @@
     "name": "新年祝福",
     "icon": "🧧",
     "description": "過年問候、平安吉祥",
-    "color": "bg-red-100 border-red-400"
+    "color": "bg-red-100 border-red-400",
+    "featuredImage": "/backgrounds/cny/01.webp"
   },
   {
     "id": "morning",
     "name": "早安問候",
     "icon": "🌅",
     "description": "每日問安、傳遞好心情",
-    "color": "bg-orange-100 border-orange-400"
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/morning/01.webp"
   },
   {
     "id": "health",
     "name": "健康平安",
     "icon": "🍀",
     "description": "祝身體健康、平安順心",
-    "color": "bg-green-100 border-green-400"
+    "color": "bg-green-100 border-green-400",
+    "featuredImage": "/backgrounds/health/01.webp"
   },
   {
     "id": "classic",
@@ -259,5 +262,69 @@
     "description": "心懷感恩、知足常樂",
     "color": "bg-orange-50 border-orange-300",
     "featuredImage": "/backgrounds/thanksgiving/01.webp"
+  },
+  {
+    "id": "mazu",
+    "name": "媽祖誕辰",
+    "icon": "🏮",
+    "description": "媽祖平安、天后聖誕",
+    "color": "bg-red-50 border-red-200",
+    "featuredImage": "/backgrounds/mazu/01.webp"
+  },
+  {
+    "id": "buddha",
+    "name": "佛誕節",
+    "icon": "☸️",
+    "description": "浴佛祈福、佛誕吉祥",
+    "color": "bg-yellow-50 border-yellow-200",
+    "featuredImage": "/backgrounds/buddha/01.webp"
+  },
+  {
+    "id": "qixi",
+    "name": "七夕情人節",
+    "icon": "🌌",
+    "description": "七夕浪漫、緣定今生",
+    "color": "bg-purple-50 border-purple-200",
+    "featuredImage": "/backgrounds/qixi/01.webp"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "icon": "🎃",
+    "description": "萬聖狂歡、驚喜不絕",
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/halloween/01.webp"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "icon": "🥚",
+    "description": "復活希望、平安喜樂",
+    "color": "bg-green-50 border-green-200",
+    "featuredImage": "/backgrounds/easter/01.webp"
+  },
+  {
+    "id": "whiteday",
+    "name": "白色情人節",
+    "icon": "🤍",
+    "description": "甜蜜回禮、浪漫白節",
+    "color": "bg-slate-50 border-slate-200",
+    "featuredImage": "/backgrounds/whiteday/01.webp"
+  },
+  {
+    "id": "earthgod",
+    "name": "土地公生",
+    "icon": "👴",
+    "description": "福德正神聖誕、招財進寶",
+    "color": "bg-amber-50 border-amber-200",
+    "featuredImage": "/backgrounds/earthgod/01.webp"
+  },
+  {
+    "id": "diwali",
+    "name": "排燈節",
+    "icon": "🪔",
+    "description": "光明驅走黑暗、幸福平安",
+    "color": "bg-orange-50 border-orange-300",
+    "featuredImage": "/backgrounds/diwali/01.webp"
   }
 ]
