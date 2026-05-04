@@ -527,6 +527,174 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖聖誕",
+      "icon": "🏮",
+      "description": "媽祖繞境、祈求平安",
+      "color": "bg-red-50 border-red-300",
+      "defaultGradient": "linear-gradient(135deg, #ef4444 0%, #fde68a 100%)",
+      "backgroundLabels": {
+        "01": "媽祖慈悲",
+        "02": "繞境盛事",
+        "03": "平安祈福",
+        "04": "信仰力量"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #ef4444 0%, #fde68a 100%)",
+        "02": "linear-gradient(135deg, #f43f5e 0%, #facc15 100%)",
+        "03": "linear-gradient(135deg, #dc2626 0%, #fbbf24 100%)",
+        "04": "linear-gradient(135deg, #991b1b 0%, #f59e0b 100%)"
+      },
+      "phrases": ["媽祖保佑", "聖誕千秋", "平安繞境", "福氣滿滿"]
+    },
+    {
+      "id": "buddha",
+      "name": "浴佛節",
+      "icon": "🪷",
+      "description": "佛誕吉祥、法喜充滿",
+      "color": "bg-yellow-50 border-yellow-300",
+      "defaultGradient": "linear-gradient(135deg, #facc15 0%, #ffffff 100%)",
+      "backgroundLabels": {
+        "01": "淨化心靈",
+        "02": "佛誕喜悅",
+        "03": "慈悲為懷",
+        "04": "法水長流"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #facc15 0%, #ffffff 100%)",
+        "02": "linear-gradient(135deg, #eab308 0%, #fef9c3 100%)",
+        "03": "linear-gradient(135deg, #fbbf24 0%, #fffbeb 100%)",
+        "04": "linear-gradient(135deg, #d97706 0%, #fef3c7 100%)"
+      },
+      "phrases": ["佛光普照", "法喜充滿", "平安吉祥", "同霑法喜"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🌌",
+      "description": "浪漫七夕、鵲橋相會",
+      "color": "bg-purple-50 border-purple-300",
+      "defaultGradient": "linear-gradient(135deg, #4c1d95 0%, #db2777 100%)",
+      "backgroundLabels": {
+        "01": "鵲橋相會",
+        "02": "星空傳情",
+        "03": "浪漫之夜",
+        "04": "永恆愛戀"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #4c1d95 0%, #db2777 100%)",
+        "02": "linear-gradient(135deg, #6d28d9 0%, #f472b6 100%)",
+        "03": "linear-gradient(135deg, #7c3aed 0%, #ec4899 100%)",
+        "04": "linear-gradient(135deg, #5b21b6 0%, #be123c 100%)"
+      },
+      "phrases": ["七夕快樂", "朝朝暮暮", "幸福美滿", "愛在七夕"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就搗蛋",
+      "color": "bg-orange-100 border-orange-500",
+      "defaultGradient": "linear-gradient(135deg, #f97316 0%, #000000 100%)",
+      "backgroundLabels": {
+        "01": "南瓜慶典",
+        "02": "神祕之夜",
+        "03": "搞怪狂歡",
+        "04": "驚喜糖果"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #f97316 0%, #000000 100%)",
+        "02": "linear-gradient(135deg, #7c2d12 0%, #1e1b4b 100%)",
+        "03": "linear-gradient(135deg, #ea580c 0%, #111827 100%)",
+        "04": "linear-gradient(135deg, #c2410c 0%, #000000 100%)"
+      },
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "驚喜不斷"]
+    },
+    {
+      "id": "diwali",
+      "name": "排燈節",
+      "icon": "🪔",
+      "description": "光明驅走黑暗",
+      "color": "bg-yellow-100 border-yellow-600",
+      "defaultGradient": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+      "backgroundLabels": {
+        "01": "光之慶典",
+        "02": "璀璨燈火",
+        "03": "吉祥安康",
+        "04": "繁榮昌盛"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+        "02": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+        "03": "linear-gradient(135deg, #facc15 0%, #451a03 100%)",
+        "04": "linear-gradient(135deg, #eab308 0%, #3f6212 100%)"
+      },
+      "phrases": ["Happy Diwali", "光明快樂", "平安如意"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🥚",
+      "description": "生命重生、希望常在",
+      "color": "bg-blue-50 border-blue-200",
+      "defaultGradient": "linear-gradient(135deg, #bfdbfe 0%, #fef9c3 100%)",
+      "backgroundLabels": {
+        "01": "生命奇蹟",
+        "02": "希望晨曦",
+        "03": "繽紛復活",
+        "04": "和平喜樂"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #bfdbfe 0%, #fef9c3 100%)",
+        "02": "linear-gradient(135deg, #93c5fd 0%, #fde68a 100%)",
+        "03": "linear-gradient(135deg, #60a5fa 0%, #fcd34d 100%)",
+        "04": "linear-gradient(135deg, #38bdf8 0%, #bef264 100%)"
+      },
+      "phrases": ["復活節快樂", "充滿希望", "平安喜樂"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "純潔愛意、甜蜜回禮",
+      "color": "bg-slate-50 border-slate-200",
+      "defaultGradient": "linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)",
+      "backgroundLabels": {
+        "01": "純真愛意",
+        "02": "甜蜜回報",
+        "03": "真誠心語",
+        "04": "浪漫時光"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)",
+        "02": "linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)",
+        "03": "linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%)",
+        "04": "linear-gradient(135deg, #e2e8f0 0%, #64748b 100%)"
+      },
+      "phrases": ["白色情人節快樂", "甜蜜如初", "真誠愛意"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "👴",
+      "description": "福德正神聖誕、招財求平安",
+      "color": "bg-amber-50 border-amber-400",
+      "defaultGradient": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+      "backgroundLabels": {
+        "01": "守護土地",
+        "02": "福德正神",
+        "03": "招財納福",
+        "04": "五穀豐登"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+        "02": "linear-gradient(135deg, #f59e0b 0%, #451a03 100%)",
+        "03": "linear-gradient(135deg, #d97706 0%, #271701 100%)",
+        "04": "linear-gradient(135deg, #b45309 0%, #7c2d12 100%)"
+      },
+      "phrases": ["福德正神保佑", "招財進寶", "平安大吉", "生意興隆"]
     }
   ]
 }
