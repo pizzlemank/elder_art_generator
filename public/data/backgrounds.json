@@ -824,5 +824,213 @@
       "gradient": "linear-gradient(135deg, #fff7ed 0%, #c2410c 100%)",
       "image": "/backgrounds/thanksgiving/04.webp"
     }
+  ],
+  "mazu": [
+    {
+      "id": "mazu-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #fde68a 100%)",
+      "image": "/backgrounds/mazu/01.webp"
+    },
+    {
+      "id": "mazu-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #fde68a 100%)",
+      "image": "/backgrounds/mazu/02.webp"
+    },
+    {
+      "id": "mazu-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #fde68a 100%)",
+      "image": "/backgrounds/mazu/03.webp"
+    },
+    {
+      "id": "mazu-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #fde68a 100%)",
+      "image": "/backgrounds/mazu/04.webp"
+    }
+  ],
+  "buddha": [
+    {
+      "id": "buddha-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #ffffff 100%)",
+      "image": "/backgrounds/buddha/01.webp"
+    },
+    {
+      "id": "buddha-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #ffffff 100%)",
+      "image": "/backgrounds/buddha/02.webp"
+    },
+    {
+      "id": "buddha-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #ffffff 100%)",
+      "image": "/backgrounds/buddha/03.webp"
+    },
+    {
+      "id": "buddha-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #ffffff 100%)",
+      "image": "/backgrounds/buddha/04.webp"
+    }
+  ],
+  "qixi": [
+    {
+      "id": "qixi-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #4c1d95 0%, #db2777 100%)",
+      "image": "/backgrounds/qixi/01.webp"
+    },
+    {
+      "id": "qixi-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #4c1d95 0%, #db2777 100%)",
+      "image": "/backgrounds/qixi/02.webp"
+    },
+    {
+      "id": "qixi-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #4c1d95 0%, #db2777 100%)",
+      "image": "/backgrounds/qixi/03.webp"
+    },
+    {
+      "id": "qixi-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #4c1d95 0%, #db2777 100%)",
+      "image": "/backgrounds/qixi/04.webp"
+    }
+  ],
+  "halloween": [
+    {
+      "id": "halloween-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #000000 100%)",
+      "image": "/backgrounds/halloween/01.webp"
+    },
+    {
+      "id": "halloween-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #000000 100%)",
+      "image": "/backgrounds/halloween/02.webp"
+    },
+    {
+      "id": "halloween-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #000000 100%)",
+      "image": "/backgrounds/halloween/03.webp"
+    },
+    {
+      "id": "halloween-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #000000 100%)",
+      "image": "/backgrounds/halloween/04.webp"
+    }
+  ],
+  "diwali": [
+    {
+      "id": "diwali-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+      "image": "/backgrounds/diwali/01.webp"
+    },
+    {
+      "id": "diwali-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+      "image": "/backgrounds/diwali/02.webp"
+    },
+    {
+      "id": "diwali-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+      "image": "/backgrounds/diwali/03.webp"
+    },
+    {
+      "id": "diwali-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+      "image": "/backgrounds/diwali/04.webp"
+    }
+  ],
+  "easter": [
+    {
+      "id": "easter-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #bfdbfe 0%, #fef9c3 100%)",
+      "image": "/backgrounds/easter/01.webp"
+    },
+    {
+      "id": "easter-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #bfdbfe 0%, #fef9c3 100%)",
+      "image": "/backgrounds/easter/02.webp"
+    },
+    {
+      "id": "easter-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #bfdbfe 0%, #fef9c3 100%)",
+      "image": "/backgrounds/easter/03.webp"
+    },
+    {
+      "id": "easter-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #bfdbfe 0%, #fef9c3 100%)",
+      "image": "/backgrounds/easter/04.webp"
+    }
+  ],
+  "whiteday": [
+    {
+      "id": "whiteday-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/01.webp"
+    },
+    {
+      "id": "whiteday-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/02.webp"
+    },
+    {
+      "id": "whiteday-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/03.webp"
+    },
+    {
+      "id": "whiteday-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/04.webp"
+    }
+  ],
+  "earthgod": [
+    {
+      "id": "earthgod-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/01.webp"
+    },
+    {
+      "id": "earthgod-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/02.webp"
+    },
+    {
+      "id": "earthgod-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/03.webp"
+    },
+    {
+      "id": "earthgod-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fbbf24 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/04.webp"
+    }
   ]
 }
