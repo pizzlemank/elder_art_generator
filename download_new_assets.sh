@@ -25,6 +25,14 @@ THEMES=(
     "peace:apple,nature"
     "summer:summer,sea"
     "thanksgiving:gratitude,thanks"
+    "halloween:halloween,pumpkin"
+    "qixi:stars,love,night"
+    "mazu:temple,sea,taiwan"
+    "buddha:buddha,lotus"
+    "easter:easter,egg,rabbit"
+    "whiteday:white,gift,love"
+    "earthgod:nature,fortune,old"
+    "diwali:diwali,lamp,light"
 )
 
 BG_DIR="public/backgrounds"
