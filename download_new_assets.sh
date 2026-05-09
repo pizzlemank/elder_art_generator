@@ -25,6 +25,14 @@ THEMES=(
     "peace:apple,nature"
     "summer:summer,sea"
     "thanksgiving:gratitude,thanks"
+    "white_day:gift,chocolate,white"
+    "earthgod:temple,altar,statue"
+    "mazu:mazu,temple,statue"
+    "buddha_birthday:buddha,temple,lotus"
+    "qixi:stars,bridge,couple"
+    "halloween:pumpkin,spooky,ghost"
+    "easter:egg,rabbit,easter"
+    "diwali:lamp,candle,diwali"
 )
 
 BG_DIR="public/backgrounds"
@@ -44,14 +52,14 @@ for item in "${THEMES[@]}"; do
         # Check if any image exists (jpg or webp)
         if [ ! -f "$FILEPATH" ] && [ ! -f "$TARGET_DIR/0$i.webp" ]; then
             echo "  Downloading image $i..."
-            # Try with query but if it fails to produce a file, it might be the query format
+            # Using lock to get unique images
             # Using commas for loremflickr as per their API
-            curl -L "https://loremflickr.com/1200/900/${QUERY}" -o "$FILEPATH" -s
+            curl -L "https://loremflickr.com/1200/900/${QUERY}/all?lock=$((100 + i))" -o "$FILEPATH" -s
 
             # Simple check if download was successful and is a real file
             if [ ! -s "$FILEPATH" ]; then
                 echo "    Download failed for $FILEPATH, retrying without query..."
-                curl -L "https://loremflickr.com/1200/900/nature" -o "$FILEPATH" -s
+                curl -L "https://loremflickr.com/1200/900/nature?lock=$((200 + i))" -o "$FILEPATH" -s
             fi
             sleep 0.5
         fi
