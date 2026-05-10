@@ -527,6 +527,78 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "回應心意、浪漫白色",
+      "color": "bg-slate-50 border-slate-200",
+      "defaultGradient": "linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)",
+      "phrases": ["白色情人節快樂", "回饋滿滿的愛", "浪漫相伴", "甜蜜如初"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "👴",
+      "description": "祈求財運、福氣安康",
+      "color": "bg-yellow-50 border-yellow-300",
+      "defaultGradient": "linear-gradient(135deg, #fefce8 0%, #facc15 100%)",
+      "phrases": ["土地公生快樂", "頭牙大吉", "招財進寶", "福德正神庇佑"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖聖誕",
+      "icon": "🏮",
+      "description": "天上聖母、守護平安",
+      "color": "bg-red-50 border-red-300",
+      "defaultGradient": "linear-gradient(135deg, #fef2f2 0%, #ef4444 100%)",
+      "phrases": ["媽祖生快樂", "聖母庇佑", "出入平安", "風調雨順"]
+    },
+    {
+      "id": "buddha",
+      "name": "浴佛節",
+      "icon": "🪷",
+      "description": "佛誕吉祥、法喜充滿",
+      "color": "bg-amber-50 border-amber-200",
+      "defaultGradient": "linear-gradient(135deg, #fffbeb 0%, #f59e0b 100%)",
+      "phrases": ["浴佛節快樂", "佛誕吉祥", "法喜充滿", "福慧增長"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🌌",
+      "description": "鵲橋相會、浪漫傳說",
+      "color": "bg-purple-50 border-purple-200",
+      "defaultGradient": "linear-gradient(135deg, #faf5ff 0%, #a855f7 100%)",
+      "phrases": ["七夕快樂", "願天下有情人終成眷屬", "浪漫七夕", "情深意切"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就搗蛋、趣味搞怪",
+      "color": "bg-orange-100 border-orange-400",
+      "defaultGradient": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "Happy Halloween", "一起狂歡吧"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🐰",
+      "description": "迎接希望、春回大地",
+      "color": "bg-green-50 border-green-200",
+      "defaultGradient": "linear-gradient(135deg, #f0fdf4 0%, #22c55e 100%)",
+      "phrases": ["復活節快樂", "充滿希望", "Happy Easter", "萬象更新"]
+    },
+    {
+      "id": "diwali",
+      "name": "排燈節",
+      "icon": "🪔",
+      "description": "光明勝過黑暗、喜慶繁榮",
+      "color": "bg-yellow-100 border-yellow-500",
+      "defaultGradient": "linear-gradient(135deg, #fefce8 0%, #eab308 100%)",
+      "phrases": ["排燈節快樂", "Happy Diwali", "光明萬丈", "祈求好運"]
     }
   ]
 }
