@@ -259,5 +259,69 @@
     "description": "心懷感恩、知足常樂",
     "color": "bg-orange-50 border-orange-300",
     "featuredImage": "/backgrounds/thanksgiving/01.webp"
+  },
+  {
+    "id": "earthgod",
+    "name": "土地公生",
+    "icon": "👴",
+    "description": "福德正神聖誕、祈求財源廣進",
+    "color": "bg-amber-100 border-amber-400",
+    "featuredImage": "/backgrounds/earthgod/01.webp"
+  },
+  {
+    "id": "mazu",
+    "name": "媽祖誕辰",
+    "icon": "🏮",
+    "description": "天后聖誕、祈求平安吉祥",
+    "color": "bg-red-100 border-red-400",
+    "featuredImage": "/backgrounds/mazu/01.webp"
+  },
+  {
+    "id": "buddha",
+    "name": "佛誕節",
+    "icon": "🧘",
+    "description": "浴佛吉祥、法喜充滿",
+    "color": "bg-yellow-100 border-yellow-400",
+    "featuredImage": "/backgrounds/buddha/01.webp"
+  },
+  {
+    "id": "qixi",
+    "name": "七夕情人節",
+    "icon": "🌌",
+    "description": "浪漫七夕、情定終生",
+    "color": "bg-purple-100 border-purple-400",
+    "featuredImage": "/backgrounds/qixi/01.webp"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "icon": "🎃",
+    "description": "不給糖就搗蛋、驚喜連連",
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/halloween/01.webp"
+  },
+  {
+    "id": "diwali",
+    "name": "萬燈節",
+    "icon": "🪔",
+    "description": "光明與希望、祈福平安",
+    "color": "bg-orange-100 border-orange-500",
+    "featuredImage": "/backgrounds/diwali/01.webp"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "icon": "🐰",
+    "description": "萬物復甦、新生希望",
+    "color": "bg-green-100 border-green-400",
+    "featuredImage": "/backgrounds/easter/01.webp"
+  },
+  {
+    "id": "whiteday",
+    "name": "白色情人節",
+    "icon": "🤍",
+    "description": "甜蜜回禮、愛情滿分",
+    "color": "bg-slate-100 border-slate-300",
+    "featuredImage": "/backgrounds/whiteday/01.webp"
   }
 ]
