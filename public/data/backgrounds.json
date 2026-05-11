@@ -824,5 +824,213 @@
       "gradient": "linear-gradient(135deg, #fff7ed 0%, #c2410c 100%)",
       "image": "/backgrounds/thanksgiving/04.webp"
     }
+  ],
+  "earthgod": [
+    {
+      "id": "earthgod-01",
+      "name": "福德正神",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/01.webp"
+    },
+    {
+      "id": "earthgod-02",
+      "name": "財源廣進",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/02.webp"
+    },
+    {
+      "id": "earthgod-03",
+      "name": "土地公廟",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/03.webp"
+    },
+    {
+      "id": "earthgod-04",
+      "name": "平安發財",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #78350f 100%)",
+      "image": "/backgrounds/earthgod/04.webp"
+    }
+  ],
+  "mazu": [
+    {
+      "id": "mazu-01",
+      "name": "天上聖母",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
+      "image": "/backgrounds/mazu/01.webp"
+    },
+    {
+      "id": "mazu-02",
+      "name": "慈悲為懷",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
+      "image": "/backgrounds/mazu/02.webp"
+    },
+    {
+      "id": "mazu-03",
+      "name": "平安祈福",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
+      "image": "/backgrounds/mazu/03.webp"
+    },
+    {
+      "id": "mazu-04",
+      "name": "香火鼎盛",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
+      "image": "/backgrounds/mazu/04.webp"
+    }
+  ],
+  "buddha": [
+    {
+      "id": "buddha-01",
+      "name": "佛誕吉祥",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #a16207 100%)",
+      "image": "/backgrounds/buddha/01.webp"
+    },
+    {
+      "id": "buddha-02",
+      "name": "清淨法身",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #a16207 100%)",
+      "image": "/backgrounds/buddha/02.webp"
+    },
+    {
+      "id": "buddha-03",
+      "name": "法喜充滿",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #a16207 100%)",
+      "image": "/backgrounds/buddha/03.webp"
+    },
+    {
+      "id": "buddha-04",
+      "name": "禪意清幽",
+      "gradient": "linear-gradient(135deg, #facc15 0%, #a16207 100%)",
+      "image": "/backgrounds/buddha/04.webp"
+    }
+  ],
+  "qixi": [
+    {
+      "id": "qixi-01",
+      "name": "銀河鵲橋",
+      "gradient": "linear-gradient(135deg, #a855f7 0%, #4c1d95 100%)",
+      "image": "/backgrounds/qixi/01.webp"
+    },
+    {
+      "id": "qixi-02",
+      "name": "星空浪漫",
+      "gradient": "linear-gradient(135deg, #a855f7 0%, #4c1d95 100%)",
+      "image": "/backgrounds/qixi/02.webp"
+    },
+    {
+      "id": "qixi-03",
+      "name": "心心相印",
+      "gradient": "linear-gradient(135deg, #a855f7 0%, #4c1d95 100%)",
+      "image": "/backgrounds/qixi/03.webp"
+    },
+    {
+      "id": "qixi-04",
+      "name": "緣定今生",
+      "gradient": "linear-gradient(135deg, #a855f7 0%, #4c1d95 100%)",
+      "image": "/backgrounds/qixi/04.webp"
+    }
+  ],
+  "halloween": [
+    {
+      "id": "halloween-01",
+      "name": "南瓜派對",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #1e293b 100%)",
+      "image": "/backgrounds/halloween/01.webp"
+    },
+    {
+      "id": "halloween-02",
+      "name": "奇幻之夜",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #1e293b 100%)",
+      "image": "/backgrounds/halloween/02.webp"
+    },
+    {
+      "id": "halloween-03",
+      "name": "不給糖就搗蛋",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #1e293b 100%)",
+      "image": "/backgrounds/halloween/03.webp"
+    },
+    {
+      "id": "halloween-04",
+      "name": "神秘氣氛",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #1e293b 100%)",
+      "image": "/backgrounds/halloween/04.webp"
+    }
+  ],
+  "diwali": [
+    {
+      "id": "diwali-01",
+      "name": "光明之燈",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)",
+      "image": "/backgrounds/diwali/01.webp"
+    },
+    {
+      "id": "diwali-02",
+      "name": "希望之光",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)",
+      "image": "/backgrounds/diwali/02.webp"
+    },
+    {
+      "id": "diwali-03",
+      "name": "繁榮昌盛",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)",
+      "image": "/backgrounds/diwali/03.webp"
+    },
+    {
+      "id": "diwali-04",
+      "name": "平安吉祥",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)",
+      "image": "/backgrounds/diwali/04.webp"
+    }
+  ],
+  "easter": [
+    {
+      "id": "easter-01",
+      "name": "復活節兔",
+      "gradient": "linear-gradient(135deg, #4ade80 0%, #166534 100%)",
+      "image": "/backgrounds/easter/01.webp"
+    },
+    {
+      "id": "easter-02",
+      "name": "新生希望",
+      "gradient": "linear-gradient(135deg, #4ade80 0%, #166534 100%)",
+      "image": "/backgrounds/easter/02.webp"
+    },
+    {
+      "id": "easter-03",
+      "name": "春回大地",
+      "gradient": "linear-gradient(135deg, #4ade80 0%, #166534 100%)",
+      "image": "/backgrounds/easter/03.webp"
+    },
+    {
+      "id": "easter-04",
+      "name": "萬物復甦",
+      "gradient": "linear-gradient(135deg, #4ade80 0%, #166534 100%)",
+      "image": "/backgrounds/easter/04.webp"
+    }
+  ],
+  "whiteday": [
+    {
+      "id": "whiteday-01",
+      "name": "純潔愛情",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #64748b 100%)",
+      "image": "/backgrounds/whiteday/01.webp"
+    },
+    {
+      "id": "whiteday-02",
+      "name": "甜蜜回禮",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #64748b 100%)",
+      "image": "/backgrounds/whiteday/02.webp"
+    },
+    {
+      "id": "whiteday-03",
+      "name": "心動時刻",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #64748b 100%)",
+      "image": "/backgrounds/whiteday/03.webp"
+    },
+    {
+      "id": "whiteday-04",
+      "name": "溫馨相伴",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #64748b 100%)",
+      "image": "/backgrounds/whiteday/04.webp"
+    }
   ]
 }
