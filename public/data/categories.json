@@ -259,5 +259,77 @@
     "description": "心懷感恩、知足常樂",
     "color": "bg-orange-50 border-orange-300",
     "featuredImage": "/backgrounds/thanksgiving/01.webp"
+  },
+  {
+    "id": "qixi",
+    "name": "七夕情人節",
+    "icon": "🎋",
+    "description": "牛郎織女、浪漫七夕",
+    "color": "bg-indigo-50 border-indigo-300",
+    "featuredImage": "/backgrounds/qixi/01.webp"
+  },
+  {
+    "id": "mazu",
+    "name": "媽祖聖誕",
+    "icon": "🏮",
+    "description": "媽祖繞境、祈求平安",
+    "color": "bg-orange-50 border-orange-400",
+    "featuredImage": "/backgrounds/mazu/01.webp"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "icon": "🎃",
+    "description": "不給糖就搗蛋",
+    "color": "bg-orange-100 border-orange-600",
+    "featuredImage": "/backgrounds/halloween/01.webp"
+  },
+  {
+    "id": "buddha",
+    "name": "佛誕節",
+    "icon": "☸️",
+    "description": "浴佛淨心、法喜充滿",
+    "color": "bg-yellow-50 border-yellow-500",
+    "featuredImage": "/backgrounds/buddha/01.webp"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "icon": "🐰",
+    "description": "復活節快樂、希望萌芽",
+    "color": "bg-green-50 border-green-300",
+    "featuredImage": "/backgrounds/easter/01.webp"
+  },
+  {
+    "id": "whiteday",
+    "name": "白色情人節",
+    "icon": "🤍",
+    "description": "甜蜜回禮、白色愛戀",
+    "color": "bg-slate-50 border-slate-200",
+    "featuredImage": "/backgrounds/whiteday/01.webp"
+  },
+  {
+    "id": "earthgod",
+    "name": "土地公生",
+    "icon": "👴",
+    "description": "福德正神聖誕、招財進寶",
+    "color": "bg-yellow-100 border-yellow-600",
+    "featuredImage": "/backgrounds/earthgod/01.webp"
+  },
+  {
+    "id": "earthday",
+    "name": "世界地球日",
+    "icon": "🌍",
+    "description": "愛護地球、永續生活",
+    "color": "bg-emerald-50 border-emerald-400",
+    "featuredImage": "/backgrounds/earthday/01.webp"
+  },
+  {
+    "id": "diwali",
+    "name": "屠妖節",
+    "icon": "🪔",
+    "description": "萬燈耀眼、光明戰勝黑暗",
+    "color": "bg-amber-100 border-amber-500",
+    "featuredImage": "/backgrounds/diwali/01.webp"
   }
 ]
