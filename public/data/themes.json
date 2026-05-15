@@ -527,6 +527,87 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🎋",
+      "description": "牛郎織女、浪漫七夕",
+      "color": "bg-purple-50 border-purple-300",
+      "defaultGradient": "linear-gradient(135deg, #a855f7 0%, #3b82f6 100%)",
+      "phrases": ["七夕快樂", "心心相印", "鵲橋相會", "願天下有情人終成眷屬"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖生",
+      "icon": "🏮",
+      "description": "媽祖誕辰、平安繞境",
+      "color": "bg-amber-50 border-amber-400",
+      "defaultGradient": "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
+      "phrases": ["媽祖保佑", "隨香平安", "風調雨順", "國泰民安"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就搗蛋、驚喜派對",
+      "color": "bg-orange-100 border-orange-500",
+      "defaultGradient": "linear-gradient(135deg, #f97316 0%, #4b5563 100%)",
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "驚奇之夜", "狂歡萬聖"]
+    },
+    {
+      "id": "buddha",
+      "name": "佛誕節",
+      "icon": "🪷",
+      "description": "浴佛節、慈悲喜捨",
+      "color": "bg-yellow-50 border-yellow-300",
+      "defaultGradient": "linear-gradient(135deg, #fde68a 0%, #f59e0b 100%)",
+      "phrases": ["佛誕吉祥", "法喜充滿", "慈悲智慧", "洗滌身心"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🥚",
+      "description": "生命重生、春之祝福",
+      "color": "bg-sky-50 border-sky-200",
+      "defaultGradient": "linear-gradient(135deg, #bae6fd 0%, #a78bfa 100%)",
+      "phrases": ["復活節快樂", "希望永存", "生命喜悅", "春回大地"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "甜蜜回禮、白色浪漫",
+      "color": "bg-slate-50 border-slate-200",
+      "defaultGradient": "linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)",
+      "phrases": ["白色情人節快樂", "甜蜜回禮", "純潔愛意", "情深意重"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "🌳",
+      "description": "頭牙尾牙、福德正神",
+      "color": "bg-emerald-50 border-emerald-400",
+      "defaultGradient": "linear-gradient(135deg, #10b981 0%, #fbbf24 100%)",
+      "phrases": ["福德庇佑", "招財進寶", "合家平安", "生意興隆"]
+    },
+    {
+      "id": "earthday",
+      "name": "世界地球日",
+      "icon": "🌍",
+      "description": "愛護地球、永續生活",
+      "color": "bg-green-50 border-green-300",
+      "defaultGradient": "linear-gradient(135deg, #4ade80 0%, #3b82f6 100%)",
+      "phrases": ["愛護地球", "守護家園", "環保生活", "永續發展"]
+    },
+    {
+      "id": "diwali",
+      "name": "萬燈節",
+      "icon": "🪔",
+      "description": "光明驅散黑暗、排燈節",
+      "color": "bg-orange-50 border-orange-400",
+      "defaultGradient": "linear-gradient(135deg, #fb923c 0%, #7c3aed 100%)",
+      "phrases": ["萬燈節快樂", "光明同行", "繁榮吉祥", "幸福安康"]
     }
   ]
 }
