@@ -259,5 +259,117 @@
     "description": "心懷感恩、知足常樂",
     "color": "bg-orange-50 border-orange-300",
     "featuredImage": "/backgrounds/thanksgiving/01.webp"
+  },
+  {
+    "id": "whiteday",
+    "name": "白色情人節",
+    "icon": "⚪",
+    "description": "回饋心意、甜蜜回應",
+    "color": "bg-blue-50 border-blue-200",
+    "featuredImage": "/backgrounds/whiteday/01.webp"
+  },
+  {
+    "id": "aprilfools",
+    "name": "愚人節",
+    "icon": "🤡",
+    "description": "幽默玩笑、驚喜連連",
+    "color": "bg-yellow-50 border-yellow-300",
+    "featuredImage": "/backgrounds/aprilfools/01.webp"
+  },
+  {
+    "id": "earthday",
+    "name": "世界地球日",
+    "icon": "🌍",
+    "description": "守護地球、綠色生活",
+    "color": "bg-emerald-50 border-emerald-200",
+    "featuredImage": "/backgrounds/earthday/01.webp"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "icon": "🥚",
+    "description": "重生希望、喜悅分享",
+    "color": "bg-indigo-50 border-indigo-200",
+    "featuredImage": "/backgrounds/easter/01.webp"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "icon": "🎃",
+    "description": "變裝搞怪、不給糖就搗蛋",
+    "color": "bg-orange-100 border-orange-500",
+    "featuredImage": "/backgrounds/halloween/01.webp"
+  },
+  {
+    "id": "diwali",
+    "name": "萬燈節",
+    "icon": "🪔",
+    "description": "光明驅逐黑暗、祝福滿盈",
+    "color": "bg-amber-100 border-amber-500",
+    "featuredImage": "/backgrounds/diwali/01.webp"
+  },
+  {
+    "id": "qixi",
+    "name": "七夕情人節",
+    "icon": "🎋",
+    "description": "鵲橋相會、浪漫傳說",
+    "color": "bg-purple-100 border-purple-300",
+    "featuredImage": "/backgrounds/qixi/01.webp"
+  },
+  {
+    "id": "mazu",
+    "name": "媽祖誕辰",
+    "icon": "⛩️",
+    "description": "天上聖母、護國佑民",
+    "color": "bg-red-50 border-red-400",
+    "featuredImage": "/backgrounds/mazu/01.webp"
+  },
+  {
+    "id": "buddha",
+    "name": "浴佛節",
+    "icon": "☸️",
+    "description": "佛誕祈福、清淨身心",
+    "color": "bg-yellow-50 border-yellow-400",
+    "featuredImage": "/backgrounds/buddha/01.webp"
+  },
+  {
+    "id": "earthgod",
+    "name": "土地公生",
+    "icon": "🏮",
+    "description": "福德正神、招財納福",
+    "color": "bg-orange-50 border-orange-400",
+    "featuredImage": "/backgrounds/earthgod/01.webp"
+  },
+  {
+    "id": "youth",
+    "name": "青年節",
+    "icon": "🏃",
+    "description": "熱血活力、夢想前行",
+    "color": "bg-blue-50 border-blue-400",
+    "featuredImage": "/backgrounds/youth/01.webp"
+  },
+  {
+    "id": "armedforces",
+    "name": "軍人節",
+    "icon": "🎖️",
+    "description": "致敬國軍、保家衛國",
+    "color": "bg-green-50 border-green-600",
+    "featuredImage": "/backgrounds/armedforces/01.webp"
+  },
+  {
+    "id": "retrocession",
+    "name": "台灣光復節",
+    "icon": "🇹🇼",
+    "description": "光復紀念、守護台灣",
+    "color": "bg-red-50 border-blue-600",
+    "featuredImage": "/backgrounds/retrocession/01.webp"
+  },
+  {
+    "id": "singlesday",
+    "name": "雙十一購物節",
+    "icon": "🛒",
+    "description": "購物狂歡、生活饗宴",
+    "color": "bg-pink-50 border-pink-400",
+    "featuredImage": "/backgrounds/singlesday/01.webp"
   }
 ]

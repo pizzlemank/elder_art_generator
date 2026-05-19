@@ -18,6 +18,7 @@ const StepThemeSelection = ({ onSelect }: Props) => {
         {categories.map((cat) => (
           <button
             key={cat.id}
+            data-testid={`theme-card-${cat.id}`}
             onClick={() => onSelect(cat)}
             className={`flex items-center gap-4 w-full min-h-[110px] rounded-2xl border-4 ${cat.color} px-5 py-4 text-left transition-transform active:scale-95 hover:shadow-lg`}
           >

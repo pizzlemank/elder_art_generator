@@ -527,6 +527,132 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "⚪",
+      "description": "回饋心意、甜蜜回應",
+      "color": "bg-blue-50 border-blue-200",
+      "defaultGradient": "linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%)",
+      "phrases": ["白色情人節快樂", "心意滿滿", "甜蜜回應", "謝謝你的愛"]
+    },
+    {
+      "id": "aprilfools",
+      "name": "愚人節",
+      "icon": "🤡",
+      "description": "幽默玩笑、驚喜連連",
+      "color": "bg-yellow-50 border-yellow-300",
+      "defaultGradient": "linear-gradient(135deg, #fefce8 0%, #fef08a 100%)",
+      "phrases": ["愚人節快樂", "博君一粲", "天天開心", "幽默人生"]
+    },
+    {
+      "id": "earthday",
+      "name": "世界地球日",
+      "icon": "🌍",
+      "description": "守護地球、綠色生活",
+      "color": "bg-emerald-50 border-emerald-200",
+      "defaultGradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "phrases": ["愛護地球", "綠色生活", "守護家園", "永續發展"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🥚",
+      "description": "重生希望、喜悅分享",
+      "color": "bg-indigo-50 border-indigo-200",
+      "defaultGradient": "linear-gradient(135deg, #e0e7ff 0%, #818cf8 100%)",
+      "phrases": ["復活節快樂", "希望永存", "生命喜悅", "平安蒙福"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "變裝搞怪、不給糖就搗蛋",
+      "color": "bg-orange-100 border-orange-500",
+      "defaultGradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "變裝派對", "驚喜之夜"]
+    },
+    {
+      "id": "diwali",
+      "name": "萬燈節",
+      "icon": "🪔",
+      "description": "光明驅逐黑暗、祝福滿盈",
+      "color": "bg-amber-100 border-amber-500",
+      "defaultGradient": "linear-gradient(135deg, #fff7ed 0%, #d97706 100%)",
+      "phrases": ["萬燈節快樂", "光明永駐", "吉祥如意", "幸福平安"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🎋",
+      "description": "鵲橋相會、浪漫傳說",
+      "color": "bg-purple-100 border-purple-300",
+      "defaultGradient": "linear-gradient(135deg, #f5f3ff 0%, #8b5cf6 100%)",
+      "phrases": ["七夕快樂", "願天下有情人終成眷屬", "浪漫七夕", "一生守護"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖誕辰",
+      "icon": "⛩️",
+      "description": "天上聖母、護國佑民",
+      "color": "bg-red-50 border-red-400",
+      "defaultGradient": "linear-gradient(135deg, #fee2e2 0%, #dc2626 100%)",
+      "phrases": ["媽祖保佑", "聖母慈悲", "風調雨順", "國泰民安"]
+    },
+    {
+      "id": "buddha",
+      "name": "浴佛節",
+      "icon": "☸️",
+      "description": "佛誕祈福、清淨身心",
+      "color": "bg-yellow-50 border-yellow-400",
+      "defaultGradient": "linear-gradient(135deg, #fffbeb 0%, #fbbf24 100%)",
+      "phrases": ["佛誕吉祥", "法喜充滿", "清淨自在", "福慧增長"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "🏮",
+      "description": "福德正神、招財納福",
+      "color": "bg-orange-50 border-orange-400",
+      "defaultGradient": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+      "phrases": ["福德正神庇佑", "招財納福", "闔家平安", "大吉大利"]
+    },
+    {
+      "id": "youth",
+      "name": "青年節",
+      "icon": "🏃",
+      "description": "熱血活力、夢想前行",
+      "color": "bg-blue-50 border-blue-400",
+      "defaultGradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "phrases": ["青年節快樂", "熱血奮鬥", "勇敢追夢", "青春無敵"]
+    },
+    {
+      "id": "armedforces",
+      "name": "軍人節",
+      "icon": "🎖️",
+      "description": "致敬國軍、保家衛國",
+      "color": "bg-green-50 border-green-600",
+      "defaultGradient": "linear-gradient(135deg, #f0fdf4 0%, #166534 100%)",
+      "phrases": ["軍人節快樂", "辛苦了", "保家衛國", "向英雄致敬"]
+    },
+    {
+      "id": "retrocession",
+      "name": "台灣光復節",
+      "icon": "🇹🇼",
+      "description": "光復紀念、守護台灣",
+      "color": "bg-red-50 border-blue-600",
+      "defaultGradient": "linear-gradient(135deg, #dc2626 0%, #2563eb 100%)",
+      "phrases": ["光復節快樂", "守護台灣", "祥和平安", "繁榮進步"]
+    },
+    {
+      "id": "singlesday",
+      "name": "雙十一購物節",
+      "icon": "🛒",
+      "description": "購物狂歡、生活饗宴",
+      "color": "bg-pink-50 border-pink-400",
+      "defaultGradient": "linear-gradient(135deg, #fdf2f8 0%, #db2777 100%)",
+      "phrases": ["雙十一快樂", "購物愉快", "犒賞自己", "生活萬歲"]
     }
   ]
 }
