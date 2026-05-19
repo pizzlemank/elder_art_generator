@@ -824,5 +824,369 @@
       "gradient": "linear-gradient(135deg, #fff7ed 0%, #c2410c 100%)",
       "image": "/backgrounds/thanksgiving/04.webp"
     }
+  ],
+  "whiteday": [
+    {
+      "id": "whiteday-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%)",
+      "image": "/backgrounds/whiteday/01.webp"
+    },
+    {
+      "id": "whiteday-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%)",
+      "image": "/backgrounds/whiteday/02.webp"
+    },
+    {
+      "id": "whiteday-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%)",
+      "image": "/backgrounds/whiteday/03.webp"
+    },
+    {
+      "id": "whiteday-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%)",
+      "image": "/backgrounds/whiteday/04.webp"
+    }
+  ],
+  "aprilfools": [
+    {
+      "id": "aprilfools-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #fef08a 100%)",
+      "image": "/backgrounds/aprilfools/01.webp"
+    },
+    {
+      "id": "aprilfools-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #fef08a 100%)",
+      "image": "/backgrounds/aprilfools/02.webp"
+    },
+    {
+      "id": "aprilfools-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #fef08a 100%)",
+      "image": "/backgrounds/aprilfools/03.webp"
+    },
+    {
+      "id": "aprilfools-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #fef08a 100%)",
+      "image": "/backgrounds/aprilfools/04.webp"
+    }
+  ],
+  "earthday": [
+    {
+      "id": "earthday-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/01.webp"
+    },
+    {
+      "id": "earthday-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/02.webp"
+    },
+    {
+      "id": "earthday-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/03.webp"
+    },
+    {
+      "id": "earthday-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/04.webp"
+    }
+  ],
+  "easter": [
+    {
+      "id": "easter-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #818cf8 100%)",
+      "image": "/backgrounds/easter/01.webp"
+    },
+    {
+      "id": "easter-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #818cf8 100%)",
+      "image": "/backgrounds/easter/02.webp"
+    },
+    {
+      "id": "easter-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #818cf8 100%)",
+      "image": "/backgrounds/easter/03.webp"
+    },
+    {
+      "id": "easter-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #818cf8 100%)",
+      "image": "/backgrounds/easter/04.webp"
+    }
+  ],
+  "halloween": [
+    {
+      "id": "halloween-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/01.webp"
+    },
+    {
+      "id": "halloween-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/02.webp"
+    },
+    {
+      "id": "halloween-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/03.webp"
+    },
+    {
+      "id": "halloween-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/04.webp"
+    }
+  ],
+  "diwali": [
+    {
+      "id": "diwali-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #d97706 100%)",
+      "image": "/backgrounds/diwali/01.webp"
+    },
+    {
+      "id": "diwali-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #d97706 100%)",
+      "image": "/backgrounds/diwali/02.webp"
+    },
+    {
+      "id": "diwali-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #d97706 100%)",
+      "image": "/backgrounds/diwali/03.webp"
+    },
+    {
+      "id": "diwali-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #d97706 100%)",
+      "image": "/backgrounds/diwali/04.webp"
+    }
+  ],
+  "qixi": [
+    {
+      "id": "qixi-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #f5f3ff 0%, #8b5cf6 100%)",
+      "image": "/backgrounds/qixi/01.webp"
+    },
+    {
+      "id": "qixi-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #f5f3ff 0%, #8b5cf6 100%)",
+      "image": "/backgrounds/qixi/02.webp"
+    },
+    {
+      "id": "qixi-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #f5f3ff 0%, #8b5cf6 100%)",
+      "image": "/backgrounds/qixi/03.webp"
+    },
+    {
+      "id": "qixi-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #f5f3ff 0%, #8b5cf6 100%)",
+      "image": "/backgrounds/qixi/04.webp"
+    }
+  ],
+  "mazu": [
+    {
+      "id": "mazu-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fee2e2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/01.webp"
+    },
+    {
+      "id": "mazu-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fee2e2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/02.webp"
+    },
+    {
+      "id": "mazu-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fee2e2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/03.webp"
+    },
+    {
+      "id": "mazu-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fee2e2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/04.webp"
+    }
+  ],
+  "buddha": [
+    {
+      "id": "buddha-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #fbbf24 100%)",
+      "image": "/backgrounds/buddha/01.webp"
+    },
+    {
+      "id": "buddha-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #fbbf24 100%)",
+      "image": "/backgrounds/buddha/02.webp"
+    },
+    {
+      "id": "buddha-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #fbbf24 100%)",
+      "image": "/backgrounds/buddha/03.webp"
+    },
+    {
+      "id": "buddha-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #fbbf24 100%)",
+      "image": "/backgrounds/buddha/04.webp"
+    }
+  ],
+  "earthgod": [
+    {
+      "id": "earthgod-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+      "image": "/backgrounds/earthgod/01.webp"
+    },
+    {
+      "id": "earthgod-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+      "image": "/backgrounds/earthgod/02.webp"
+    },
+    {
+      "id": "earthgod-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+      "image": "/backgrounds/earthgod/03.webp"
+    },
+    {
+      "id": "earthgod-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+      "image": "/backgrounds/earthgod/04.webp"
+    }
+  ],
+  "youth": [
+    {
+      "id": "youth-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youth/01.webp"
+    },
+    {
+      "id": "youth-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youth/02.webp"
+    },
+    {
+      "id": "youth-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youth/03.webp"
+    },
+    {
+      "id": "youth-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youth/04.webp"
+    }
+  ],
+  "armedforces": [
+    {
+      "id": "armedforces-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #f0fdf4 0%, #166534 100%)",
+      "image": "/backgrounds/armedforces/01.webp"
+    },
+    {
+      "id": "armedforces-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #f0fdf4 0%, #166534 100%)",
+      "image": "/backgrounds/armedforces/02.webp"
+    },
+    {
+      "id": "armedforces-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #f0fdf4 0%, #166534 100%)",
+      "image": "/backgrounds/armedforces/03.webp"
+    },
+    {
+      "id": "armedforces-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #f0fdf4 0%, #166534 100%)",
+      "image": "/backgrounds/armedforces/04.webp"
+    }
+  ],
+  "retrocession": [
+    {
+      "id": "retrocession-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #2563eb 100%)",
+      "image": "/backgrounds/retrocession/01.webp"
+    },
+    {
+      "id": "retrocession-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #2563eb 100%)",
+      "image": "/backgrounds/retrocession/02.webp"
+    },
+    {
+      "id": "retrocession-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #2563eb 100%)",
+      "image": "/backgrounds/retrocession/03.webp"
+    },
+    {
+      "id": "retrocession-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #2563eb 100%)",
+      "image": "/backgrounds/retrocession/04.webp"
+    }
+  ],
+  "singlesday": [
+    {
+      "id": "singlesday-01",
+      "name": "背景 01",
+      "gradient": "linear-gradient(135deg, #fdf2f8 0%, #db2777 100%)",
+      "image": "/backgrounds/singlesday/01.webp"
+    },
+    {
+      "id": "singlesday-02",
+      "name": "背景 02",
+      "gradient": "linear-gradient(135deg, #fdf2f8 0%, #db2777 100%)",
+      "image": "/backgrounds/singlesday/02.webp"
+    },
+    {
+      "id": "singlesday-03",
+      "name": "背景 03",
+      "gradient": "linear-gradient(135deg, #fdf2f8 0%, #db2777 100%)",
+      "image": "/backgrounds/singlesday/03.webp"
+    },
+    {
+      "id": "singlesday-04",
+      "name": "背景 04",
+      "gradient": "linear-gradient(135deg, #fdf2f8 0%, #db2777 100%)",
+      "image": "/backgrounds/singlesday/04.webp"
+    }
   ]
 }
