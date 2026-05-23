@@ -527,6 +527,286 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "回應愛意、浪漫情懷",
+      "color": "bg-white border-slate-300",
+      "backgroundLabels": {
+        "01": "純白愛戀",
+        "02": "甜蜜回禮",
+        "03": "真心不變",
+        "04": "浪漫時刻"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+        "02": "linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)",
+        "03": "linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%)",
+        "04": "linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%)"
+      },
+      "phrases": ["白色情人節快樂", "回報你的愛", "真情永不變", "手牽手一輩子"]
+    },
+    {
+      "id": "aprilfools",
+      "name": "愚人節",
+      "icon": "🤡",
+      "description": "幽默玩笑、開開心心",
+      "color": "bg-yellow-100 border-yellow-400",
+      "backgroundLabels": {
+        "01": "幽默一下",
+        "02": "開心玩笑",
+        "03": "歡樂驚喜",
+        "04": "笑容滿面"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #fef08a 0%, #facc15 100%)",
+        "02": "linear-gradient(135deg, #fde68a 0%, #fbbf24 100%)",
+        "03": "linear-gradient(135deg, #fef9c3 0%, #eab308 100%)",
+        "04": "linear-gradient(135deg, #fde047 0%, #ca8a04 100%)"
+      },
+      "phrases": ["愚人節快樂", "笑一個嘛", "今天不開玩笑", "認同請分享（？）"]
+    },
+    {
+      "id": "earthday",
+      "name": "世界地球日",
+      "icon": "🌍",
+      "description": "守護地球、愛護自然",
+      "color": "bg-green-50 border-green-300",
+      "backgroundLabels": {
+        "01": "綠色家園",
+        "02": "蔚藍地球",
+        "03": "自然共生",
+        "04": "環保生活"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #f0fdf4 0%, #22c55e 100%)",
+        "02": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+        "03": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+        "04": "linear-gradient(135deg, #f7fee7 0%, #84cc16 100%)"
+      },
+      "phrases": ["愛護地球", "守護我們的家", "節能減碳", "為地球盡一份力"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🐰",
+      "description": "迎向希望、新生喜悅",
+      "color": "bg-purple-50 border-purple-200",
+      "backgroundLabels": {
+        "01": "希望種子",
+        "02": "彩蛋繽紛",
+        "03": "春回大地",
+        "04": "新生喜悅"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #faf5ff 0%, #a855f7 100%)",
+        "02": "linear-gradient(135deg, #f5f3ff 0%, #8b5cf6 100%)",
+        "03": "linear-gradient(135deg, #f3e8ff 0%, #d8b4fe 100%)",
+        "04": "linear-gradient(135deg, #fdf4ff 0%, #e879f9 100%)"
+      },
+      "phrases": ["復活節快樂", "新生的希望", "平安喜樂", "充滿活力"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "搞怪狂歡、不給糖就搗蛋",
+      "color": "bg-orange-100 border-orange-500",
+      "backgroundLabels": {
+        "01": "南瓜狂歡",
+        "02": "搞怪派對",
+        "03": "神秘夜晚",
+        "04": "歡樂萬聖"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #fff7ed 0%, #ea580c 100%)",
+        "02": "linear-gradient(135deg, #fefce8 0%, #ca8a04 100%)",
+        "03": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+        "04": "linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%)"
+      },
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "大家來搞怪", "恐怖又好玩"]
+    },
+    {
+      "id": "diwali",
+      "name": "排燈節",
+      "icon": "🪔",
+      "description": "光明節慶、祈求繁榮",
+      "color": "bg-amber-100 border-amber-500",
+      "backgroundLabels": {
+        "01": "光明之火",
+        "02": "繁榮祈福",
+        "03": "喜慶排燈",
+        "04": "燦爛時刻"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #fffbeb 0%, #d97706 100%)",
+        "02": "linear-gradient(135deg, #fff7ed 0%, #c2410c 100%)",
+        "03": "linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%)",
+        "04": "linear-gradient(135deg, #fde68a 0%, #b45309 100%)"
+      },
+      "phrases": ["排燈節快樂", "光明戰勝黑暗", "祝你繁榮昌盛", "祈求好運"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🌌",
+      "description": "牛郎織女、浪漫相會",
+      "color": "bg-indigo-50 border-indigo-300",
+      "backgroundLabels": {
+        "01": "銀河相會",
+        "02": "浪漫七夕",
+        "03": "真愛永恆",
+        "04": "鵲橋傳情"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #312e81 0%, #4338ca 100%)",
+        "02": "linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%)",
+        "03": "linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%)",
+        "04": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)"
+      },
+      "phrases": ["七夕快樂", "願天下有情人終成眷屬", "浪漫一輩子", "心心相印"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖誕辰",
+      "icon": "🌊",
+      "description": "海上守護、慈悲為懷",
+      "color": "bg-blue-100 border-blue-400",
+      "backgroundLabels": {
+        "01": "媽祖保佑",
+        "02": "海神護佑",
+        "03": "慈悲平安",
+        "04": "盛大慶典"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)",
+        "02": "linear-gradient(135deg, #38bdf8 0%, #1d4ed8 100%)",
+        "03": "linear-gradient(135deg, #bae6fd 0%, #0284c7 100%)",
+        "04": "linear-gradient(135deg, #7dd3fc 0%, #075985 100%)"
+      },
+      "phrases": ["媽祖保佑", "風調雨順", "國泰民安", "慈悲守護"]
+    },
+    {
+      "id": "buddha",
+      "name": "佛陀誕辰",
+      "icon": "🪷",
+      "description": "浴佛節、淨化心靈",
+      "color": "bg-yellow-50 border-yellow-300",
+      "backgroundLabels": {
+        "01": "佛光普照",
+        "02": "淨心浴佛",
+        "03": "慈悲喜捨",
+        "04": "禪意人生"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #fbbf24 0%, #b45309 100%)",
+        "02": "linear-gradient(135deg, #fef3c7 0%, #d97706 100%)",
+        "03": "linear-gradient(135deg, #fde68a 0%, #92400e 100%)",
+        "04": "linear-gradient(135deg, #fcd34d 0%, #78350f 100%)"
+      },
+      "phrases": ["法喜充滿", "浴佛淨心", "共植福田", "清淨自在"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公誕辰",
+      "icon": "🏺",
+      "description": "守護土地、保佑豐收",
+      "color": "bg-orange-50 border-orange-400",
+      "backgroundLabels": {
+        "01": "福德正神",
+        "02": "守護家園",
+        "03": "招財進寶",
+        "04": "鄉里平安"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #f97316 0%, #7c2d12 100%)",
+        "02": "linear-gradient(135deg, #fb923c 0%, #9a3412 100%)",
+        "03": "linear-gradient(135deg, #fdba74 0%, #c2410c 100%)",
+        "04": "linear-gradient(135deg, #ffedd5 0%, #ea580c 100%)"
+      },
+      "phrases": ["福德正神保佑", "招財進寶", "闔家平安", "大吉大利"]
+    },
+    {
+      "id": "youth",
+      "name": "青年節",
+      "icon": "🏃",
+      "description": "青春活力、勇敢追夢",
+      "color": "bg-blue-50 border-blue-300",
+      "backgroundLabels": {
+        "01": "青春無敵",
+        "02": "勇敢追夢",
+        "03": "活力四射",
+        "04": "燃燒熱情"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #60a5fa 0%, #1d4ed8 100%)",
+        "02": "linear-gradient(135deg, #93c5fd 0%, #1e40af 100%)",
+        "03": "linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%)",
+        "04": "linear-gradient(135deg, #2563eb 0%, #172554 100%)"
+      },
+      "phrases": ["青年節快樂", "夢想成真", "永保青春的心", "熱血奮鬥"]
+    },
+    {
+      "id": "armedforces",
+      "name": "軍人節",
+      "icon": "🎖️",
+      "description": "致敬國軍、守護家園",
+      "color": "bg-zinc-100 border-zinc-500",
+      "backgroundLabels": {
+        "01": "守護家園",
+        "02": "英雄本色",
+        "03": "堅毅衛國",
+        "04": "致敬榮耀"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #3f3f46 0%, #18181b 100%)",
+        "02": "linear-gradient(135deg, #52525b 0%, #27272a 100%)",
+        "03": "linear-gradient(135deg, #71717a 0%, #3f3f46 100%)",
+        "04": "linear-gradient(135deg, #27272a 0%, #09090b 100%)"
+      },
+      "phrases": ["軍人節快樂", "致敬國軍英雄", "守護和平", "辛苦了"]
+    },
+    {
+      "id": "retrocession",
+      "name": "台灣光復節",
+      "icon": "🇹🇼",
+      "description": "紀念光復、珍惜和平",
+      "color": "bg-red-50 border-red-400",
+      "backgroundLabels": {
+        "01": "紀念時刻",
+        "02": "光復榮耀",
+        "03": "和平永續",
+        "04": "歡慶光復"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
+        "02": "linear-gradient(135deg, #f87171 0%, #b91c1c 100%)",
+        "03": "linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%)",
+        "04": "linear-gradient(135deg, #fee2e2 0%, #ef4444 100%)"
+      },
+      "phrases": ["光復節快樂", "珍惜和平", "攜手同行", "欣欣向榮"]
+    },
+    {
+      "id": "singlesday",
+      "name": "雙11購物節",
+      "icon": "🛍️",
+      "description": "歡樂購物、犒賞自己",
+      "color": "bg-rose-50 border-rose-400",
+      "backgroundLabels": {
+        "01": "購物狂歡",
+        "02": "犒賞自己",
+        "03": "超值驚喜",
+        "04": "歡樂雙11"
+      },
+      "backgroundGradients": {
+        "01": "linear-gradient(135deg, #e11d48 0%, #4c0519 100%)",
+        "02": "linear-gradient(135deg, #fb7185 0%, #881337 100%)",
+        "03": "linear-gradient(135deg, #f43f5e 0%, #9f1239 100%)",
+        "04": "linear-gradient(135deg, #fff1f2 0%, #e11d48 100%)"
+      },
+      "phrases": ["雙11快樂", "買得開心", "犒賞辛苦的自己", "認同請分享"]
     }
   ]
 }
