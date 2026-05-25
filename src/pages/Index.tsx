@@ -133,7 +133,7 @@ const Index = () => {
         )}
       </main>
       <footer className="py-2 text-center">
-        <span className="text-[10px] text-muted-foreground/30 font-mono">v1.1.0-ar</span>
+        <span className="text-[10px] text-muted-foreground/30 font-mono">v1.2.0</span>
       </footer>
     </div>
   );
