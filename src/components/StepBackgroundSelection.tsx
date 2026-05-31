@@ -68,6 +68,7 @@ const StepBackgroundSelection = ({
       <button
         key={bg.id}
         onClick={() => onSelect(bg)}
+        data-testid={`bg-card-${bg.id}`}
         className={`relative overflow-hidden rounded-2xl border-4 transition-all ${
           selected?.id === bg.id ? "border-primary ring-4 ring-primary/30 scale-105" : "border-border"
         }`}
