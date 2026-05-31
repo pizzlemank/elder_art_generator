@@ -19,6 +19,7 @@ const StepThemeSelection = ({ onSelect }: Props) => {
           <button
             key={cat.id}
             onClick={() => onSelect(cat)}
+            data-testid={`theme-card-${cat.id}`}
             className={`flex items-center gap-4 w-full min-h-[110px] rounded-2xl border-4 ${cat.color} px-5 py-4 text-left transition-transform active:scale-95 hover:shadow-lg`}
           >
             <div
