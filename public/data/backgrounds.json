@@ -824,5 +824,369 @@
       "gradient": "linear-gradient(135deg, #fff7ed 0%, #c2410c 100%)",
       "image": "/backgrounds/thanksgiving/04.webp"
     }
+  ],
+  "whiteday": [
+    {
+      "id": "whiteday-01",
+      "name": "純白愛戀",
+      "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/01.webp"
+    },
+    {
+      "id": "whiteday-02",
+      "name": "甜蜜回禮",
+      "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/02.webp"
+    },
+    {
+      "id": "whiteday-03",
+      "name": "清新花語",
+      "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/03.webp"
+    },
+    {
+      "id": "whiteday-04",
+      "name": "浪漫約定",
+      "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+      "image": "/backgrounds/whiteday/04.webp"
+    }
+  ],
+  "aprilfools": [
+    {
+      "id": "aprilfools-01",
+      "name": "調皮小丑",
+      "gradient": "linear-gradient(135deg, #fef9c3 0%, #facc15 100%)",
+      "image": "/backgrounds/aprilfools/01.webp"
+    },
+    {
+      "id": "aprilfools-02",
+      "name": "驚喜派對",
+      "gradient": "linear-gradient(135deg, #fef9c3 0%, #facc15 100%)",
+      "image": "/backgrounds/aprilfools/02.webp"
+    },
+    {
+      "id": "aprilfools-03",
+      "name": "笑口常開",
+      "gradient": "linear-gradient(135deg, #fef9c3 0%, #facc15 100%)",
+      "image": "/backgrounds/aprilfools/03.webp"
+    },
+    {
+      "id": "aprilfools-04",
+      "name": "趣味滿分",
+      "gradient": "linear-gradient(135deg, #fef9c3 0%, #facc15 100%)",
+      "image": "/backgrounds/aprilfools/04.webp"
+    }
+  ],
+  "earthday": [
+    {
+      "id": "earthday-01",
+      "name": "翠綠山巒",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/01.webp"
+    },
+    {
+      "id": "earthday-02",
+      "name": "蔚藍海洋",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/02.webp"
+    },
+    {
+      "id": "earthday-03",
+      "name": "環保新生活",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/03.webp"
+    },
+    {
+      "id": "earthday-04",
+      "name": "綠意盎然",
+      "gradient": "linear-gradient(135deg, #ecfdf5 0%, #10b981 100%)",
+      "image": "/backgrounds/earthday/04.webp"
+    }
+  ],
+  "easter": [
+    {
+      "id": "easter-01",
+      "name": "彩蛋尋蹤",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #6366f1 100%)",
+      "image": "/backgrounds/easter/01.webp"
+    },
+    {
+      "id": "easter-02",
+      "name": "春暖花開",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #6366f1 100%)",
+      "image": "/backgrounds/easter/02.webp"
+    },
+    {
+      "id": "easter-03",
+      "name": "希望曙光",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #6366f1 100%)",
+      "image": "/backgrounds/easter/03.webp"
+    },
+    {
+      "id": "easter-04",
+      "name": "可愛萌兔",
+      "gradient": "linear-gradient(135deg, #e0e7ff 0%, #6366f1 100%)",
+      "image": "/backgrounds/easter/04.webp"
+    }
+  ],
+  "qixi": [
+    {
+      "id": "qixi-01",
+      "name": "星空之約",
+      "gradient": "linear-gradient(135deg, #f3e8ff 0%, #9333ea 100%)",
+      "image": "/backgrounds/qixi/01.webp"
+    },
+    {
+      "id": "qixi-02",
+      "name": "鵲橋情緣",
+      "gradient": "linear-gradient(135deg, #f3e8ff 0%, #9333ea 100%)",
+      "image": "/backgrounds/qixi/02.webp"
+    },
+    {
+      "id": "qixi-03",
+      "name": "浪漫星河",
+      "gradient": "linear-gradient(135deg, #f3e8ff 0%, #9333ea 100%)",
+      "image": "/backgrounds/qixi/03.webp"
+    },
+    {
+      "id": "qixi-04",
+      "name": "執子之手",
+      "gradient": "linear-gradient(135deg, #f3e8ff 0%, #9333ea 100%)",
+      "image": "/backgrounds/qixi/04.webp"
+    }
+  ],
+  "halloween": [
+    {
+      "id": "halloween-01",
+      "name": "南瓜燈火",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/01.webp"
+    },
+    {
+      "id": "halloween-02",
+      "name": "神祕黑夜",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/02.webp"
+    },
+    {
+      "id": "halloween-03",
+      "name": "搞怪派對",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/03.webp"
+    },
+    {
+      "id": "halloween-04",
+      "name": "神祕古堡",
+      "gradient": "linear-gradient(135deg, #ffedd5 0%, #f97316 100%)",
+      "image": "/backgrounds/halloween/04.webp"
+    }
+  ],
+  "singlesday": [
+    {
+      "id": "singlesday-01",
+      "name": "狂歡購物",
+      "gradient": "linear-gradient(135deg, #fff1f2 0%, #fb7185 100%)",
+      "image": "/backgrounds/singlesday/01.webp"
+    },
+    {
+      "id": "singlesday-02",
+      "name": "單身萬歲",
+      "gradient": "linear-gradient(135deg, #fff1f2 0%, #fb7185 100%)",
+      "image": "/backgrounds/singlesday/02.webp"
+    },
+    {
+      "id": "singlesday-03",
+      "name": "購物清單",
+      "gradient": "linear-gradient(135deg, #fff1f2 0%, #fb7185 100%)",
+      "image": "/backgrounds/singlesday/03.webp"
+    },
+    {
+      "id": "singlesday-04",
+      "name": "驚喜回饋",
+      "gradient": "linear-gradient(135deg, #fff1f2 0%, #fb7185 100%)",
+      "image": "/backgrounds/singlesday/04.webp"
+    }
+  ],
+  "mazu": [
+    {
+      "id": "mazu-01",
+      "name": "聖母神威",
+      "gradient": "linear-gradient(135deg, #fef2f2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/01.webp"
+    },
+    {
+      "id": "mazu-02",
+      "name": "遶境祈福",
+      "gradient": "linear-gradient(135deg, #fef2f2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/02.webp"
+    },
+    {
+      "id": "mazu-03",
+      "name": "平安御守",
+      "gradient": "linear-gradient(135deg, #fef2f2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/03.webp"
+    },
+    {
+      "id": "mazu-04",
+      "name": "進香盛事",
+      "gradient": "linear-gradient(135deg, #fef2f2 0%, #dc2626 100%)",
+      "image": "/backgrounds/mazu/04.webp"
+    }
+  ],
+  "buddha": [
+    {
+      "id": "buddha-01",
+      "name": "浴佛大典",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #f59e0b 100%)",
+      "image": "/backgrounds/buddha/01.webp"
+    },
+    {
+      "id": "buddha-02",
+      "name": "法喜充滿",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #f59e0b 100%)",
+      "image": "/backgrounds/buddha/02.webp"
+    },
+    {
+      "id": "buddha-03",
+      "name": "慈悲喜捨",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #f59e0b 100%)",
+      "image": "/backgrounds/buddha/03.webp"
+    },
+    {
+      "id": "buddha-04",
+      "name": "清淨蓮花",
+      "gradient": "linear-gradient(135deg, #fffbeb 0%, #f59e0b 100%)",
+      "image": "/backgrounds/buddha/04.webp"
+    }
+  ],
+  "earthgod": [
+    {
+      "id": "earthgod-01",
+      "name": "福德正神",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #ca8a04 100%)",
+      "image": "/backgrounds/earthgod/01.webp"
+    },
+    {
+      "id": "earthgod-02",
+      "name": "財源滾滾",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #ca8a04 100%)",
+      "image": "/backgrounds/earthgod/02.webp"
+    },
+    {
+      "id": "earthgod-03",
+      "name": "地方守護",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #ca8a04 100%)",
+      "image": "/backgrounds/earthgod/03.webp"
+    },
+    {
+      "id": "earthgod-04",
+      "name": "求財祈福",
+      "gradient": "linear-gradient(135deg, #fefce8 0%, #ca8a04 100%)",
+      "image": "/backgrounds/earthgod/04.webp"
+    }
+  ],
+  "youthday": [
+    {
+      "id": "youthday-01",
+      "name": "熱血青春",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youthday/01.webp"
+    },
+    {
+      "id": "youthday-02",
+      "name": "勇往直前",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youthday/02.webp"
+    },
+    {
+      "id": "youthday-03",
+      "name": "追逐夢想",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youthday/03.webp"
+    },
+    {
+      "id": "youthday-04",
+      "name": "朝氣蓬勃",
+      "gradient": "linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%)",
+      "image": "/backgrounds/youthday/04.webp"
+    }
+  ],
+  "armedforces": [
+    {
+      "id": "armedforces-01",
+      "name": "英姿颯爽",
+      "gradient": "linear-gradient(135deg, #f5f5f4 0%, #57534e 100%)",
+      "image": "/backgrounds/armedforces/01.webp"
+    },
+    {
+      "id": "armedforces-02",
+      "name": "保家衛國",
+      "gradient": "linear-gradient(135deg, #f5f5f4 0%, #57534e 100%)",
+      "image": "/backgrounds/armedforces/02.webp"
+    },
+    {
+      "id": "armedforces-03",
+      "name": "榮耀勳章",
+      "gradient": "linear-gradient(135deg, #f5f5f4 0%, #57534e 100%)",
+      "image": "/backgrounds/armedforces/03.webp"
+    },
+    {
+      "id": "armedforces-04",
+      "name": "鋼鐵意志",
+      "gradient": "linear-gradient(135deg, #f5f5f4 0%, #57534e 100%)",
+      "image": "/backgrounds/armedforces/04.webp"
+    }
+  ],
+  "retrocession": [
+    {
+      "id": "retrocession-01",
+      "name": "光輝歲月",
+      "gradient": "linear-gradient(135deg, #002266 0%, #ff0000 100%)",
+      "image": "/backgrounds/retrocession/01.webp"
+    },
+    {
+      "id": "retrocession-02",
+      "name": "寶島台灣",
+      "gradient": "linear-gradient(135deg, #002266 0%, #ff0000 100%)",
+      "image": "/backgrounds/retrocession/02.webp"
+    },
+    {
+      "id": "retrocession-03",
+      "name": "普天同慶",
+      "gradient": "linear-gradient(135deg, #002266 0%, #ff0000 100%)",
+      "image": "/backgrounds/retrocession/03.webp"
+    },
+    {
+      "id": "retrocession-04",
+      "name": "歷史足跡",
+      "gradient": "linear-gradient(135deg, #002266 0%, #ff0000 100%)",
+      "image": "/backgrounds/retrocession/04.webp"
+    }
+  ],
+  "constitution": [
+    {
+      "id": "constitution-01",
+      "name": "公平正義",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #475569 100%)",
+      "image": "/backgrounds/constitution/01.webp"
+    },
+    {
+      "id": "constitution-02",
+      "name": "民主基石",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #475569 100%)",
+      "image": "/backgrounds/constitution/02.webp"
+    },
+    {
+      "id": "constitution-03",
+      "name": "法治精神",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #475569 100%)",
+      "image": "/backgrounds/constitution/03.webp"
+    },
+    {
+      "id": "constitution-04",
+      "name": "和平守護",
+      "gradient": "linear-gradient(135deg, #f1f5f9 0%, #475569 100%)",
+      "image": "/backgrounds/constitution/04.webp"
+    }
   ]
 }
