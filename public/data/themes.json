@@ -527,6 +527,118 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "甜蜜回禮、浪漫延續",
+      "color": "bg-slate-50 border-slate-200",
+      "phrases": ["白色情人節快樂", "甜蜜如初", "愛在每一天", "謝謝你的愛"]
+    },
+    {
+      "id": "youthday",
+      "name": "青年節",
+      "icon": "🧗",
+      "description": "青春活力、勇敢追夢",
+      "color": "bg-sky-50 border-sky-400",
+      "phrases": ["青年節快樂", "青春不老", "勇敢追夢", "展現活力"]
+    },
+    {
+      "id": "aprilfools",
+      "name": "愚人節",
+      "icon": "🤡",
+      "description": "幽默生活、博君一粲",
+      "color": "bg-yellow-50 border-yellow-300",
+      "phrases": ["愚人節快樂", "博君一粲", "幽默一下", "天天開心"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🥚",
+      "description": "喜樂新生、春暖花開",
+      "color": "bg-emerald-50 border-emerald-200",
+      "phrases": ["復活節快樂", "新生喜悅", "春暖花開", "平安蒙福"]
+    },
+    {
+      "id": "earthday",
+      "name": "世界地球日",
+      "icon": "🌍",
+      "description": "守護地球、綠色生活",
+      "color": "bg-green-50 border-green-300",
+      "phrases": ["地球日快樂", "愛護地球", "節能減碳", "守護家園"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖聖誕",
+      "icon": "🏮",
+      "description": "聖母慈悲、平安庇佑",
+      "color": "bg-orange-50 border-orange-400",
+      "phrases": ["媽祖保佑", "聖母慈悲", "平安順利", "闔家平安"]
+    },
+    {
+      "id": "buddha",
+      "name": "佛誕節",
+      "icon": "🪷",
+      "description": "佛光普照、法喜充滿",
+      "color": "bg-yellow-50 border-yellow-500",
+      "phrases": ["佛誕吉祥", "法喜充滿", "心中有佛", "平安如意"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "👴",
+      "description": "福德正神、招財納福",
+      "color": "bg-red-50 border-red-300",
+      "phrases": ["土地公保佑", "招財納福", "生意興隆", "平安大吉"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就搗蛋",
+      "color": "bg-orange-100 border-orange-600",
+      "phrases": ["萬聖節快樂", "Happy Halloween", "不給糖就搗蛋", "驚喜不斷"]
+    },
+    {
+      "id": "singlesday",
+      "name": "雙11",
+      "icon": "🛒",
+      "description": "購物狂歡、好康多多",
+      "color": "bg-red-100 border-red-500",
+      "phrases": ["雙11快樂", "購物愉快", "好康多多", "買得開心"]
+    },
+    {
+      "id": "armedforces",
+      "name": "軍人節",
+      "icon": "🫡",
+      "description": "致敬英雄、守護國家",
+      "color": "bg-green-100 border-green-700",
+      "phrases": ["軍人節快樂", "致敬英雄", "保家衛國", "辛苦了"]
+    },
+    {
+      "id": "retrocession",
+      "name": "台灣光復節",
+      "icon": "🇹🇼",
+      "description": "歷史印記、珍視當下",
+      "color": "bg-blue-100 border-blue-600",
+      "phrases": ["光復節快樂", "珍惜當下", "繁榮昌盛", "平安台灣"]
+    },
+    {
+      "id": "constitution",
+      "name": "行憲紀念日",
+      "icon": "📜",
+      "description": "民主法治、平安和諧",
+      "color": "bg-indigo-50 border-indigo-400",
+      "phrases": ["行憲紀念日快樂", "民主法治", "平安和諧", "守護憲法"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🎋",
+      "description": "牛郎織女、情牽一世",
+      "color": "bg-purple-50 border-purple-300",
+      "phrases": ["七夕快樂", "情牽一世", "鵲橋相會", "恩愛久久"]
     }
   ]
 }
