@@ -4,21 +4,24 @@
     "name": "新年祝福",
     "icon": "🧧",
     "description": "過年問候、平安吉祥",
-    "color": "bg-red-100 border-red-400"
+    "color": "bg-red-100 border-red-400",
+    "featuredImage": "/backgrounds/cny/01.webp"
   },
   {
     "id": "morning",
     "name": "早安問候",
     "icon": "🌅",
     "description": "每日問安、傳遞好心情",
-    "color": "bg-orange-100 border-orange-400"
+    "color": "bg-orange-100 border-orange-400",
+    "featuredImage": "/backgrounds/morning/01.webp"
   },
   {
     "id": "health",
     "name": "健康平安",
     "icon": "🍀",
     "description": "祝身體健康、平安順心",
-    "color": "bg-green-100 border-green-400"
+    "color": "bg-green-100 border-green-400",
+    "featuredImage": "/backgrounds/health/01.webp"
   },
   {
     "id": "classic",
@@ -259,5 +262,125 @@
     "description": "心懷感恩、知足常樂",
     "color": "bg-orange-50 border-orange-300",
     "featuredImage": "/backgrounds/thanksgiving/01.webp"
+  },
+  {
+    "id": "whiteday",
+    "name": "白色情人節",
+    "icon": "🤍",
+    "description": "甜蜜回禮、浪漫三月",
+    "color": "bg-white border-slate-200",
+    "featuredImage": "/backgrounds/whiteday/01.webp"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "icon": "🐰",
+    "description": "春暖花開、希望再生",
+    "color": "bg-sky-50 border-sky-200",
+    "featuredImage": "/backgrounds/easter/01.webp"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "icon": "🎃",
+    "description": "不給糖就搗蛋、趣味萬聖",
+    "color": "bg-orange-100 border-orange-500",
+    "featuredImage": "/backgrounds/halloween/01.webp"
+  },
+  {
+    "id": "aprilfools",
+    "name": "愚人節",
+    "icon": "🤡",
+    "description": "幽默一笑、趣味四月",
+    "color": "bg-yellow-100 border-yellow-400",
+    "featuredImage": "/backgrounds/aprilfools/01.webp"
+  },
+  {
+    "id": "earthday",
+    "name": "世界地球日",
+    "icon": "🌍",
+    "description": "守護地球、愛護家園",
+    "color": "bg-emerald-100 border-emerald-400",
+    "featuredImage": "/backgrounds/earthday/01.webp"
+  },
+  {
+    "id": "youthday",
+    "name": "青年節",
+    "icon": "🚩",
+    "description": "熱血青春、勇敢追夢",
+    "color": "bg-blue-100 border-blue-400",
+    "featuredImage": "/backgrounds/youthday/01.webp"
+  },
+  {
+    "id": "armedforcesday",
+    "name": "軍人節",
+    "icon": "🎖️",
+    "description": "致敬國軍、守護家園",
+    "color": "bg-slate-100 border-slate-500",
+    "featuredImage": "/backgrounds/armedforcesday/01.webp"
+  },
+  {
+    "id": "retrocessionday",
+    "name": "台灣光復節",
+    "icon": "🇹🇼",
+    "description": "光復台灣、建設家園",
+    "color": "bg-red-50 border-red-300",
+    "featuredImage": "/backgrounds/retrocessionday/01.webp"
+  },
+  {
+    "id": "constitutionday",
+    "name": "行憲紀念日",
+    "icon": "📜",
+    "description": "民主憲政、基石永固",
+    "color": "bg-stone-100 border-stone-400",
+    "featuredImage": "/backgrounds/constitutionday/01.webp"
+  },
+  {
+    "id": "singlesday",
+    "name": "雙十一",
+    "icon": "🛍️",
+    "description": "購物狂歡、生活品味",
+    "color": "bg-pink-50 border-pink-400",
+    "featuredImage": "/backgrounds/singlesday/01.webp"
+  },
+  {
+    "id": "mazubirthday",
+    "name": "媽祖誕辰",
+    "icon": "🛐",
+    "description": "天上聖母、護佑萬民",
+    "color": "bg-yellow-50 border-yellow-300",
+    "featuredImage": "/backgrounds/mazubirthday/01.webp"
+  },
+  {
+    "id": "buddhabirthday",
+    "name": "佛誕節",
+    "icon": "☸️",
+    "description": "佛光普照、浴佛祈福",
+    "color": "bg-orange-50 border-orange-300",
+    "featuredImage": "/backgrounds/buddhabirthday/01.webp"
+  },
+  {
+    "id": "earthgodbirthday",
+    "name": "土地公誕辰",
+    "icon": "👴",
+    "description": "福德正神、招財進寶",
+    "color": "bg-yellow-50 border-orange-200",
+    "featuredImage": "/backgrounds/earthgodbirthday/01.webp"
+  },
+  {
+    "id": "qixifestival",
+    "name": "七夕情人節",
+    "icon": "🌌",
+    "description": "銀河傳情、乞巧浪漫",
+    "color": "bg-purple-50 border-purple-300",
+    "featuredImage": "/backgrounds/qixifestival/01.webp"
+  },
+  {
+    "id": "arborday",
+    "name": "植樹節",
+    "icon": "🌲",
+    "description": "十年樹木、百年樹人",
+    "color": "bg-green-50 border-green-300",
+    "featuredImage": "/backgrounds/arborday/01.webp"
   }
 ]
