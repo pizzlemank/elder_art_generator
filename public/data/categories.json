@@ -259,5 +259,125 @@
     "description": "心懷感恩、知足常樂",
     "color": "bg-orange-50 border-orange-300",
     "featuredImage": "/backgrounds/thanksgiving/01.webp"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "icon": "🎃",
+    "description": "不給糖就搗蛋、驚喜萬聖",
+    "color": "bg-orange-100 border-orange-600",
+    "featuredImage": "/backgrounds/halloween/01.webp"
+  },
+  {
+    "id": "singlesday",
+    "name": "雙十一",
+    "icon": "🛍️",
+    "description": "購物狂歡、生活優選",
+    "color": "bg-red-50 border-red-500",
+    "featuredImage": "/backgrounds/singlesday/01.webp"
+  },
+  {
+    "id": "whiteday",
+    "name": "白色情人節",
+    "icon": "🤍",
+    "description": "純潔告白、甜蜜回禮",
+    "color": "bg-blue-50 border-blue-200",
+    "featuredImage": "/backgrounds/whiteday/01.webp"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "icon": "🐰",
+    "description": "重生希望、春暖花開",
+    "color": "bg-green-50 border-green-200",
+    "featuredImage": "/backgrounds/easter/01.webp"
+  },
+  {
+    "id": "aprilfools",
+    "name": "愚人節",
+    "icon": "🤡",
+    "description": "輕鬆幽默、博君一粲",
+    "color": "bg-yellow-100 border-yellow-500",
+    "featuredImage": "/backgrounds/aprilfools/01.webp"
+  },
+  {
+    "id": "youthday",
+    "name": "青年節",
+    "icon": "🏃",
+    "description": "熱血青春、夢想起飛",
+    "color": "bg-sky-100 border-sky-400",
+    "featuredImage": "/backgrounds/youthday/01.webp"
+  },
+  {
+    "id": "armedforces",
+    "name": "軍人節",
+    "icon": "🫡",
+    "description": "致敬國軍、守護家園",
+    "color": "bg-emerald-100 border-emerald-700",
+    "featuredImage": "/backgrounds/armedforces/01.webp"
+  },
+  {
+    "id": "retrocession",
+    "name": "光復節",
+    "icon": "🇹🇼",
+    "description": "光復歷史、珍愛台灣",
+    "color": "bg-blue-100 border-red-400",
+    "featuredImage": "/backgrounds/retrocession/01.webp"
+  },
+  {
+    "id": "constitution",
+    "name": "憲法紀念日",
+    "icon": "📜",
+    "description": "法治基石、保障人權",
+    "color": "bg-slate-100 border-slate-500",
+    "featuredImage": "/backgrounds/constitution/01.webp"
+  },
+  {
+    "id": "earthday",
+    "name": "世界地球日",
+    "icon": "🌍",
+    "description": "愛護地球、永續環境",
+    "color": "bg-green-100 border-blue-400",
+    "featuredImage": "/backgrounds/earthday/01.webp"
+  },
+  {
+    "id": "arborday",
+    "name": "植樹節",
+    "icon": "🌳",
+    "description": "十年樹木、百年樹人",
+    "color": "bg-green-100 border-green-600",
+    "featuredImage": "/backgrounds/arborday/01.webp"
+  },
+  {
+    "id": "mazu",
+    "name": "媽祖誕辰",
+    "icon": "🏮",
+    "description": "媽祖生、平安祈福",
+    "color": "bg-red-50 border-amber-400",
+    "featuredImage": "/backgrounds/mazu/01.webp"
+  },
+  {
+    "id": "buddha",
+    "name": "佛誕節",
+    "icon": "🪷",
+    "description": "浴佛祈福、淨化心靈",
+    "color": "bg-yellow-50 border-yellow-300",
+    "featuredImage": "/backgrounds/buddha/01.webp"
+  },
+  {
+    "id": "earthgod",
+    "name": "土地公生",
+    "icon": "🧧",
+    "description": "頭牙祈福、財源廣進",
+    "color": "bg-orange-50 border-amber-500",
+    "featuredImage": "/backgrounds/earthgod/01.webp"
+  },
+  {
+    "id": "qixi",
+    "name": "七夕情人節",
+    "icon": "🌌",
+    "description": "銀河相會、傳統浪漫",
+    "color": "bg-indigo-50 border-pink-400",
+    "featuredImage": "/backgrounds/qixi/01.webp"
   }
 ]
