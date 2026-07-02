@@ -527,6 +527,231 @@
         "04": "真誠感激"
       },
       "phrases": ["感恩有你", "心存感激", "知足常樂", "謝謝你的陪伴"]
+    },
+    {
+      "id": "halloween",
+      "name": "萬聖節",
+      "icon": "🎃",
+      "description": "不給糖就搗蛋、驚喜萬聖",
+      "color": "bg-orange-100 border-orange-600",
+      "defaultGradient": "linear-gradient(135deg, #f97316 0%, #7c3aed 100%)",
+      "backgroundLabels": {
+        "01": "南瓜派對",
+        "02": "神祕黑貓",
+        "03": "萬聖之夜",
+        "04": "奇幻古堡"
+      },
+      "phrases": ["萬聖節快樂", "不給糖就搗蛋", "平安喜樂", "驚喜無限"]
+    },
+    {
+      "id": "singlesday",
+      "name": "雙十一",
+      "icon": "🛍️",
+      "description": "購物狂歡、生活優選",
+      "color": "bg-red-50 border-red-500",
+      "defaultGradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "backgroundLabels": {
+        "01": "購物狂歡",
+        "02": "好物分享",
+        "03": "超值特惠",
+        "04": "精選生活"
+      },
+      "phrases": ["雙十一快樂", "購物愉快", "精省達人", "享受生活"]
+    },
+    {
+      "id": "whiteday",
+      "name": "白色情人節",
+      "icon": "🤍",
+      "description": "純潔告白、甜蜜回禮",
+      "color": "bg-blue-50 border-blue-200",
+      "defaultGradient": "linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%)",
+      "backgroundLabels": {
+        "01": "純淨之愛",
+        "02": "白色浪漫",
+        "03": "甜蜜糖果",
+        "04": "心意相連"
+      },
+      "phrases": ["白色情人節快樂", "心意相通", "純真告白", "幸福甜蜜"]
+    },
+    {
+      "id": "easter",
+      "name": "復活節",
+      "icon": "🐰",
+      "description": "重生希望、春暖花開",
+      "color": "bg-green-50 border-green-200",
+      "defaultGradient": "linear-gradient(135deg, #fef9c3 0%, #86efac 100%)",
+      "backgroundLabels": {
+        "01": "彩蛋尋蹤",
+        "02": "春日兔影",
+        "03": "大地復甦",
+        "04": "希望之光"
+      },
+      "phrases": ["復活節快樂", "主內平安", "萬象更新", "希望常在"]
+    },
+    {
+      "id": "aprilfools",
+      "name": "愚人節",
+      "icon": "🤡",
+      "description": "輕鬆幽默、博君一粲",
+      "color": "bg-yellow-100 border-yellow-500",
+      "defaultGradient": "linear-gradient(135deg, #fbbf24 0%, #f472b6 100%)",
+      "backgroundLabels": {
+        "01": "驚喜時刻",
+        "02": "歡樂笑聲",
+        "03": "幽默生活",
+        "04": "調皮一刻"
+      },
+      "phrases": ["愚人節快樂", "笑口常開", "放鬆心情", "今天不騙你"]
+    },
+    {
+      "id": "youthday",
+      "name": "青年節",
+      "icon": "🏃",
+      "description": "熱血青春、夢想起飛",
+      "color": "bg-sky-100 border-sky-400",
+      "defaultGradient": "linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%)",
+      "backgroundLabels": {
+        "01": "熱血青年",
+        "02": "逐夢而行",
+        "03": "青春無敵",
+        "04": "朝氣蓬勃"
+      },
+      "phrases": ["青年節快樂", "熱血常在", "夢想成真", "青春永駐"]
+    },
+    {
+      "id": "armedforces",
+      "name": "軍人節",
+      "icon": "🫡",
+      "description": "致敬國軍、守護家園",
+      "color": "bg-emerald-100 border-emerald-700",
+      "defaultGradient": "linear-gradient(135deg, #064e3b 0%, #059669 100%)",
+      "backgroundLabels": {
+        "01": "鋼鐵勁旅",
+        "02": "英雄身影",
+        "03": "保家衛國",
+        "04": "榮耀勳章"
+      },
+      "phrases": ["軍人節快樂", "謝謝您的守護", "國軍加油", "英勇無畏"]
+    },
+    {
+      "id": "retrocession",
+      "name": "光復節",
+      "icon": "🇹🇼",
+      "description": "光復歷史、珍愛台灣",
+      "color": "bg-blue-100 border-red-400",
+      "defaultGradient": "linear-gradient(135deg, #1d4ed8 0%, #ef4444 100%)",
+      "backgroundLabels": {
+        "01": "光輝歲月",
+        "02": "懷舊足跡",
+        "03": "美麗寶島",
+        "04": "紀念時刻"
+      },
+      "phrases": ["光復節快樂", "珍愛台灣", "永續和平", "薪火相傳"]
+    },
+    {
+      "id": "constitution",
+      "name": "憲法紀念日",
+      "icon": "📜",
+      "description": "法治基石、保障人權",
+      "color": "bg-slate-100 border-slate-500",
+      "defaultGradient": "linear-gradient(135deg, #475569 0%, #334155 100%)",
+      "backgroundLabels": {
+        "01": "法治精神",
+        "02": "自由保障",
+        "03": "正義之秤",
+        "04": "經典卷軸"
+      },
+      "phrases": ["憲法紀念日平安", "守護法治", "自由無價", "安居樂業"]
+    },
+    {
+      "id": "earthday",
+      "name": "世界地球日",
+      "icon": "🌍",
+      "description": "愛護地球、永續環境",
+      "color": "bg-green-100 border-blue-400",
+      "defaultGradient": "linear-gradient(135deg, #22c55e 0%, #3b82f6 100%)",
+      "backgroundLabels": {
+        "01": "翠綠大地",
+        "02": "蔚藍海洋",
+        "03": "生態平衡",
+        "04": "攜手環保"
+      },
+      "phrases": ["地球日快樂", "愛護地球", "永續生活", "節能減碳"]
+    },
+    {
+      "id": "arborday",
+      "name": "植樹節",
+      "icon": "🌳",
+      "description": "十年樹木、百年樹人",
+      "color": "bg-green-100 border-green-600",
+      "defaultGradient": "linear-gradient(135deg, #166534 0%, #4ade80 100%)",
+      "backgroundLabels": {
+        "01": "茂密森林",
+        "02": "希望樹苗",
+        "03": "綠色長廊",
+        "04": "森森不息"
+      },
+      "phrases": ["植樹節快樂", "種下希望", "綠意盎然", "守護山林"]
+    },
+    {
+      "id": "mazu",
+      "name": "媽祖誕辰",
+      "icon": "🏮",
+      "description": "媽祖生、平安祈福",
+      "color": "bg-red-50 border-amber-400",
+      "defaultGradient": "linear-gradient(135deg, #ef4444 0%, #facc15 100%)",
+      "backgroundLabels": {
+        "01": "媽祖慈悲",
+        "02": "遶境祈福",
+        "03": "平安守護",
+        "04": "廟宇文化"
+      },
+      "phrases": ["天上聖母聖誕千秋", "平安順心", "媽祖保佑", "闔家平安"]
+    },
+    {
+      "id": "buddha",
+      "name": "佛誕節",
+      "icon": "🪷",
+      "description": "浴佛祈福、淨化心靈",
+      "color": "bg-yellow-50 border-yellow-300",
+      "defaultGradient": "linear-gradient(135deg, #fef3c7 0%, #f59e0b 100%)",
+      "backgroundLabels": {
+        "01": "清淨蓮花",
+        "02": "浴佛儀式",
+        "03": "法喜充滿",
+        "04": "禪定安詳"
+      },
+      "phrases": ["佛誕節快樂", "法喜充滿", "吉祥如意", "心靈淨化"]
+    },
+    {
+      "id": "earthgod",
+      "name": "土地公生",
+      "icon": "🧧",
+      "description": "頭牙祈福、財源廣進",
+      "color": "bg-orange-50 border-amber-500",
+      "defaultGradient": "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+      "backgroundLabels": {
+        "01": "福德正神",
+        "02": "財源廣進",
+        "03": "土地守護",
+        "04": "五穀豐登"
+      },
+      "phrases": ["土地公生平安", "財源滾滾", "生意興隆", "平安大吉"]
+    },
+    {
+      "id": "qixi",
+      "name": "七夕情人節",
+      "icon": "🌌",
+      "description": "銀河相會、傳統浪漫",
+      "color": "bg-indigo-50 border-pink-400",
+      "defaultGradient": "linear-gradient(135deg, #312e81 0%, #ec4899 100%)",
+      "backgroundLabels": {
+        "01": "鵲橋相會",
+        "02": "繁星夏夜",
+        "03": "浪漫古風",
+        "04": "心心相印"
+      },
+      "phrases": ["七夕快樂", "願天下有情人終成眷屬", "永結同心", "愛情甜蜜"]
     }
   ]
 }
