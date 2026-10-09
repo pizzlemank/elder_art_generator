@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Array of theme_id:query
+THEMES=(
+    "cny:chinese,newyear,red"
+    "lantern:lantern,festival"
+    "peace228:dove,peace,sky"
+    "arbor:tree,nature,plant"
+    "whiteday:white,rose,gift"
+    "youthday:youth,sunset,run"
+    "womens:woman,flowers,happy"
+    "aprilfools:jester,clown,smile"
+    "children:children,balloons,play"
+    "qingming:spring,rain,nature"
+    "easter:easter,egg,spring"
+    "earthday:earth,forest,nature"
+    "labor:worker,tools,industry"
+    "mothersday:carnation,flower,mother"
+    "dragonboat:river,boat,green"
+    "fathersday:mountain,father,landscape"
+    "ghost:lantern,night,temple"
+    "qixi:starry,sky,galaxy"
+    "teachers:book,school,library"
+    "midautumn:moon,autumn,night"
+    "nationalday:fireworks,celebration"
+    "doubleninth:chrysanthemum,flower,autumn"
+    "halloween:pumpkin,halloween,autumn"
+    "singlesday:shopping,gift,box"
+    "thanksgiving:autumn,harvest,thanksgiving"
+    "winter:snow,winter,soup"
+    "christmas:christmas,tree,snow"
+    "newyear:fireworks,newyear"
+    "valentine:heart,rose,love"
+    "morning:sunrise,morning,landscape"
+    "night:starry,night,moon"
+    "health:green,nature,health"
+    "buddhist:buddha,temple,lotus"
+    "birthday:cake,balloon,party"
+    "graduation:graduation,cap,school"
+    "exam:study,book,pencil"
+    "wedding:wedding,ring,flowers"
+    "encouragement:mountain,climb,sunlight"
+    "peace:apple,lake,peaceful"
+    "summer:beach,summer,sea"
+    "classic:landscape,scenery"
+    "funny:funny,cat,dog"
+)
+
+for item in "${THEMES[@]}"; do
+    ID="${item%%:*}"
+    QUERY="${item#*:}"
+    python3 scripts/download_unique.py "$ID" "$QUERY" 4
+done
+
+echo "All batch downloads complete."
